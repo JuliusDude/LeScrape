@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>F1 Portfolio — Premium Motion Design</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+
+    <style>
+        /* ─── RESET & BASE ─── */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+            background: #0a0a0a;
+            color: #f0f0f0;
+            overflow-x: hidden;
+            cursor: default;
+        }
+
+        /* ─── CUSTOM CURSOR ─── */
+        .cursor {
+            position: fixed;
+            width: 8px;
+            height: 8px;
+            background: #e10600;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s ease, height 0.3s ease, background 0.3s ease, opacity 0.3s ease;
+            mix-blend-mode: difference;
+            will-change: transform, width, height;
+        }
+        .cursor.hover {
+            width: 60px;
+            height: 60px;
+            background: rgba(225, 6, 0, 0.25);
+            border: 1px solid rgba(225, 6, 0, 0.3);
+            mix-blend-mode: normal;
+        }
+        .cursor.hover .cursor-dot {
+            width: 12px;
+            height: 12px;
+            background: #e10600;
+        }
+        .cursor-dot {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px;
+            height: 8px;
+            background: #e10600;
+            border-radius: 50%;
+            transition: width 0.3s ease, height 0.3s ease;
+        }
+        @media (pointer: coarse) {
+            .cursor {
+                display: none;
+            }
+        }
+
+        /* ─── LENIS OVERRIDE ─── */
+        html.lenis {
+            height: auto;
+        }
+        .lenis.lenis-smooth {
+            scroll-behavior: auto;
+        }
+        .lenis.lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+
+        /* ─── SCROLL INDICATOR ─── */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 300;
+            animation: floatDown 2.4s ease-in-out infinite;
+            z-index: 10;
+        }
+        .scroll-indicator .line {
+            width: 1px;
+            height: 40px;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), transparent);
+            animation: scrollLine 2.4s ease-in-out infinite;
+        }
+        @keyframes floatDown {
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            50% {
+                transform: translateX(-50%) translateY(6px);
+            }
+        }
+        @keyframes scrollLine {
+            0% {
+                transform: scaleY(0);
+                transform-origin: top;
+                opacity: 0;
+            }
+            30% {
+                transform: scaleY(1);
+                transform-origin: top;
+                opacity: 1;
+            }
+            70% {
+                transform: scaleY(1);
+                transform-origin: bottom;
+                opacity: 1;
+            }
+            100% {
+                transform: scaleY(0);
+                transform-origin: bottom;
+                opacity: 0;
+            }
+        }
+
+        /* ─── SECTION BASE ─── */
+        section {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        .section-inner {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 60px;
+        }
+        @media (max-width: 768px) {
+            .section-inner {
+                padding: 0 24px;
+            }
+        }
+
+        /* ─── HERO ─── */
+        .hero {
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #0a0a0a;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 30% 50%, rgba(225, 6, 0, 0.12) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 80%, rgba(225, 6, 0, 0.06) 0%, transparent 50%),
+                #0a0a0a;
+            z-index: 1;
+        }
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 1100px;
+            padding: 0 24px;
+        }
+        .hero-badge {
+            display: inline-block;
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.35);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 8px 20px;
+            border-radius: 100px;
+            font-weight: 400;
+            margin-bottom: 32px;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(4px);
+        }
+        .hero-title {
+            font-size: clamp(64px, 14vw, 140px);
+            font-weight: 700;
+            line-height: 0.92;
+            letter-spacing: -0.03em;
+            color: #fff;
+            margin-bottom: 24px;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .hero-title .highlight {
+            background: linear-gradient(135deg, #e10600, #ff4d4d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-sub {
+            font-size: clamp(16px, 2vw, 24px);
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.5);
+            letter-spacing: 2px;
+            max-width: 600px;
+            margin: 0 auto 48px;
+            line-height: 1.6;
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 40px;
+            background: #e10600;
+            color: #fff;
+            border: none;
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            overflow: hidden;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .hero-cta::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #ff1a1a, #b30500);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            border-radius: 100px;
+        }
+        .hero-cta:hover::before {
+            opacity: 1;
+        }
+        .hero-cta span {
+            position: relative;
+            z-index: 1;
+        }
+        .hero-cta .arrow {
+            display: inline-block;
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            z-index: 1;
+        }
+        .hero-cta:hover .arrow {
+            transform: translateX(6px) rotate(-45deg);
+        }
+
+        .hero-meta {
+            position: absolute;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 5;
+            display: flex;
+            gap: 48px;
+            color: rgba(255, 255, 255, 0.2);
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+        .hero-meta span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .hero-meta .dot {
+            width: 4px;
+            height: 4px;
+            background: #e10600;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        @media (max-width: 600px) {
+            .hero-meta {
+                gap: 24px;
+                font-size: 10px;
+                bottom: 60px;
+            }
+            .hero-badge {
+                font-size: 10px;
+                padding: 6px 16px;
+            }
+        }
+
+        /* ─── ABOUT SECTION ─── */
+        .about {
+            padding: 120px 0;
+            background: #0d0d0d;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        .about-image-wrap {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #141414;
+            aspect-ratio: 4/3;
+        }
+        .about-image-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            opacity: 0;
+            transform: scale(1.05);
+        }
+        .about-image-wrap .placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.1);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .about-image-wrap .accent-line {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #e10600, transparent);
+        }
+        .about-text h2 {
+            font-size: clamp(36px, 5vw, 64px);
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .about-text h2 .highlight {
+            background: linear-gradient(135deg, #e10600, #ff4d4d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .about-text p {
+            font-size: clamp(16px, 1.2vw, 20px);
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.55);
+            font-weight: 300;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 16px;
+        }
+        .about-text .tag {
+            display: inline-block;
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            padding-bottom: 6px;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 900px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+            .about {
+                padding: 80px 0;
+            }
+        }
+
+        /* ─── STATS ─── */
+        .stats {
+            padding: 100px 0;
+            background: #0a0a0a;
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            text-align: center;
+        }
+        .stat-item {
+            padding: 32px 16px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            transition: background 0.4s ease;
+        }
+        .stat-item:hover {
+            background: rgba(255, 255, 255, 0.04);
+        }
+        .stat-number {
+            font-size: clamp(48px, 5vw, 72px);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            font-family: 'Space Grotesk', sans-serif;
+            background: linear-gradient(135deg, #fff, rgba(255, 255, 255, 0.5));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .stat-label {
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.3);
+            margin-top: 8px;
+            font-weight: 300;
+            font-family: 'Inter', sans-serif;
+        }
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            .stat-item {
+                padding: 24px 12px;
+            }
+        }
+        @media (max-width: 450px) {
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+            .stat-number {
+                font-size: 36px;
+            }
+        }
+
+        /* ─── GALLERY (horizontal scroll) ─── */
+        .gallery-wrap {
+            position: relative;
+            padding: 100px 0;
+            background: #0d0d0d;
+            overflow: hidden;
+        }
+        .gallery-header {
+            padding: 0 60px 60px;
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+        .gallery-header h2 {
+            font-size: clamp(32px, 4vw, 56px);
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .gallery-header h2 .highlight {
+            background: linear-gradient(135deg, #e10600, #ff4d4d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .gallery-header p {
+            color: rgba(255, 255, 255, 0.35);
+            font-size: 16px;
+            font-weight: 300;
+            margin-top: 8px;
+            font-family: 'Inter', sans-serif;
+        }
+        .gallery-track {
+            display: flex;
+            gap: 24px;
+            padding: 0 60px;
+            width: max-content;
+            will-change: transform;
+        }
+        .gallery-item {
+            flex: 0 0 340px;
+            height: 460px;
+            border-radius: 16px;
+            overflow: hidden;
+            background: #141414;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            transition: border-color 0.4s ease;
+        }
+        .gallery-item:hover {
+            border-color: rgba(225, 6, 0, 0.3);
+        }
+        .gallery-item .placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.06);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .gallery-item .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 32px 24px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+        }
+        .gallery-item .overlay h4 {
+            font-size: 18px;
+            font-weight: 500;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .gallery-item .overlay p {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.3);
+            font-weight: 300;
+            font-family: 'Inter', sans-serif;
+        }
+        .gallery-item .number {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.06);
+            font-weight: 700;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        @media (max-width: 768px) {
+            .gallery-header {
+                padding: 0 24px 40px;
+            }
+            .gallery-track {
+                padding: 0 24px;
+                gap: 16px;
+            }
+            .gallery-item {
+                flex: 0 0 260px;
+                height: 360px;
+            }
+        }
+        @media (max-width: 450px) {
+            .gallery-item {
+                flex: 0 0 200px;
+                height: 280px;
+            }
+        }
+
+        /* ─── CTA ─── */
+        .cta-section {
+            padding: 140px 0;
+            background: #0a0a0a;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
+        }
+        .cta-section h2 {
+            font-size: clamp(40px, 6vw, 80px);
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            font-family: 'Space Grotesk', sans-serif;
+            margin-bottom: 16px;
+        }
+        .cta-section h2 .highlight {
+            background: linear-gradient(135deg, #e10600, #ff4d4d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .cta-section p {
+            font-size: clamp(16px, 1.2vw, 22px);
+            color: rgba(255, 255, 255, 0.35);
+            font-weight: 300;
+            max-width: 520px;
+            margin: 0 auto 40px;
+            font-family: 'Inter', sans-serif;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 40px;
+            background: #e10600;
+            color: #fff;
+            border: none;
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            font-family: 'Space Grotesk', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #ff1a1a, #b30500);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            border-radius: 100px;
+        }
+        .btn-primary:hover::before {
+            opacity: 1;
+        }
+        .btn-primary span {
+            position: relative;
+            z-index: 1;
+        }
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 40px;
+            background: transparent;
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* ─── FOOTER ─── */
+        .footer {
+            padding: 40px 60px;
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.15);
+            font-weight: 300;
+            font-family: 'Inter', sans-serif;
+        }
+        .footer-links {
+            display: flex;
+            gap: 32px;
+        }
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.15);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .footer-links a:hover {
+            color: rgba(255, 255, 255, 0.4);
+        }
+        @media (max-width: 600px) {
+            .footer {
+                flex-direction: column;
+                gap: 16px;
+                padding: 32px 24px;
+                text-align: center;
+            }
+            .footer-links {
+                gap: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        /* ─── RESPONSIVE UTILITIES ─── */
+        .text-clip {
+            clip-path: inset(0 0 100% 0);
+        }
+
+        /* ─── SECTION DIVIDER ─── */
+        .section-divider {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.04), transparent);
+        }
+
+        /* ─── LOADING SHIMMER ─── */
+        .shimmer {
+            background: linear-gradient(90deg, #141414 25%, #1a1a1a 50%, #141414 75%);
+            background-size: 200% 100%;
+            animation: shimmer 2s infinite;
+        }
+        @keyframes shimmer {
+            0% {
+                background-position: -200% 0;
+            }
+            100% {
+                background-position: 200% 0;
+            }
+        }
+
+        /* ─── MAGNETIC BUTTON WRAPPER ─── */
+        .magnetic-wrap {
+            display: inline-block;
+            position: relative;
+            transition: transform 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        /* ─── RESPONSIVE FIXES ─── */
+        @media (max-width: 600px) {
+            .hero-title {
+                font-size: 52px;
+            }
+            .hero-sub {
+                font-size: 15px;
+            }
+            .hero-cta {
+                padding: 14px 28px;
+                font-size: 12px;
+            }
+            .about-text h2 {
+                font-size: 32px;
+            }
+            .cta-section {
+                padding: 80px 0;
+            }
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ─── CUSTOM CURSOR ─── -->
+    <div class="cursor" id="cursor">
+        <div class="cursor-dot"></div>
+    </div>
+
+    <!-- ─── HERO ─── -->
+    <section class="hero" id="hero">
+        <div class="hero-bg" id="heroBg"></div>
+        <div class="hero-content" id="heroContent">
+            <div class="hero-badge" id="heroBadge">✦ 2026 Season</div>
+            <h1 class="hero-title" id="heroTitle">
+                <span class="text-clip" style="display:inline-block;">Precision</span><br />
+                <span class="text-clip" style="display:inline-block;"><span class="highlight">Velocity</span></span><br />
+                <span class="text-clip" style="display:inline-block;">Legacy</span>
+            </h1>
+            <p class="hero-sub text-clip" id="heroSub" style="display:inline-block;">
+                Where every millisecond defines the difference between greatness and history.
+            </p>
+            <div class="magnetic-wrap" id="ctaWrap">
+                <button class="hero-cta" id="heroCta">
+                    <span>Explore the circuit</span>
+                    <span class="arrow">→</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="scroll-indicator" id="scrollIndicator">
+            <span>Scroll</span>
+            <div class="line"></div>
+        </div>
+
+        <div class="hero-meta">
+            <span><span class="dot"></span> 3x World Champion</span>
+            <span><span class="dot"></span> 47 Career Wins</span>
+            <span><span class="dot"></span> 102 Podiums</span>
+        </div>
+    </section>
+
+    <!-- ─── ABOUT ─── -->
+    <section class="about" id="about">
+        <div class="section-inner">
+            <div class="about-grid">
+                <div class="about-image-wrap" id="aboutImage">
+                    <div class="placeholder">[ IMAGE ]</div>
+                    <div class="accent-line"></div>
+                </div>
+                <div class="about-text" id="aboutText">
+                    <div class="tag">● Behind the visor</div>
+                    <h2>
+                        Born to<br />
+                        <span class="highlight">Push Limits</span>
+                    </h2>
+                    <p>
+                        From karting prodigy to Formula 1 icon — every corner, every apex,
+                        every heartbeat is engineered for one purpose: victory.
+                    </p>
+                    <p>
+                        With a relentless pursuit of perfection and a team that shares the
+                        same fire, we don't just race. We redefine what's possible.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ─── STATS ─── -->
+    <section class="stats" id="stats">
+        <div class="section-inner">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="47">0</div>
+                    <div class="stat-label">Race Wins</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="102">0</div>
+                    <div class="stat-label">Podiums</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="3">0</div>
+                    <div class="stat-label">World Titles</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="28">0</div>
+                    <div class="stat-label">Pole Positions</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ─── GALLERY (horizontal scroll) ─── -->
+    <section class="gallery-wrap" id="gallery">
+        <div class="gallery-header">
+            <h2>
+                <span class="highlight">Iconic</span> Moments
+            </h2>
+            <p>Relive the defining frames of a legendary career</p>
+        </div>
+        <div class="gallery-track" id="galleryTrack">
+            <div class="gallery-item">
+                <div class="placeholder">Frame 01</div>
+                <div class="number">01</div>
+                <div class="overlay">
+                    <h4>Monza 2024</h4>
+                    <p>Victory under pressure</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="placeholder">Frame 02</div>
+                <div class="number">02</div>
+                <div class="overlay">
+                    <h4>Silverstone Sweep</h4>
+                    <p>Home soil dominance</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="placeholder">Frame 03</div>
+                <div class="number">03</div>
+                <div class="overlay">
+                    <h4>Monaco Mastery</h4>
+                    <p>Precision through the streets</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="placeholder">Frame 04</div>
+                <div class="number">04</div>
+                <div class="overlay">
+                    <h4>Spa Champion</h4>
+                    <p>Rain masterclass</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="placeholder">Frame 05</div>
+                <div class="number">05</div>
+                <div class="overlay">
+                    <h4>Interlagos Thriller</h4>
+                    <p>Title decider drama</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="placeholder">Frame 06</div>
+                <div class="number">06</div>
+                <div class="overlay">
+                    <h4>Abu Dhabi Finale</h4>
+                    <p>Season culmination</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="placeholder">Frame 07</div>
+                <div class="number">07</div>
+                <div class="overlay">
+                    <h4>Baku Breakthrough</h4>
+                    <p>Street circuit poetry</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="placeholder">Frame 08</div>
+                <div class="number">08</div>
+                <div class="overlay">
+                    <h4>Singapore Night</h4>
+                    <p>Under the lights</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ─── CTA ─── -->
+    <section class="cta-section" id="cta">
+        <div class="section-inner">
+            <h2>
+                Ready to<br />
+                <span class="highlight">Join the Grid?</span>
+            </h2>
+            <p>Step into the world of speed, precision, and championship pedigree.</p>
+            <div class="cta-buttons">
+                <div class="magnetic-wrap">
+                    <button class="btn-primary"><span>Get Started</span></button>
+                </div>
+                <div class="magnetic-wrap">
+                    <button class="btn-secondary"><span>View Highlights</span></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── FOOTER ─── -->
+    <footer class="footer">
+        <span>© 2026 — Formula 1 Portfolio</span>
+        <div class="footer-links">
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+            <a href="#">YouTube</a>
+            <a href="#">Contact</a>
+        </div>
+    </footer>
+
+
+    <!-- ─── SCRIPTS ─── -->
+    <script>
+        // ────────────────────────────────────────────────
+        // 1. LENIS SMOOTH SCROLL
+        // ────────────────────────────────────────────────
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            orientation: 'vertical',
+            smoothWheel: true,
+            wheelMultiplier: 1.2,
+            touchMultiplier: 1.5,
+        });
+
+        lenis.on('scroll', ScrollTrigger.update);
+
+        // Connect Lenis to GSAP ScrollTrigger
+        gsap.ticker.add((time) => {
+            lenis.raf(time * 1000);
+        });
+        gsap.ticker.lagSmoothing(0);
+
+        // ────────────────────────────────────────────────
+        // 2. GSAP + SCROLLTRIGGER
+        // ────────────────────────────────────────────────
+        gsap.registerPlugin(ScrollTrigger);
+
+        // ── Hero: slow zoom on background ──
+        gsap.to('#heroBg', {
+            scale: 1.08,
+            duration: 6,
+            ease: 'power1.inOut',
+            scrollTrigger: {
+                trigger: '#hero',
+                start: 'top top',
+                end: 'bottom top',
+                scrub: 1.5,
+            },
+        });
+
+        // ── Hero: text clip reveal ──
+        const heroClips = document.querySelectorAll('#heroTitle .text-clip');
+        heroClips.forEach((el, i) => {
+            gsap.to(el, {
+                clipPath: 'inset(0 0 0 0)',
+                duration: 1.4,
+                delay: 0.2 + i * 0.12,
+                ease: 'power4.out',
+            });
+        });
+
+        gsap.to('#heroSub', {
+            clipPath: 'inset(0 0 0 0)',
+            duration: 1.2,
+            delay: 0.6,
+            ease: 'power4.out',
+        });
+
+        gsap.from('#heroBadge', {
+            opacity: 0,
+            y: 20,
+            duration: 1,
+            delay: 0.1,
+            ease: 'power3.out',
+        });
+
+        gsap.from('#heroCta', {
+            opacity: 0,
+            y: 30,
+            duration: 1.2,
+            delay: 0.8,
+            ease: 'power3.out',
+        });
+
+        gsap.from('#scrollIndicator', {
+            opacity: 0,
+            y: 20,
+            duration: 1.2,
+            delay: 1.2,
+            ease: 'power3.out',
+        });
+
+        // ── About: image scale-in ──
+        gsap.from('#aboutImage', {
+            scale: 0.92,
+            opacity: 0,
+            duration: 1.4,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '#about',
+                start: 'top 85%',
+                toggleActions: 'play none none reverse',
+            },
+        });
+
+        // ── About: text fade-up stagger ──
+        gsap.from('#aboutText .tag', {
+            opacity: 0,
+            y: 30,
+            duration: 0.8,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '#aboutText',
+                start: 'top 80%',
+                toggleActions: 'play none none reverse',
+            },
+        });
+        gsap.from('#aboutText h2', {
+            opacity: 0,
+            y: 40,
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '#aboutText',
+                start: 'top 80%',
+                toggleActions: 'play none none reverse',
+            },
+        });
+        gsap.from('#aboutText p', {
+            opacity: 0,
+            y: 30,
+            duration: 0.8,
+            stagger: 0.15,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '#aboutText',
+                start: 'top 80%',
+                toggleActions: 'play none none reverse',
+            },
+        });
+
+        // ── Stats: counter animation ──
+        const statNumbers = document.querySelectorAll('.stat-number');
+        statNumbers.forEach((el) => {
+            const target = parseInt(el.dataset.count, 10);
+            let animated = false;
+
+            ScrollTrigger.create({
+                trigger: el,
+                start: 'top 90%',
+                onEnter: () => {
+                    if (animated) return;
+                    animated = true;
+                    gsap.fromTo(el, {
+                        textContent: 0,
+                    }, {
+                        textContent: target,
+                        duration: 2.2,
+                        ease: 'power2.out',
+                        snap: {
+                            textContent: 1,
+                        },
+                        onUpdate: () => {
+                            // preserve the "+" suffix if any
+                            const val = Math.round(parseFloat(el.textContent));
+                            el.textContent = val;
+                        },
+                        onComplete: () => {
+                            el.textContent = target;
+                        },
+                    });
+                },
+                once: true,
+            });
+        });
+
+        // ── Gallery: horizontal scroll ──
+        const track = document.getElementById('galleryTrack');
+        const galleryWrap = document.getElementById('gallery');
+
+        let trackWidth = track.scrollWidth;
+        let viewportWidth = window.innerWidth;
+
+        // Recalculate on resize
+        window.addEventListener('resize', () => {
+            trackWidth = track.scrollWidth;
+            viewportWidth = window.innerWidth;
+        });
+
+        gsap.to(track, {
+            x: () => -(trackWidth - viewportWidth + 120),
+            ease: 'power1.inOut',
+            scrollTrigger: {
+                trigger: galleryWrap,
+                start: 'top top',
+                end: () => `+=${trackWidth - viewportWidth + 120}`,
+                scrub: 1.2,
+                pin: true,
+                anticipatePin: 1,
+                invalidateOnRefresh: true,
+            },
+        });
+
+        // ── Gallery items: fade-up on appear ──
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        galleryItems.forEach((item, i) => {
+            gsap.from(item, {
+                opacity: 0,
+                y: 40,
+                duration: 0.8,
+                delay: i * 0.06,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: item,
+                    start: 'top 90%',
+                    toggleActions: 'play none none reverse',
+                },
+            });
+        });
+
+        // ── CTA: fade-up ──
+        gsap.from('#cta h2', {
+            opacity: 0,
+            y: 40,
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '#cta',
+                start: 'top 80%',
+                toggleActions: 'play none none reverse',
+            },
+        });
+        gsap.from('#cta p', {
+            opacity: 0,
+            y: 30,
+            duration: 0.8,
+            delay: 0.15,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '#cta',
+                start: 'top 80%',
+                toggleActions: 'play none none reverse',
+            },
+        });
+        gsap.from('#cta .cta-buttons', {
+            opacity: 0,
+            y: 30,
+            duration: 0.8,
+            delay: 0.3,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '#cta',
+                start: 'top 80%',
+                toggleActions: 'play none none reverse',
+            },
+        });
+
+        // ────────────────────────────────────────────────
+        // 3. CUSTOM CURSOR
+        // ────────────────────────────────────────────────
+        const cursor = document.getElementById('cursor');
+        const cursorDot = cursor.querySelector('.cursor-dot');
+        let mouseX = 0,
+            mouseY = 0;
+        let cursorX = 0,
+            cursorY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        function animateCursor() {
+            cursorX += (mouseX - cursorX) * 0.12;
+            cursorY += (mouseY - cursorY) * 0.12;
+            cursor.style.left = cursorX + 'px';
+            cursor.style.top = cursorY + 'px';
+            requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+
+        // Hover effects on interactive elements
+        const interactive = document.querySelectorAll(
+            'button, a, .gallery-item, .stat-item, .hero-cta, .btn-primary, .btn-secondary'
+        );
+        interactive.forEach((el) => {
+            el.addEventListener('mouseenter', () => {
+                cursor.classList.add('hover');
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hover');
+            });
+        });
+
+        // ────────────────────────────────────────────────
+        // 4. MAGNETIC BUTTONS
+        // ────────────────────────────────────────────────
+        const magneticWraps = document.querySelectorAll('.magnetic-wrap');
+        magneticWraps.forEach((wrap) => {
+            const btn = wrap.querySelector('button');
+            if (!btn) return;
+
+            wrap.addEventListener('mousemove', (e) => {
+                const rect = wrap.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                const dist = Math.sqrt(x * x + y * y);
+                const maxDist = Math.min(rect.width, rect.height) / 2;
+                const strength = Math.min(dist / maxDist, 1) * 0.4;
+                const moveX = x * strength * 0.2;
+                const moveY = y * strength * 0.2;
+                btn.style.transform = `translate(${moveX}px, ${moveY}px)`;
+            });
+
+            wrap.addEventListener('mouseleave', () => {
+                btn.style.transform = 'translate(0, 0)';
+            });
+        });
+
+        // ────────────────────────────────────────────────
+        // 5. UPDATE LENIS ON RESIZE
+        // ────────────────────────────────────────────────
+        window.addEventListener('resize', () => {
+            lenis.resize();
+            ScrollTrigger.refresh();
+        });
+
+        // ────────────────────────────────────────────────
+        // 6. HERO CTA CLICK (smooth scroll to about)
+        // ────────────────────────────────────────────────
+        document.getElementById('heroCta').addEventListener('click', () => {
+            const about = document.getElementById('about');
+            if (about) {
+                lenis.scrollTo(about, { duration: 1.6, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
+            }
+        });
+
+        // ────────────────────────────────────────────────
+        // 7. SCROLL INDICATOR HIDE AFTER SCROLL
+        // ────────────────────────────────────────────────
+        let indicatorHidden = false;
+        lenis.on('scroll', (e) => {
+            if (e.animatedScroll > 100 && !indicatorHidden) {
+                indicatorHidden = true;
+                gsap.to('#scrollIndicator', {
+                    opacity: 0,
+                    y: 20,
+                    duration: 0.6,
+                    ease: 'power2.out',
+                });
+            }
+        });
+
+        // ────────────────────────────────────────────────
+        // 8. PARALLAX LAYERS (subtle)
+        // ────────────────────────────────────────────────
+        // Hero badge subtle parallax
+        gsap.to('#heroBadge', {
+            y: 30,
+            opacity: 0,
+            duration: 1.2,
+            ease: 'power1.inOut',
+            scrollTrigger: {
+                trigger: '#hero',
+                start: 'top top',
+                end: 'bottom top',
+                scrub: 1,
+            },
+        });
+
+        // ────────────────────────────────────────────────
+        // 9. REFRESH SCROLLTRIGGER AFTER LOAD
+        // ────────────────────────────────────────────────
+        window.addEventListener('load', () => {
+            ScrollTrigger.refresh();
+            lenis.resize();
+        });
+
+        // Initial refresh after a small delay
+        setTimeout(() => {
+            ScrollTrigger.refresh();
+        }, 300);
+
+        console.log('🏎️ F1 Portfolio ready — Lenis + GSAP + ScrollTrigger');
+    </script>
+
+</body>
+</html>

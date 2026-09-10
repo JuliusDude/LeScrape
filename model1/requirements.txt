@@ -1,0 +1,24 @@
+# eCourts Scraper Dependencies
+# pip install -r requirements.txt
+
+# Core scraping
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+
+# Image processing (CAPTCHA)
+Pillow>=10.0.0
+
+# OCR solver (free option)
+easyocr>=1.7.0        # Recommended: better accuracy on Securimage
+# pytesseract>=0.3.10  # Alternative: requires Tesseract binary installed
+
+# Retry logic
+tenacity>=8.2.0
+
+# Paid CAPTCHA solver (production)
+# 2captcha-python>=1.2.0  # Uncomment if using 2captcha
+
+# Optional: for async/scheduled runs
+# celery>=5.3.0
+# redis>=5.0.0

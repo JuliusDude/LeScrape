@@ -1,0 +1,30 @@
+﻿# Virtual environment
+.venv/
+venv/
+ENV/
+
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*.class
+*.pyc
+
+# Local SQLite databases & runtime data
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+ecourts.db
+Model2/ecourts_data.db
+Model3/ecourts_data.db
+Model3/data/
+Model_BackUP/ecourts_data.db
+
+# Agent metadata and temp logs
+.agents/
+*.log
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/

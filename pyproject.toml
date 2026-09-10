@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ecourts"
+version = "0.1.0"
+description = "eCourts India Production Scraper and Resilient Persistent Task Pipeline"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "requests>=2.28.0",
+    "beautifulsoup4>=4.11.0",
+    "pillow>=9.0.0",
+    "opencv-python-headless>=4.5.0",
+]
+
+[project.scripts]
+ecourts = "ecourts.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["ecourts*"]
