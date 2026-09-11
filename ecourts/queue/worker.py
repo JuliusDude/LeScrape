@@ -91,6 +91,8 @@ class QueueWorker:
         task_id = task["id"]
         task_type = task["task_type"]
         params = task.get("params", {})
+        if not self.session.app_token:
+            self.session.init_session()
         log.info("Claimed task #%d (%s) for worker %s", task_id, task_type, self.worker_id)
 
         try:

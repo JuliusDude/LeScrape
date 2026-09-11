@@ -53,6 +53,8 @@ def _get_session(har_path: Optional[str] = None, pacing: float = 2.0) -> PacedSe
         session.mount("https://services.ecourts.gov.in", adapter)
         session.mount("http://services.ecourts.gov.in", adapter)
         log.info("Mounted HarReplayAdapter using %s", har_path)
+    else:
+        session.init_session()
     return session
 
 

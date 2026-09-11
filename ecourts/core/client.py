@@ -36,6 +36,8 @@ DEFAULT_HEADERS: Dict[str, str] = {
     "Sec-Fetch-Dest": "empty",
     "Sec-Fetch-Mode": "cors",
     "Sec-Fetch-Site": "same-origin",
+    "delimeter": "bnvfgffy6",
+    "Juihjrtr778": "bnvfgffy6",
 }
 
 
@@ -100,6 +102,34 @@ class PacedSession:
             return f"{self.base_url.rstrip('/')}{endpoint}"
         return f"{self.base_url}?p={endpoint}"
 
+    def init_session(self) -> str:
+        """Fetch casestatus/index to initialize session cookies and extract the app_token."""
+        url = self._resolve_url("casestatus/index")
+        nav_headers = {
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            "Sec-Fetch-Dest": "document",
+            "Sec-Fetch-Mode": "navigate",
+            "Sec-Fetch-Site": "same-origin",
+            "Sec-Fetch-User": "?1",
+            "Upgrade-Insecure-Requests": "1",
+        }
+        self._enforce_pacing()
+        try:
+            resp = self.session.get(url, headers=nav_headers, timeout=30)
+            self._mark_request_complete()
+            import re
+            m = re.search(r'name=["\']app_token["\'][^>]*value=["\']([a-zA-Z0-9_-]+)["\']', resp.text)
+            if not m:
+                m = re.search(r'id=["\']app_token["\'][^>]*value=["\']([a-zA-Z0-9_-]+)["\']', resp.text)
+            if m:
+                self.app_token = m.group(1)
+                log.info("Initialized session with app_token=%s", self.app_token)
+            return self.app_token
+        except Exception as exc:
+            self._mark_request_complete()
+            log.debug("Session initialization skipped or failed: %s", exc)
+            return self.app_token
+
     def post(
         self,
         endpoint: str,
@@ -111,7 +141,6 @@ class PacedSession:
         """Send a POST request with pacing, default headers, ajax_req=true, and app_token."""
         url = self._resolve_url(endpoint)
         max_attempts = retries if retries is not None else self.max_retries
-
         payload: Dict[str, Any] = {
             "ajax_req": "true",
             "app_token": self.app_token,
@@ -125,6 +154,12 @@ class PacedSession:
             try:
                 resp = self.session.post(url, data=payload, timeout=timeout, **kwargs)
                 self._mark_request_complete()
+                try:
+                    data_json = resp.json()
+                    if isinstance(data_json, dict) and data_json.get("app_token"):
+                        self.app_token = data_json["app_token"]
+                except Exception:
+                    pass
                 return resp
             except (requests.ConnectionError, requests.Timeout, requests.RequestException) as exc:
                 self._mark_request_complete()
