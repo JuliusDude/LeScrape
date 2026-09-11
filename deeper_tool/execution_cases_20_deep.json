@@ -1,0 +1,3931 @@
+[
+  {
+    "cnr_number": "KABC010342242022",
+    "case_type": "EX - Execution Petition Under Order",
+    "case_number": "EX/2/2023",
+    "filing_number": "2786/2022",
+    "filing_date": "17-12-2022",
+    "registration_number": "2/2023",
+    "registration_date": "02-01-2023",
+    "efiling_number": "",
+    "efiling_date": "-",
+    "first_hearing_date": "02nd January 2023",
+    "decision_date": "06th December 2025",
+    "case_status": "Case disposed",
+    "nature_of_disposal": "Uncontested--DISMISSED",
+    "court_number_judge": "1147-CCH64 LXIII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+    "court_name": "PRL. CITY CIVIL AND SESSIONS JUDGE",
+    "state_code": "3",
+    "dist_code": "20",
+    "court_complex_code": "1030135",
+    "est_code": "3",
+    "parties": [
+      {
+        "type": "petitioner",
+        "name": "KRISHNAMURTHY G",
+        "advocate": "DINESH J S"
+      },
+      {
+        "type": "respondent",
+        "name": "SATHISH M",
+        "advocate": ""
+      }
+    ],
+    "petitioners": [
+      {
+        "type": "petitioner",
+        "name": "KRISHNAMURTHY G",
+        "advocate": "DINESH J S"
+      }
+    ],
+    "respondents": [
+      {
+        "type": "respondent",
+        "name": "SATHISH M",
+        "advocate": ""
+      }
+    ],
+    "acts": [
+      {
+        "act": "U/O 21 RULE 11 OF CPC",
+        "section": ","
+      }
+    ],
+    "processes": [
+      {
+        "process_id": "PKABC010342242022_1_1",
+        "process_title": "Notice to show cause why execution should not issue [O. 21, R. 16]",
+        "process_date": "07-01-2023"
+      }
+    ],
+    "main_matters": [
+      {
+        "main_case_number": "O.S./0004555/2020",
+        "main_cnr_number": "KABC010166632020",
+        "main_filing_number": "6849"
+      }
+    ],
+    "hearings": [
+      {
+        "hearing_index": 1,
+        "judge": "CCH64 LXIII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "06-12-2025",
+        "hearing_date": "",
+        "purpose": "Disposed"
+      },
+      {
+        "hearing_index": 2,
+        "judge": "CCH64 LXIII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "25-11-2025",
+        "hearing_date": "06-12-2025",
+        "purpose": "ORDERS"
+      },
+      {
+        "hearing_index": 3,
+        "judge": "CCH64 LXIII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "23-09-2025",
+        "hearing_date": "25-11-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 4,
+        "judge": "CCH64 LXIII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "12-08-2025",
+        "hearing_date": "23-09-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 5,
+        "judge": "CCH64 LXIII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "24-06-2025",
+        "hearing_date": "12-08-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 6,
+        "judge": "CCH64 LXIII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "22-04-2025",
+        "hearing_date": "24-06-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 7,
+        "judge": "CCH64 LXIII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "12-03-2025",
+        "hearing_date": "22-04-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 8,
+        "judge": "CCH64 LXIII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "29-01-2025",
+        "hearing_date": "12-03-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 9,
+        "judge": "CCH64 LXIII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "18-12-2024",
+        "hearing_date": "29-01-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 10,
+        "judge": "CCH64 LXIII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "13-11-2024",
+        "hearing_date": "18-12-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 11,
+        "judge": "CCH64 LXIII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "25-09-2024",
+        "hearing_date": "13-11-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 12,
+        "judge": "CCH64 LXIII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "14-08-2024",
+        "hearing_date": "25-09-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 13,
+        "judge": "CCH64 LXIII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "08-08-2024",
+        "hearing_date": "14-08-2024",
+        "purpose": "HEARING"
+      },
+      {
+        "hearing_index": 14,
+        "judge": "CCH64 LXIII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "01-08-2024",
+        "hearing_date": "08-08-2024",
+        "purpose": "HEARING"
+      },
+      {
+        "hearing_index": 15,
+        "judge": "CCH64 LXIII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "26-07-2024",
+        "hearing_date": "01-08-2024",
+        "purpose": "SUMMONS"
+      },
+      {
+        "hearing_index": 16,
+        "judge": "CCH64 LXIII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "05-07-2024",
+        "hearing_date": "26-07-2024",
+        "purpose": "SUMMONS"
+      },
+      {
+        "hearing_index": 17,
+        "judge": "CCH64 LXIII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "28-06-2024",
+        "hearing_date": "05-07-2024",
+        "purpose": "SUMMONS"
+      },
+      {
+        "hearing_index": 18,
+        "judge": "CCH64 LXIII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "20-06-2024",
+        "hearing_date": "28-06-2024",
+        "purpose": "HEARING"
+      },
+      {
+        "hearing_index": 19,
+        "judge": "CCH64 LXIII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "30-05-2024",
+        "hearing_date": "20-06-2024",
+        "purpose": "SUMMONS"
+      },
+      {
+        "hearing_index": 20,
+        "judge": "CCH64 LXIII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "24-04-2024",
+        "hearing_date": "30-05-2024",
+        "purpose": "HEARING"
+      },
+      {
+        "hearing_index": 21,
+        "judge": "CCH64 LXIII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "06-04-2024",
+        "hearing_date": "24-04-2024",
+        "purpose": "HEARING"
+      },
+      {
+        "hearing_index": 22,
+        "judge": "CCH64 LXIII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "28-02-2024",
+        "hearing_date": "06-04-2024",
+        "purpose": "HEARING"
+      },
+      {
+        "hearing_index": 23,
+        "judge": "CCH64 LXIII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "09-02-2024",
+        "hearing_date": "28-02-2024",
+        "purpose": "HEARING"
+      },
+      {
+        "hearing_index": 24,
+        "judge": "CCH64 LXIII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "22-01-2024",
+        "hearing_date": "09-02-2024",
+        "purpose": "HEARING"
+      },
+      {
+        "hearing_index": 25,
+        "judge": "CCH64 LXIII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "20-12-2023",
+        "hearing_date": "22-01-2024",
+        "purpose": "HEARING"
+      },
+      {
+        "hearing_index": 26,
+        "judge": "CCH64 LXIII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "18-11-2023",
+        "hearing_date": "20-12-2023",
+        "purpose": "HEARING"
+      },
+      {
+        "hearing_index": 27,
+        "judge": "CCH64 LXIII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "30-09-2023",
+        "hearing_date": "18-11-2023",
+        "purpose": "HEARING"
+      },
+      {
+        "hearing_index": 28,
+        "judge": "CCH64 LXIII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "15-07-2023",
+        "hearing_date": "30-09-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 29,
+        "judge": "CCH64 LXIII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "03-06-2023",
+        "hearing_date": "15-07-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 30,
+        "judge": "CCH64 LXIII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "01-04-2023",
+        "hearing_date": "03-06-2023",
+        "purpose": "APPEARANCE OF PARTY"
+      },
+      {
+        "hearing_index": 31,
+        "judge": "CCH64 LXIII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "07-01-2023",
+        "hearing_date": "01-04-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 32,
+        "judge": "CCH64 LXIII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "02-01-2023",
+        "hearing_date": "07-01-2023",
+        "purpose": "NOTICE"
+      }
+    ],
+    "orders": [
+      {
+        "order_number": "1",
+        "order_date": "06-12-2025",
+        "order_details": "Judgment",
+        "pdf_params": "displayPdf('cl+sGJoSJ58oyVespa8VHg==','wd/evbCOK7tqvcKwXT25tA==','5rHUl/fJ8k9+dheUWTi6OQ==','8NJb071ifDPc/70jxdgMFg+I5ofoKfz4CQ0t934yFW9MCiB9AnJK6BKMDh4ZxKiO','')"
+      }
+    ]
+  },
+  {
+    "cnr_number": "KABC010342952022",
+    "case_type": "EX - Execution Petition Under Order",
+    "case_number": "EX/9/2023",
+    "filing_number": "2796/2022",
+    "filing_date": "17-12-2022",
+    "registration_number": "9/2023",
+    "registration_date": "02-01-2023",
+    "efiling_number": "",
+    "efiling_date": "-",
+    "first_hearing_date": "02nd January 2023",
+    "decision_date": "28th November 2023",
+    "case_status": "Case disposedSub Stage",
+    "nature_of_disposal": "Uncontested--DISPOSED OTHERWISE",
+    "court_number_judge": "808-CCH38 XXXVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+    "court_name": "PRL. CITY CIVIL AND SESSIONS JUDGE",
+    "state_code": "3",
+    "dist_code": "20",
+    "court_complex_code": "1030135",
+    "est_code": "3",
+    "parties": [
+      {
+        "type": "petitioner",
+        "name": "SARPABHUSHANA SHIVAYOGIGALA MATADA TRUST",
+        "advocate": "M R RAVI RAJ MALALI"
+      },
+      {
+        "type": "respondent",
+        "name": "M/S PRISM SCIENTIFIC AND TEACHING AIDS",
+        "advocate": ""
+      }
+    ],
+    "petitioners": [
+      {
+        "type": "petitioner",
+        "name": "SARPABHUSHANA SHIVAYOGIGALA MATADA TRUST",
+        "advocate": "M R RAVI RAJ MALALI"
+      }
+    ],
+    "respondents": [
+      {
+        "type": "respondent",
+        "name": "M/S PRISM SCIENTIFIC AND TEACHING AIDS",
+        "advocate": ""
+      }
+    ],
+    "acts": [
+      {
+        "act": "U/O 21 RULE 11 OF CPC",
+        "section": ","
+      }
+    ],
+    "processes": [
+      {
+        "process_id": "PKABC010342952022_1_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "02-01-2023"
+      }
+    ],
+    "main_matters": [
+      {
+        "main_case_number": "O.S./0000797/2017",
+        "main_cnr_number": "KABC010027452017",
+        "main_filing_number": "6849"
+      }
+    ],
+    "hearings": [
+      {
+        "hearing_index": 1,
+        "judge": "CCH38 XXXVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "28-11-2023",
+        "hearing_date": "",
+        "purpose": "Disposed"
+      },
+      {
+        "hearing_index": 2,
+        "judge": "CCH38 XXXVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "25-10-2023",
+        "hearing_date": "28-11-2023",
+        "purpose": "HEARING"
+      },
+      {
+        "hearing_index": 3,
+        "judge": "CCH38 XXXVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "19-09-2023",
+        "hearing_date": "25-10-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 4,
+        "judge": "CCH38 XXXVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "18-07-2023",
+        "hearing_date": "19-09-2023",
+        "purpose": "HEARING"
+      },
+      {
+        "hearing_index": 5,
+        "judge": "CCH38 XXXVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "26-06-2023",
+        "hearing_date": "18-07-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 6,
+        "judge": "CCH38 XXXVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "05-06-2023",
+        "hearing_date": "26-06-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 7,
+        "judge": "CCH38 XXXVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "19-04-2023",
+        "hearing_date": "05-06-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 8,
+        "judge": "CCH38 XXXVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "17-04-2023",
+        "hearing_date": "19-04-2023",
+        "purpose": "HEARING"
+      },
+      {
+        "hearing_index": 9,
+        "judge": "CCH38 XXXVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "14-03-2023",
+        "hearing_date": "17-04-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 10,
+        "judge": "CCH38 XXXVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "07-03-2023",
+        "hearing_date": "14-03-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 11,
+        "judge": "CCH38 XXXVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "03-03-2023",
+        "hearing_date": "07-03-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 12,
+        "judge": "CCH38 XXXVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "28-02-2023",
+        "hearing_date": "03-03-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 13,
+        "judge": "CCH38 XXXVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "16-02-2023",
+        "hearing_date": "28-02-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 14,
+        "judge": "CCH38 XXXVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "02-01-2023",
+        "hearing_date": "16-02-2023",
+        "purpose": "NOTICE"
+      }
+    ],
+    "orders": [
+      {
+        "order_number": "1",
+        "order_date": "28-11-2023",
+        "order_details": "Orders",
+        "pdf_params": "displayPdf('cl+sGJoSJ58oyVespa8VHg==','AlJ1aru3BWRFJV1ZDRO1Xw==','5rHUl/fJ8k9+dheUWTi6OQ==','8NJb071ifDPc/70jxdgMFox3jYXVr10+CYZq38eI0rX+2cZB9tyTGEzEcLqTd2Kg','')"
+      }
+    ]
+  },
+  {
+    "cnr_number": "KABC010343082022",
+    "case_type": "EX - Execution Petition Under Order",
+    "case_number": "EX/10/2023",
+    "filing_number": "2798/2022",
+    "filing_date": "17-12-2022",
+    "registration_number": "10/2023",
+    "registration_date": "02-01-2023",
+    "efiling_number": "",
+    "efiling_date": "-",
+    "first_hearing_date": "02nd January 2023",
+    "decision_date": "20th November 2025",
+    "case_status": "Case disposedSub Stage",
+    "nature_of_disposal": "Uncontested--DISPOSED OTHERWISE",
+    "court_number_judge": "11-CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+    "court_name": "PRL. CITY CIVIL AND SESSIONS JUDGE",
+    "state_code": "3",
+    "dist_code": "20",
+    "court_complex_code": "1030135",
+    "est_code": "3",
+    "parties": [
+      {
+        "type": "petitioner",
+        "name": "THE FEDERAL BANK LTD",
+        "advocate": "VITTAL S RAI"
+      },
+      {
+        "type": "respondent",
+        "name": "BALAJI M D",
+        "advocate": ""
+      }
+    ],
+    "petitioners": [
+      {
+        "type": "petitioner",
+        "name": "THE FEDERAL BANK LTD",
+        "advocate": "VITTAL S RAI"
+      }
+    ],
+    "respondents": [
+      {
+        "type": "respondent",
+        "name": "BALAJI M D",
+        "advocate": ""
+      }
+    ],
+    "acts": [
+      {
+        "act": "U/O 21 RULE 11 OF CPC",
+        "section": ","
+      }
+    ],
+    "processes": [
+      {
+        "process_id": "PKABC010343082022_2_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "19-01-2023"
+      },
+      {
+        "process_id": "PKABC010343082022_2_2",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "19-01-2023"
+      },
+      {
+        "process_id": "PKABC010343082022_3_2",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "28-06-2023"
+      },
+      {
+        "process_id": "PKABC010343082022_3_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "28-06-2023"
+      },
+      {
+        "process_id": "PKABC010343082022_4_2",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "05-08-2023"
+      },
+      {
+        "process_id": "PKABC010343082022_4_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "05-08-2023"
+      },
+      {
+        "process_id": "PKABC010343082022_5_2",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "06-01-2024"
+      },
+      {
+        "process_id": "PKABC010343082022_5_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "06-01-2024"
+      }
+    ],
+    "main_matters": [
+      {
+        "main_case_number": "O.S./0001620/2008",
+        "main_cnr_number": "KABC010100232008",
+        "main_filing_number": "6849"
+      }
+    ],
+    "hearings": [
+      {
+        "hearing_index": 1,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "20-11-2025",
+        "hearing_date": "",
+        "purpose": "Disposed"
+      },
+      {
+        "hearing_index": 2,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "12-08-2025",
+        "hearing_date": "20-11-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 3,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "21-01-2025",
+        "hearing_date": "12-08-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 4,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "18-09-2024",
+        "hearing_date": "21-01-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 5,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "29-06-2024",
+        "hearing_date": "18-09-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 6,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "20-04-2024",
+        "hearing_date": "29-06-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 7,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "01-03-2024",
+        "hearing_date": "20-04-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 8,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "06-01-2024",
+        "hearing_date": "01-03-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 9,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "04-11-2023",
+        "hearing_date": "06-01-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 10,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "16-09-2023",
+        "hearing_date": "04-11-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 11,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "05-08-2023",
+        "hearing_date": "16-09-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 12,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "28-06-2023",
+        "hearing_date": "05-08-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 13,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "21-04-2023",
+        "hearing_date": "28-06-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 14,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "28-02-2023",
+        "hearing_date": "21-04-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 15,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "19-01-2023",
+        "hearing_date": "28-02-2023",
+        "purpose": "OBJECTION"
+      },
+      {
+        "hearing_index": 16,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "02-01-2023",
+        "hearing_date": "19-01-2023",
+        "purpose": "OBJECTION"
+      }
+    ],
+    "orders": [
+      {
+        "order_number": "1",
+        "order_date": "20-11-2025",
+        "order_details": "Orders",
+        "pdf_params": "displayPdf('cl+sGJoSJ58oyVespa8VHg==','ajYFPrqNPqwx54vb+3smRw==','5rHUl/fJ8k9+dheUWTi6OQ==','8NJb071ifDPc/70jxdgMFu9YRIcVpEN/qOA52wJYWZAPKsVjIFq1D6lOvNJBPMrv','')"
+      }
+    ]
+  },
+  {
+    "cnr_number": "KABC010343092022",
+    "case_type": "EX - Execution Petition Under Order",
+    "case_number": "EX/11/2023",
+    "filing_number": "2799/2022",
+    "filing_date": "17-12-2022",
+    "registration_number": "11/2023",
+    "registration_date": "02-01-2023",
+    "efiling_number": "",
+    "efiling_date": "-",
+    "first_hearing_date": "02nd January 2023",
+    "decision_date": "04th February 2025",
+    "case_status": "Case disposedSub Stage",
+    "nature_of_disposal": "Uncontested--DISPOSED OTHERWISE",
+    "court_number_judge": "13-CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+    "court_name": "PRL. CITY CIVIL AND SESSIONS JUDGE",
+    "state_code": "3",
+    "dist_code": "20",
+    "court_complex_code": "1030135",
+    "est_code": "3",
+    "parties": [
+      {
+        "type": "petitioner",
+        "name": "THE FEDERAL BANK LTD.",
+        "advocate": "VITTAL S RAI"
+      },
+      {
+        "type": "respondent",
+        "name": "SHIVANNA C",
+        "advocate": ""
+      }
+    ],
+    "petitioners": [
+      {
+        "type": "petitioner",
+        "name": "THE FEDERAL BANK LTD.",
+        "advocate": "VITTAL S RAI"
+      }
+    ],
+    "respondents": [
+      {
+        "type": "respondent",
+        "name": "SHIVANNA C",
+        "advocate": ""
+      }
+    ],
+    "acts": [
+      {
+        "act": "U/O 21 RULE 11 OF CPC",
+        "section": ","
+      }
+    ],
+    "processes": [
+      {
+        "process_id": "PKABC010343092022_2_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "19-04-2023"
+      },
+      {
+        "process_id": "PKABC010343092022_2_2",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "19-04-2023"
+      }
+    ],
+    "main_matters": [
+      {
+        "main_case_number": "O.S./0005305/2009",
+        "main_cnr_number": "KABC010151942009",
+        "main_filing_number": "6849"
+      }
+    ],
+    "hearings": [
+      {
+        "hearing_index": 1,
+        "judge": "CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "04-02-2025",
+        "hearing_date": "",
+        "purpose": "Disposed"
+      },
+      {
+        "hearing_index": 2,
+        "judge": "CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "15-11-2024",
+        "hearing_date": "04-02-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 3,
+        "judge": "CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "03-08-2024",
+        "hearing_date": "15-11-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 4,
+        "judge": "CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "20-04-2024",
+        "hearing_date": "03-08-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 5,
+        "judge": "CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "23-01-2024",
+        "hearing_date": "20-04-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 6,
+        "judge": "CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "12-10-2023",
+        "hearing_date": "23-01-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 7,
+        "judge": "CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "28-07-2023",
+        "hearing_date": "12-10-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 8,
+        "judge": "CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "19-04-2023",
+        "hearing_date": "28-07-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 9,
+        "judge": "CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "17-02-2023",
+        "hearing_date": "19-04-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 10,
+        "judge": "CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "02-01-2023",
+        "hearing_date": "17-02-2023",
+        "purpose": "NOTICE"
+      }
+    ],
+    "orders": [
+      {
+        "order_number": "1",
+        "order_date": "04-02-2025",
+        "order_details": "Orders",
+        "pdf_params": "displayPdf('cl+sGJoSJ58oyVespa8VHg==','wILh3tpXzSfb8o+xc3V21g==','5rHUl/fJ8k9+dheUWTi6OQ==','8NJb071ifDPc/70jxdgMFi7NPnCTooyLzzOUvRgeO3BG1En0P3p9DKQHGDqNFyuA','')"
+      }
+    ]
+  },
+  {
+    "cnr_number": "KABC010343102022",
+    "case_type": "EX - Execution Petition Under Order",
+    "case_number": "EX/12/2023",
+    "filing_number": "2800/2022",
+    "filing_date": "17-12-2022",
+    "registration_number": "12/2023",
+    "registration_date": "02-01-2023",
+    "efiling_number": "",
+    "efiling_date": "-",
+    "first_hearing_date": "02nd January 2023",
+    "decision_date": "26th March 2026",
+    "case_status": "Case disposedSub Stage",
+    "nature_of_disposal": "Uncontested--DISPOSED OTHERWISE",
+    "court_number_judge": "11-CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+    "court_name": "PRL. CITY CIVIL AND SESSIONS JUDGE",
+    "state_code": "3",
+    "dist_code": "20",
+    "court_complex_code": "1030135",
+    "est_code": "3",
+    "parties": [
+      {
+        "type": "petitioner",
+        "name": "THE FEDERAL BANK LTD",
+        "advocate": "VITTAL S RAI"
+      },
+      {
+        "type": "respondent",
+        "name": "RAJESHWAR RAO",
+        "advocate": ""
+      }
+    ],
+    "petitioners": [
+      {
+        "type": "petitioner",
+        "name": "THE FEDERAL BANK LTD",
+        "advocate": "VITTAL S RAI"
+      }
+    ],
+    "respondents": [
+      {
+        "type": "respondent",
+        "name": "RAJESHWAR RAO",
+        "advocate": ""
+      }
+    ],
+    "acts": [
+      {
+        "act": "U/O 21 RULE 11 OF CPC",
+        "section": ","
+      }
+    ],
+    "processes": [
+      {
+        "process_id": "PKABC010343102022_1_2",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "19-01-2023"
+      },
+      {
+        "process_id": "PKABC010343102022_1_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "19-01-2023"
+      },
+      {
+        "process_id": "PKABC010343102022_2_2",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "28-06-2023"
+      },
+      {
+        "process_id": "PKABC010343102022_2_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "28-06-2023"
+      },
+      {
+        "process_id": "PKABC010343102022_3_2",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "05-08-2023"
+      },
+      {
+        "process_id": "PKABC010343102022_3_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "05-08-2023"
+      }
+    ],
+    "main_matters": [
+      {
+        "main_case_number": "O.S./0001621/2008",
+        "main_cnr_number": "KABC010100242008",
+        "main_filing_number": "6849"
+      }
+    ],
+    "hearings": [
+      {
+        "hearing_index": 1,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "26-03-2026",
+        "hearing_date": "",
+        "purpose": "Disposed"
+      },
+      {
+        "hearing_index": 2,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "06-01-2026",
+        "hearing_date": "26-03-2026",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 3,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "16-10-2025",
+        "hearing_date": "06-01-2026",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 4,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "14-07-2025",
+        "hearing_date": "16-10-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 5,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "09-04-2025",
+        "hearing_date": "14-07-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 6,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "21-01-2025",
+        "hearing_date": "09-04-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 7,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "18-09-2024",
+        "hearing_date": "21-01-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 8,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "29-06-2024",
+        "hearing_date": "18-09-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 9,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "20-04-2024",
+        "hearing_date": "29-06-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 10,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "01-03-2024",
+        "hearing_date": "20-04-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 11,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "06-01-2024",
+        "hearing_date": "01-03-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 12,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "04-11-2023",
+        "hearing_date": "06-01-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 13,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "16-09-2023",
+        "hearing_date": "04-11-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 14,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "05-08-2023",
+        "hearing_date": "16-09-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 15,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "28-06-2023",
+        "hearing_date": "05-08-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 16,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "21-04-2023",
+        "hearing_date": "28-06-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 17,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "28-02-2023",
+        "hearing_date": "21-04-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 18,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "19-01-2023",
+        "hearing_date": "28-02-2023",
+        "purpose": "OBJECTION"
+      },
+      {
+        "hearing_index": 19,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "02-01-2023",
+        "hearing_date": "19-01-2023",
+        "purpose": "OBJECTION"
+      }
+    ],
+    "orders": [
+      {
+        "order_number": "1",
+        "order_date": "26-03-2026",
+        "order_details": "Orders",
+        "pdf_params": "displayPdf('cl+sGJoSJ58oyVespa8VHg==','h7tTDKDi92OjYTbZJBrrIQ==','5rHUl/fJ8k9+dheUWTi6OQ==','8NJb071ifDPc/70jxdgMFspvORiJECpRV6oJ53NksmrSERwudT3exY3UHYD+ZKlf','')"
+      }
+    ]
+  },
+  {
+    "cnr_number": "KABC010343112022",
+    "case_type": "EX - Execution Petition Under Order",
+    "case_number": "EX/13/2023",
+    "filing_number": "2801/2022",
+    "filing_date": "17-12-2022",
+    "registration_number": "13/2023",
+    "registration_date": "02-01-2023",
+    "efiling_number": "",
+    "efiling_date": "-",
+    "first_hearing_date": "02nd January 2023",
+    "decision_date": "21st March 2025",
+    "case_status": "Case disposedSub Stage",
+    "nature_of_disposal": "Uncontested--DISPOSED OTHERWISE",
+    "court_number_judge": "13-CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+    "court_name": "PRL. CITY CIVIL AND SESSIONS JUDGE",
+    "state_code": "3",
+    "dist_code": "20",
+    "court_complex_code": "1030135",
+    "est_code": "3",
+    "parties": [
+      {
+        "type": "petitioner",
+        "name": "THE FEDERAL BANK LTD.",
+        "advocate": "VITTAL S RAI"
+      },
+      {
+        "type": "respondent",
+        "name": "HEMANTH KUMAR H J",
+        "advocate": ""
+      }
+    ],
+    "petitioners": [
+      {
+        "type": "petitioner",
+        "name": "THE FEDERAL BANK LTD.",
+        "advocate": "VITTAL S RAI"
+      }
+    ],
+    "respondents": [
+      {
+        "type": "respondent",
+        "name": "HEMANTH KUMAR H J",
+        "advocate": ""
+      }
+    ],
+    "acts": [
+      {
+        "act": "U/O 21 RULE 11 OF CPC",
+        "section": ","
+      }
+    ],
+    "processes": [
+      {
+        "process_id": "PKABC010343112022_1_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "17-02-2023"
+      },
+      {
+        "process_id": "PKABC010343112022_1_2",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "17-02-2023"
+      },
+      {
+        "process_id": "PKABC010343112022_3_2",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "21-07-2023"
+      },
+      {
+        "process_id": "PKABC010343112022_3_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "21-07-2023"
+      },
+      {
+        "process_id": "PKABC010343112022_2_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "21-07-2023"
+      },
+      {
+        "process_id": "PKABC010343112022_2_2",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "21-07-2023"
+      }
+    ],
+    "main_matters": [
+      {
+        "main_case_number": "O.S./0004872/2009",
+        "main_cnr_number": "KABC010147672009",
+        "main_filing_number": "6849"
+      }
+    ],
+    "hearings": [
+      {
+        "hearing_index": 1,
+        "judge": "CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "21-03-2025",
+        "hearing_date": "",
+        "purpose": "Disposed"
+      },
+      {
+        "hearing_index": 2,
+        "judge": "CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "07-01-2025",
+        "hearing_date": "21-03-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 3,
+        "judge": "CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "11-11-2024",
+        "hearing_date": "07-01-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 4,
+        "judge": "CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "08-08-2024",
+        "hearing_date": "11-11-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 5,
+        "judge": "CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "07-06-2024",
+        "hearing_date": "08-08-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 6,
+        "judge": "CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "22-02-2024",
+        "hearing_date": "07-06-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 7,
+        "judge": "CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "22-01-2024",
+        "hearing_date": "22-02-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 8,
+        "judge": "CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "10-10-2023",
+        "hearing_date": "22-01-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 9,
+        "judge": "CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "21-07-2023",
+        "hearing_date": "10-10-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 10,
+        "judge": "CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "19-04-2023",
+        "hearing_date": "21-07-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 11,
+        "judge": "CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "17-02-2023",
+        "hearing_date": "19-04-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 12,
+        "judge": "CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "02-01-2023",
+        "hearing_date": "17-02-2023",
+        "purpose": "NOTICE"
+      }
+    ],
+    "orders": [
+      {
+        "order_number": "1",
+        "order_date": "21-03-2025",
+        "order_details": "Orders",
+        "pdf_params": "displayPdf('cl+sGJoSJ58oyVespa8VHg==','EFWEHuCeAE3IpwAOqgTqgw==','5rHUl/fJ8k9+dheUWTi6OQ==','8NJb071ifDPc/70jxdgMFtpX5TwbWaOZRHv2bZjc+8yE3E91wu9gbm1FqrgdaCsG','')"
+      }
+    ]
+  },
+  {
+    "cnr_number": "KABC010343122022",
+    "case_type": "EX - Execution Petition Under Order",
+    "case_number": "EX/14/2023",
+    "filing_number": "2802/2022",
+    "filing_date": "17-12-2022",
+    "registration_number": "14/2023",
+    "registration_date": "02-01-2023",
+    "efiling_number": "",
+    "efiling_date": "-",
+    "first_hearing_date": "02nd January 2023",
+    "decision_date": "26th March 2026",
+    "case_status": "Case disposedSub Stage",
+    "nature_of_disposal": "Uncontested--DISPOSED OTHERWISE",
+    "court_number_judge": "11-CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+    "court_name": "PRL. CITY CIVIL AND SESSIONS JUDGE",
+    "state_code": "3",
+    "dist_code": "20",
+    "court_complex_code": "1030135",
+    "est_code": "3",
+    "parties": [
+      {
+        "type": "petitioner",
+        "name": "THE FEDERAL BANK LTD",
+        "advocate": "VITTAL S RAI"
+      },
+      {
+        "type": "respondent",
+        "name": "RAJASHEKAR B R",
+        "advocate": ""
+      }
+    ],
+    "petitioners": [
+      {
+        "type": "petitioner",
+        "name": "THE FEDERAL BANK LTD",
+        "advocate": "VITTAL S RAI"
+      }
+    ],
+    "respondents": [
+      {
+        "type": "respondent",
+        "name": "RAJASHEKAR B R",
+        "advocate": ""
+      }
+    ],
+    "acts": [
+      {
+        "act": "U/O 21 RULE 11 OF CPC",
+        "section": ","
+      }
+    ],
+    "processes": [
+      {
+        "process_id": "PKABC010343122022_1_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "19-01-2023"
+      },
+      {
+        "process_id": "PKABC010343122022_1_2",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "19-01-2023"
+      },
+      {
+        "process_id": "PKABC010343122022_2_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "28-06-2023"
+      },
+      {
+        "process_id": "PKABC010343122022_2_2",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "28-06-2023"
+      },
+      {
+        "process_id": "PKABC010343122022_3_2",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "05-08-2023"
+      },
+      {
+        "process_id": "PKABC010343122022_3_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "05-08-2023"
+      }
+    ],
+    "main_matters": [
+      {
+        "main_case_number": "O.S./0002228/2008",
+        "main_cnr_number": "KABC010106192008",
+        "main_filing_number": "6849"
+      }
+    ],
+    "hearings": [
+      {
+        "hearing_index": 1,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "26-03-2026",
+        "hearing_date": "",
+        "purpose": "Disposed"
+      },
+      {
+        "hearing_index": 2,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "06-01-2026",
+        "hearing_date": "26-03-2026",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 3,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "16-10-2025",
+        "hearing_date": "06-01-2026",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 4,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "14-07-2025",
+        "hearing_date": "16-10-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 5,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "09-04-2025",
+        "hearing_date": "14-07-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 6,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "21-01-2025",
+        "hearing_date": "09-04-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 7,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "18-09-2024",
+        "hearing_date": "21-01-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 8,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "29-06-2024",
+        "hearing_date": "18-09-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 9,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "20-04-2024",
+        "hearing_date": "29-06-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 10,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "01-03-2024",
+        "hearing_date": "20-04-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 11,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "06-01-2024",
+        "hearing_date": "01-03-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 12,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "04-11-2023",
+        "hearing_date": "06-01-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 13,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "16-09-2023",
+        "hearing_date": "04-11-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 14,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "05-08-2023",
+        "hearing_date": "16-09-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 15,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "28-06-2023",
+        "hearing_date": "05-08-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 16,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "21-04-2023",
+        "hearing_date": "28-06-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 17,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "28-02-2023",
+        "hearing_date": "21-04-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 18,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "19-01-2023",
+        "hearing_date": "28-02-2023",
+        "purpose": "OBJECTION"
+      },
+      {
+        "hearing_index": 19,
+        "judge": "CCH26 X ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "02-01-2023",
+        "hearing_date": "19-01-2023",
+        "purpose": "OBJECTION"
+      }
+    ],
+    "orders": [
+      {
+        "order_number": "1",
+        "order_date": "26-03-2026",
+        "order_details": "Orders",
+        "pdf_params": "displayPdf('cl+sGJoSJ58oyVespa8VHg==','yAeHttZmIQHDqAaOZPxCdQ==','5rHUl/fJ8k9+dheUWTi6OQ==','8NJb071ifDPc/70jxdgMFh0S8nzIErxjJvZp50yp2S2mp2eYY+sA5GB909AjSVpm','')"
+      }
+    ]
+  },
+  {
+    "cnr_number": "KABC010342612022",
+    "case_type": "EX - Execution Petition Under Order",
+    "case_number": "EX/15/2023",
+    "filing_number": "2789/2022",
+    "filing_date": "17-12-2022",
+    "registration_number": "15/2023",
+    "registration_date": "02-01-2023",
+    "efiling_number": "",
+    "efiling_date": "-",
+    "first_hearing_date": "07th January 2023",
+    "decision_date": "03rd June 2023",
+    "case_status": "Case disposed",
+    "nature_of_disposal": "Uncontested--DISPOSED OTHERWISE",
+    "court_number_judge": "843-CCH41 XL ADDL. CITY CIVIL AND SESSONS JUDGE",
+    "court_name": "PRL. CITY CIVIL AND SESSIONS JUDGE",
+    "state_code": "3",
+    "dist_code": "20",
+    "court_complex_code": "1030135",
+    "est_code": "3",
+    "parties": [
+      {
+        "type": "petitioner",
+        "name": "BAJAJ FINANCE LTD",
+        "advocate": "Dilip M R"
+      },
+      {
+        "type": "respondent",
+        "name": "SWATI ENGINEERS",
+        "advocate": ""
+      }
+    ],
+    "petitioners": [
+      {
+        "type": "petitioner",
+        "name": "BAJAJ FINANCE LTD",
+        "advocate": "Dilip M R"
+      }
+    ],
+    "respondents": [
+      {
+        "type": "respondent",
+        "name": "SWATI ENGINEERS",
+        "advocate": ""
+      }
+    ],
+    "acts": [
+      {
+        "act": "U/O 21 RULE 11 OF CPC",
+        "section": ","
+      }
+    ],
+    "processes": [
+      {
+        "process_id": "PKABC010342612022_1_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "17-01-2023"
+      },
+      {
+        "process_id": "PKABC010342612022_1_3",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "17-01-2023"
+      },
+      {
+        "process_id": "PKABC010342612022_1_2",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "17-01-2023"
+      }
+    ],
+    "main_matters": [],
+    "hearings": [
+      {
+        "hearing_index": 1,
+        "judge": "CCH41 XL ADDL. CITY CIVIL AND SESSONS JUDGE",
+        "business_date": "03-06-2023",
+        "hearing_date": "",
+        "purpose": "Disposed"
+      },
+      {
+        "hearing_index": 2,
+        "judge": "CCH41 XL ADDL. CITY CIVIL AND SESSONS JUDGE",
+        "business_date": "17-01-2023",
+        "hearing_date": "03-06-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 3,
+        "judge": "CCH41 XL ADDL. CITY CIVIL AND SESSONS JUDGE",
+        "business_date": "07-01-2023",
+        "hearing_date": "17-01-2023",
+        "purpose": "NOTICE"
+      }
+    ],
+    "orders": [
+      {
+        "order_number": "1",
+        "order_date": "03-06-2023",
+        "order_details": "Orders",
+        "pdf_params": "displayPdf('cl+sGJoSJ58oyVespa8VHg==','ATXeoxg33gD382VcMxHrxA==','5rHUl/fJ8k9+dheUWTi6OQ==','8NJb071ifDPc/70jxdgMFprPhLcny1U4tcyR+hc8mOZHGdiCovKmUGLM8nQYxlf3','')"
+      }
+    ]
+  },
+  {
+    "cnr_number": "KABC010342962022",
+    "case_type": "EX - Execution Petition Under Order",
+    "case_number": "EX/16/2023",
+    "filing_number": "2797/2022",
+    "filing_date": "17-12-2022",
+    "registration_number": "16/2023",
+    "registration_date": "02-01-2023",
+    "efiling_number": "",
+    "efiling_date": "-",
+    "first_hearing_date": "02nd January 2023",
+    "decision_date": "10th October 2025",
+    "case_status": "Case disposed",
+    "nature_of_disposal": "Uncontested--DISPOSED OTHERWISE",
+    "court_number_judge": "18-CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+    "court_name": "PRL. CITY CIVIL AND SESSIONS JUDGE",
+    "state_code": "3",
+    "dist_code": "20",
+    "court_complex_code": "1030135",
+    "est_code": "3",
+    "parties": [
+      {
+        "type": "petitioner",
+        "name": "H L L LIFECARE LIMITED",
+        "advocate": "M R RAVI RAJ MALALI"
+      },
+      {
+        "type": "respondent",
+        "name": "M/S SUPER THREADS INDIA",
+        "advocate": ""
+      }
+    ],
+    "petitioners": [
+      {
+        "type": "petitioner",
+        "name": "H L L LIFECARE LIMITED",
+        "advocate": "M R RAVI RAJ MALALI"
+      }
+    ],
+    "respondents": [
+      {
+        "type": "respondent",
+        "name": "M/S SUPER THREADS INDIA",
+        "advocate": ""
+      }
+    ],
+    "acts": [
+      {
+        "act": "U/O 21 RULE 11 OF CPC",
+        "section": ","
+      }
+    ],
+    "processes": [
+      {
+        "process_id": "PKABC010342962022_1_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "02-01-2023"
+      },
+      {
+        "process_id": "PKABC010342962022_2_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "17-04-2023"
+      },
+      {
+        "process_id": "PKABC010342962022_3_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "20-04-2024"
+      }
+    ],
+    "main_matters": [],
+    "hearings": [
+      {
+        "hearing_index": 1,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "10-10-2025",
+        "hearing_date": "",
+        "purpose": "Disposed"
+      },
+      {
+        "hearing_index": 2,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "20-08-2025",
+        "hearing_date": "10-10-2025",
+        "purpose": "HEARING"
+      },
+      {
+        "hearing_index": 3,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "03-06-2025",
+        "hearing_date": "20-08-2025",
+        "purpose": "HEARING"
+      },
+      {
+        "hearing_index": 4,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "05-04-2025",
+        "hearing_date": "03-06-2025",
+        "purpose": "SUMMONS"
+      },
+      {
+        "hearing_index": 5,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "06-02-2025",
+        "hearing_date": "05-04-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 6,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "05-12-2024",
+        "hearing_date": "06-02-2025",
+        "purpose": "HEARING"
+      },
+      {
+        "hearing_index": 7,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "25-10-2024",
+        "hearing_date": "05-12-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 8,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "30-09-2024",
+        "hearing_date": "25-10-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 9,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "11-09-2024",
+        "hearing_date": "30-09-2024",
+        "purpose": "ORDERS"
+      },
+      {
+        "hearing_index": 10,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "31-07-2024",
+        "hearing_date": "11-09-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 11,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "22-07-2024",
+        "hearing_date": "31-07-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 12,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "29-06-2024",
+        "hearing_date": "22-07-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 13,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "20-04-2024",
+        "hearing_date": "29-06-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 14,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "17-02-2024",
+        "hearing_date": "20-04-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 15,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "02-12-2023",
+        "hearing_date": "17-02-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 16,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "23-09-2023",
+        "hearing_date": "02-12-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 17,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "05-08-2023",
+        "hearing_date": "23-09-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 18,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "26-06-2023",
+        "hearing_date": "05-08-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 19,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "17-04-2023",
+        "hearing_date": "26-06-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 20,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "06-03-2023",
+        "hearing_date": "17-04-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 21,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "02-01-2023",
+        "hearing_date": "06-03-2023",
+        "purpose": "NOTICE"
+      }
+    ],
+    "orders": [
+      {
+        "order_number": "1",
+        "order_date": "30-09-2024",
+        "order_details": "Orders",
+        "pdf_params": "displayPdf('cl+sGJoSJ58oyVespa8VHg==','QVkg4B2rfbg5bR1kOq/bgg==','5rHUl/fJ8k9+dheUWTi6OQ==','8NJb071ifDPc/70jxdgMFtbulEUw654AT3DEVRKHzb5OUfvtwPBisvqPPgsjp606','')"
+      }
+    ]
+  },
+  {
+    "cnr_number": "KABC010342472022",
+    "case_type": "EX - Execution Petition Under Order",
+    "case_number": "EX/17/2023",
+    "filing_number": "2787/2022",
+    "filing_date": "17-12-2022",
+    "registration_number": "17/2023",
+    "registration_date": "03-01-2023",
+    "efiling_number": "",
+    "efiling_date": "-",
+    "first_hearing_date": "03rd January 2023",
+    "decision_date": "15th November 2025",
+    "case_status": "Case disposed",
+    "nature_of_disposal": "Uncontested--DISPOSED OTHERWISE",
+    "court_number_judge": "18-CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+    "court_name": "PRL. CITY CIVIL AND SESSIONS JUDGE",
+    "state_code": "3",
+    "dist_code": "20",
+    "court_complex_code": "1030135",
+    "est_code": "3",
+    "parties": [
+      {
+        "type": "petitioner",
+        "name": "GENERAL MANAGER, SERE SUBRAMANYESWARA CO OPERATIVE BANK LTD",
+        "advocate": "VENKATARAMANA K S"
+      },
+      {
+        "type": "respondent",
+        "name": "SHIVARAJU N",
+        "advocate": ""
+      }
+    ],
+    "petitioners": [
+      {
+        "type": "petitioner",
+        "name": "GENERAL MANAGER, SERE SUBRAMANYESWARA CO OPERATIVE BANK LTD",
+        "advocate": "VENKATARAMANA K S"
+      }
+    ],
+    "respondents": [
+      {
+        "type": "respondent",
+        "name": "SHIVARAJU N",
+        "advocate": ""
+      }
+    ],
+    "acts": [
+      {
+        "act": "U/O 21 RULE 11 OF CPC",
+        "section": ","
+      }
+    ],
+    "processes": [
+      {
+        "process_id": "PKABC010342472022_1_2",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "04-02-2023"
+      },
+      {
+        "process_id": "PKABC010342472022_1_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "04-02-2023"
+      },
+      {
+        "process_id": "PKABC010342472022_1_3",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "04-02-2023"
+      }
+    ],
+    "main_matters": [],
+    "hearings": [
+      {
+        "hearing_index": 1,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "15-11-2025",
+        "hearing_date": "",
+        "purpose": "Disposed"
+      },
+      {
+        "hearing_index": 2,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "18-08-2025",
+        "hearing_date": "15-11-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 3,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "12-07-2025",
+        "hearing_date": "18-08-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 4,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "15-04-2025",
+        "hearing_date": "12-07-2025",
+        "purpose": "A.D.R."
+      },
+      {
+        "hearing_index": 5,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "14-04-2025",
+        "hearing_date": "15-04-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 6,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "20-12-2024",
+        "hearing_date": "14-04-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 7,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "04-09-2024",
+        "hearing_date": "20-12-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 8,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "13-07-2024",
+        "hearing_date": "04-09-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 9,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "11-07-2024",
+        "hearing_date": "13-07-2024",
+        "purpose": "A.D.R."
+      },
+      {
+        "hearing_index": 10,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "22-06-2024",
+        "hearing_date": "11-07-2024",
+        "purpose": "A.D.R."
+      },
+      {
+        "hearing_index": 11,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "28-05-2024",
+        "hearing_date": "22-06-2024",
+        "purpose": "APPEARANCE OF PARTY"
+      },
+      {
+        "hearing_index": 12,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "16-03-2024",
+        "hearing_date": "28-05-2024",
+        "purpose": "HEARING"
+      },
+      {
+        "hearing_index": 13,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "06-01-2024",
+        "hearing_date": "16-03-2024",
+        "purpose": "HEARING"
+      },
+      {
+        "hearing_index": 14,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "25-11-2023",
+        "hearing_date": "06-01-2024",
+        "purpose": "HEARING"
+      },
+      {
+        "hearing_index": 15,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "30-09-2023",
+        "hearing_date": "25-11-2023",
+        "purpose": "HEARING"
+      },
+      {
+        "hearing_index": 16,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "16-09-2023",
+        "hearing_date": "30-09-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 17,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "15-07-2023",
+        "hearing_date": "16-09-2023",
+        "purpose": "OBJECTION"
+      },
+      {
+        "hearing_index": 18,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "30-05-2023",
+        "hearing_date": "15-07-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 19,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "01-04-2023",
+        "hearing_date": "30-05-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 20,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "04-02-2023",
+        "hearing_date": "01-04-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 21,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "03-01-2023",
+        "hearing_date": "04-02-2023",
+        "purpose": "NOTICE"
+      }
+    ],
+    "orders": [
+      {
+        "order_number": "1",
+        "order_date": "15-11-2025",
+        "order_details": "Orders",
+        "pdf_params": "displayPdf('cl+sGJoSJ58oyVespa8VHg==','nDGpUIkQLGaqxMsCpl/PwQ==','5rHUl/fJ8k9+dheUWTi6OQ==','8NJb071ifDPc/70jxdgMFtbYr9XYSJqA2qQ9Mg2Q/J52B1xJCBzq70yF+WbPok2+','')"
+      }
+    ]
+  },
+  {
+    "cnr_number": "KABC010342492022",
+    "case_type": "EX - Execution Petition Under Order",
+    "case_number": "EX/18/2023",
+    "filing_number": "2788/2022",
+    "filing_date": "17-12-2022",
+    "registration_number": "18/2023",
+    "registration_date": "03-01-2023",
+    "efiling_number": "",
+    "efiling_date": "-",
+    "first_hearing_date": "03rd January 2023",
+    "decision_date": "15th November 2025",
+    "case_status": "Case disposed",
+    "nature_of_disposal": "Uncontested--DISPOSED OTHERWISE",
+    "court_number_judge": "18-CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+    "court_name": "PRL. CITY CIVIL AND SESSIONS JUDGE",
+    "state_code": "3",
+    "dist_code": "20",
+    "court_complex_code": "1030135",
+    "est_code": "3",
+    "parties": [
+      {
+        "type": "petitioner",
+        "name": "GENERAL MANAGER, SERE SUBRAMANYESWARA CO OPERATIVE BANK LTD",
+        "advocate": "VENKATARAMANA K S"
+      },
+      {
+        "type": "respondent",
+        "name": "M/S SRI SIDDALINGESHWARA ELECTRICALS PVT LTD",
+        "advocate": ""
+      }
+    ],
+    "petitioners": [
+      {
+        "type": "petitioner",
+        "name": "GENERAL MANAGER, SERE SUBRAMANYESWARA CO OPERATIVE BANK LTD",
+        "advocate": "VENKATARAMANA K S"
+      }
+    ],
+    "respondents": [
+      {
+        "type": "respondent",
+        "name": "M/S SRI SIDDALINGESHWARA ELECTRICALS PVT LTD",
+        "advocate": ""
+      }
+    ],
+    "acts": [
+      {
+        "act": "U/O 21 RULE 11 OF CPC",
+        "section": ","
+      }
+    ],
+    "processes": [
+      {
+        "process_id": "PKABC010342492022_1_4",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "04-02-2023"
+      },
+      {
+        "process_id": "PKABC010342492022_1_2",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "04-02-2023"
+      },
+      {
+        "process_id": "PKABC010342492022_1_3",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "04-02-2023"
+      },
+      {
+        "process_id": "PKABC010342492022_1_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "04-02-2023"
+      }
+    ],
+    "main_matters": [],
+    "hearings": [
+      {
+        "hearing_index": 1,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "15-11-2025",
+        "hearing_date": "",
+        "purpose": "Disposed"
+      },
+      {
+        "hearing_index": 2,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "18-08-2025",
+        "hearing_date": "15-11-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 3,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "12-07-2025",
+        "hearing_date": "18-08-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 4,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "15-04-2025",
+        "hearing_date": "12-07-2025",
+        "purpose": "A.D.R."
+      },
+      {
+        "hearing_index": 5,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "14-04-2025",
+        "hearing_date": "15-04-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 6,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "20-12-2024",
+        "hearing_date": "14-04-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 7,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "04-09-2024",
+        "hearing_date": "20-12-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 8,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "13-07-2024",
+        "hearing_date": "04-09-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 9,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "11-07-2024",
+        "hearing_date": "13-07-2024",
+        "purpose": "A.D.R."
+      },
+      {
+        "hearing_index": 10,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "22-06-2024",
+        "hearing_date": "11-07-2024",
+        "purpose": "A.D.R."
+      },
+      {
+        "hearing_index": 11,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "28-05-2024",
+        "hearing_date": "22-06-2024",
+        "purpose": "APPEARANCE OF PARTY"
+      },
+      {
+        "hearing_index": 12,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "16-03-2024",
+        "hearing_date": "28-05-2024",
+        "purpose": "HEARING"
+      },
+      {
+        "hearing_index": 13,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "06-01-2024",
+        "hearing_date": "16-03-2024",
+        "purpose": "HEARING"
+      },
+      {
+        "hearing_index": 14,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "25-11-2023",
+        "hearing_date": "06-01-2024",
+        "purpose": "HEARING"
+      },
+      {
+        "hearing_index": 15,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "30-09-2023",
+        "hearing_date": "25-11-2023",
+        "purpose": "HEARING"
+      },
+      {
+        "hearing_index": 16,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "16-09-2023",
+        "hearing_date": "30-09-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 17,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "15-07-2023",
+        "hearing_date": "16-09-2023",
+        "purpose": "OBJECTION"
+      },
+      {
+        "hearing_index": 18,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "30-05-2023",
+        "hearing_date": "15-07-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 19,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "01-04-2023",
+        "hearing_date": "30-05-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 20,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "04-02-2023",
+        "hearing_date": "01-04-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 21,
+        "judge": "CCH16 XVII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "03-01-2023",
+        "hearing_date": "04-02-2023",
+        "purpose": "NOTICE"
+      }
+    ],
+    "orders": [
+      {
+        "order_number": "1",
+        "order_date": "15-11-2025",
+        "order_details": "Orders",
+        "pdf_params": "displayPdf('cl+sGJoSJ58oyVespa8VHg==','GZAHwaNSkCfhKCB7binGYA==','5rHUl/fJ8k9+dheUWTi6OQ==','8NJb071ifDPc/70jxdgMFgJoRI6hNAK8dlHtZam6w3kwq3V+aMyIdFS8SJa8/Jw9','')"
+      }
+    ]
+  },
+  {
+    "cnr_number": "KABC010000382023",
+    "case_type": "EX - Execution Petition Under Order",
+    "case_number": "EX/19/2023",
+    "filing_number": "1/2023",
+    "filing_date": "02-01-2023",
+    "registration_number": "19/2023",
+    "registration_date": "03-01-2023",
+    "efiling_number": "",
+    "efiling_date": "-",
+    "first_hearing_date": "03rd January 2023",
+    "decision_date": "06th April 2023",
+    "case_status": "Case disposedSub Stage",
+    "nature_of_disposal": "Uncontested--DECREE SATISFIED",
+    "court_number_judge": "23-CCH7 XXII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+    "court_name": "PRL. CITY CIVIL AND SESSIONS JUDGE",
+    "state_code": "3",
+    "dist_code": "20",
+    "court_complex_code": "1030135",
+    "est_code": "3",
+    "parties": [
+      {
+        "type": "petitioner",
+        "name": "KAUSHIK R T",
+        "advocate": "G L VISHWANATH"
+      },
+      {
+        "type": "respondent",
+        "name": "LOKESH A S",
+        "advocate": ""
+      }
+    ],
+    "petitioners": [
+      {
+        "type": "petitioner",
+        "name": "KAUSHIK R T",
+        "advocate": "G L VISHWANATH"
+      }
+    ],
+    "respondents": [
+      {
+        "type": "respondent",
+        "name": "LOKESH A S",
+        "advocate": ""
+      }
+    ],
+    "acts": [
+      {
+        "act": "U/O 21 RULE 11 OF CPC",
+        "section": ","
+      }
+    ],
+    "processes": [
+      {
+        "process_id": "PKABC010000382023_1_3",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "03-01-2023"
+      },
+      {
+        "process_id": "PKABC010000382023_1_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "03-01-2023"
+      },
+      {
+        "process_id": "PKABC010000382023_1_4",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "03-01-2023"
+      },
+      {
+        "process_id": "PKABC010000382023_1_2",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "03-01-2023"
+      },
+      {
+        "process_id": "PKABC010000382023_2_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "07-02-2023"
+      }
+    ],
+    "main_matters": [
+      {
+        "main_case_number": "O.S./0007245/2018",
+        "main_cnr_number": "KABC010274952018",
+        "main_filing_number": "6849"
+      }
+    ],
+    "hearings": [
+      {
+        "hearing_index": 1,
+        "judge": "CCH7 XXII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "06-04-2023",
+        "hearing_date": "",
+        "purpose": "Disposed"
+      },
+      {
+        "hearing_index": 2,
+        "judge": "CCH7 XXII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "21-03-2023",
+        "hearing_date": "06-04-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 3,
+        "judge": "CCH7 XXII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "17-03-2023",
+        "hearing_date": "21-03-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 4,
+        "judge": "CCH7 XXII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "06-03-2023",
+        "hearing_date": "17-03-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 5,
+        "judge": "CCH7 XXII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "07-02-2023",
+        "hearing_date": "06-03-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 6,
+        "judge": "CCH7 XXII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "31-01-2023",
+        "hearing_date": "07-02-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 7,
+        "judge": "CCH7 XXII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "03-01-2023",
+        "hearing_date": "31-01-2023",
+        "purpose": "NOTICE"
+      }
+    ],
+    "orders": [
+      {
+        "order_number": "1",
+        "order_date": "06-04-2023",
+        "order_details": "Orders",
+        "pdf_params": "displayPdf('cl+sGJoSJ58oyVespa8VHg==','t7+oC5Tmm2DFHGEQ3tCSkg==','5rHUl/fJ8k9+dheUWTi6OQ==','xABx7jVd4HuG8HsEmMBj10YNgvCp9gOakf1QqEx5vGylIfoX3TL3lyF3uCujx0+v','')"
+      }
+    ]
+  },
+  {
+    "cnr_number": "KABC010000532023",
+    "case_type": "EX - Execution Petition Under Order",
+    "case_number": "EX/20/2023",
+    "filing_number": "2/2023",
+    "filing_date": "02-01-2023",
+    "registration_number": "20/2023",
+    "registration_date": "03-01-2023",
+    "efiling_number": "",
+    "efiling_date": "-",
+    "first_hearing_date": "03rd January 2023",
+    "decision_date": "19th December 2024",
+    "case_status": "Case disposedSub Stage",
+    "nature_of_disposal": "Uncontested--DISPOSED OTHERWISE",
+    "court_number_judge": "1153-CCH70 LXIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+    "court_name": "PRL. CITY CIVIL AND SESSIONS JUDGE",
+    "state_code": "3",
+    "dist_code": "20",
+    "court_complex_code": "1030135",
+    "est_code": "3",
+    "parties": [
+      {
+        "type": "petitioner",
+        "name": "JYOTHI RAO",
+        "advocate": "VISHNU HEGDE"
+      },
+      {
+        "type": "respondent",
+        "name": "RAMESH M P",
+        "advocate": ""
+      }
+    ],
+    "petitioners": [
+      {
+        "type": "petitioner",
+        "name": "JYOTHI RAO",
+        "advocate": "VISHNU HEGDE"
+      }
+    ],
+    "respondents": [
+      {
+        "type": "respondent",
+        "name": "RAMESH M P",
+        "advocate": ""
+      }
+    ],
+    "acts": [
+      {
+        "act": "U/O 21 RULE 11 OF CPC",
+        "section": ","
+      }
+    ],
+    "processes": [],
+    "main_matters": [
+      {
+        "main_case_number": "O.S./0002841/2021",
+        "main_cnr_number": "KABC010100612021",
+        "main_filing_number": "6849"
+      }
+    ],
+    "hearings": [
+      {
+        "hearing_index": 1,
+        "judge": "CCH70 LXIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "19-12-2024",
+        "hearing_date": "",
+        "purpose": "Disposed"
+      },
+      {
+        "hearing_index": 2,
+        "judge": "CCH70 LXIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "22-11-2024",
+        "hearing_date": "19-12-2024",
+        "purpose": "SUMMONS"
+      },
+      {
+        "hearing_index": 3,
+        "judge": "CCH70 LXIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "19-10-2024",
+        "hearing_date": "22-11-2024",
+        "purpose": "SUMMONS"
+      },
+      {
+        "hearing_index": 4,
+        "judge": "CCH70 LXIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "18-10-2024",
+        "hearing_date": "19-10-2024",
+        "purpose": "SUMMONS"
+      },
+      {
+        "hearing_index": 5,
+        "judge": "CCH70 LXIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "30-08-2024",
+        "hearing_date": "18-10-2024",
+        "purpose": "SUMMONS"
+      },
+      {
+        "hearing_index": 6,
+        "judge": "CCH70 LXIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "26-07-2024",
+        "hearing_date": "30-08-2024",
+        "purpose": "SUMMONS"
+      },
+      {
+        "hearing_index": 7,
+        "judge": "CCH70 LXIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "13-06-2024",
+        "hearing_date": "26-07-2024",
+        "purpose": "SUMMONS"
+      },
+      {
+        "hearing_index": 8,
+        "judge": "CCH70 LXIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "27-04-2024",
+        "hearing_date": "13-06-2024",
+        "purpose": "SUMMONS"
+      },
+      {
+        "hearing_index": 9,
+        "judge": "CCH70 LXIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "26-04-2024",
+        "hearing_date": "27-04-2024",
+        "purpose": "SUMMONS"
+      },
+      {
+        "hearing_index": 10,
+        "judge": "CCH70 LXIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "06-03-2024",
+        "hearing_date": "26-04-2024",
+        "purpose": "SUMMONS"
+      },
+      {
+        "hearing_index": 11,
+        "judge": "CCH70 LXIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "20-12-2023",
+        "hearing_date": "06-03-2024",
+        "purpose": "HEARING"
+      },
+      {
+        "hearing_index": 12,
+        "judge": "CCH70 LXIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "03-11-2023",
+        "hearing_date": "03-11-2023",
+        "purpose": "HEARING"
+      },
+      {
+        "hearing_index": 13,
+        "judge": "CCH70 LXIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "03-11-2023",
+        "hearing_date": "03-11-2023",
+        "purpose": "Restored"
+      },
+      {
+        "hearing_index": 14,
+        "judge": "CCH70 LXIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "03-11-2023",
+        "hearing_date": "20-12-2023",
+        "purpose": "HEARING"
+      },
+      {
+        "hearing_index": 15,
+        "judge": "CCH70 LXIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "18-03-2023",
+        "hearing_date": "",
+        "purpose": "Disposed"
+      },
+      {
+        "hearing_index": 16,
+        "judge": "CCH70 LXIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "27-02-2023",
+        "hearing_date": "18-03-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 17,
+        "judge": "CCH70 LXIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "03-01-2023",
+        "hearing_date": "27-02-2023",
+        "purpose": "NOTICE"
+      }
+    ],
+    "orders": [
+      {
+        "order_number": "1",
+        "order_date": "18-03-2023",
+        "order_details": "Orders",
+        "pdf_params": "displayPdf('cl+sGJoSJ58oyVespa8VHg==','arwe4GuqWE+nSPq+wol9bg==','5rHUl/fJ8k9+dheUWTi6OQ==','xABx7jVd4HuG8HsEmMBj1ya44ZEAtTeU2VR6eQmo1I9MFgCchZiTMdQWxT+mmSYO','')"
+      }
+    ]
+  },
+  {
+    "cnr_number": "KABC010000622023",
+    "case_type": "EX - Execution Petition Under Order",
+    "case_number": "EX/21/2023",
+    "filing_number": "3/2023",
+    "filing_date": "02-01-2023",
+    "registration_number": "21/2023",
+    "registration_date": "03-01-2023",
+    "efiling_number": "",
+    "efiling_date": "-",
+    "first_hearing_date": "03rd January 2023",
+    "decision_date": "10th November 2025",
+    "case_status": "Case disposedSub Stage",
+    "nature_of_disposal": "Uncontested--DISMISSED",
+    "court_number_judge": "1139-CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+    "court_name": "PRL. CITY CIVIL AND SESSIONS JUDGE",
+    "state_code": "3",
+    "dist_code": "20",
+    "court_complex_code": "1030135",
+    "est_code": "3",
+    "parties": [
+      {
+        "type": "petitioner",
+        "name": "SRINIVASA T",
+        "advocate": "RAJANNA"
+      },
+      {
+        "type": "respondent",
+        "name": "SAMPANGI RAMAIAH G C",
+        "advocate": "NAGESH B L"
+      }
+    ],
+    "petitioners": [
+      {
+        "type": "petitioner",
+        "name": "SRINIVASA T",
+        "advocate": "RAJANNA"
+      }
+    ],
+    "respondents": [
+      {
+        "type": "respondent",
+        "name": "SAMPANGI RAMAIAH G C",
+        "advocate": "NAGESH B L"
+      }
+    ],
+    "acts": [
+      {
+        "act": "U/O 21 RULE 11 OF CPC",
+        "section": ","
+      }
+    ],
+    "processes": [
+      {
+        "process_id": "PKABC010000622023_1_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "14-02-2023"
+      }
+    ],
+    "main_matters": [
+      {
+        "main_case_number": "CRL.A/0000277/2016",
+        "main_cnr_number": "KABC010054322016",
+        "main_filing_number": "4150"
+      }
+    ],
+    "hearings": [
+      {
+        "hearing_index": 1,
+        "judge": "CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "10-11-2025",
+        "hearing_date": "",
+        "purpose": "Disposed"
+      },
+      {
+        "hearing_index": 2,
+        "judge": "CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "18-10-2025",
+        "hearing_date": "10-11-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 3,
+        "judge": "CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "25-09-2025",
+        "hearing_date": "18-10-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 4,
+        "judge": "CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "11-09-2025",
+        "hearing_date": "25-09-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 5,
+        "judge": "CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "29-08-2025",
+        "hearing_date": "11-09-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 6,
+        "judge": "CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "05-08-2025",
+        "hearing_date": "29-08-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 7,
+        "judge": "CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "21-07-2025",
+        "hearing_date": "05-08-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 8,
+        "judge": "CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "28-06-2025",
+        "hearing_date": "21-07-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 9,
+        "judge": "CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "12-06-2025",
+        "hearing_date": "28-06-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 10,
+        "judge": "CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "25-02-2025",
+        "hearing_date": "12-06-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 11,
+        "judge": "CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "19-12-2024",
+        "hearing_date": "25-02-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 12,
+        "judge": "CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "13-11-2024",
+        "hearing_date": "19-12-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 13,
+        "judge": "CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "10-09-2024",
+        "hearing_date": "13-11-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 14,
+        "judge": "CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "20-07-2024",
+        "hearing_date": "10-09-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 15,
+        "judge": "CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "14-06-2024",
+        "hearing_date": "20-07-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 16,
+        "judge": "CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "24-04-2024",
+        "hearing_date": "14-06-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 17,
+        "judge": "CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "06-03-2024",
+        "hearing_date": "24-04-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 18,
+        "judge": "CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "31-01-2024",
+        "hearing_date": "06-03-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 19,
+        "judge": "CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "21-12-2023",
+        "hearing_date": "31-01-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 20,
+        "judge": "CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "10-11-2023",
+        "hearing_date": "21-12-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 21,
+        "judge": "CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "13-10-2023",
+        "hearing_date": "10-11-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 22,
+        "judge": "CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "31-08-2023",
+        "hearing_date": "13-10-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 23,
+        "judge": "CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "16-08-2023",
+        "hearing_date": "31-08-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 24,
+        "judge": "CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "21-06-2023",
+        "hearing_date": "16-08-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 25,
+        "judge": "CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "29-05-2023",
+        "hearing_date": "21-06-2023",
+        "purpose": "A.D.R."
+      },
+      {
+        "hearing_index": 26,
+        "judge": "CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "27-05-2023",
+        "hearing_date": "29-05-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 27,
+        "judge": "CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "23-03-2023",
+        "hearing_date": "27-05-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 28,
+        "judge": "CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "14-02-2023",
+        "hearing_date": "23-03-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 29,
+        "judge": "CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "03-01-2023",
+        "hearing_date": "14-02-2023",
+        "purpose": "NOTICE"
+      }
+    ],
+    "orders": [
+      {
+        "order_number": "1",
+        "order_date": "10-11-2025",
+        "order_details": "Orders",
+        "pdf_params": "displayPdf('cl+sGJoSJ58oyVespa8VHg==','M3kqjoE7wmThqWZfHZ7URA==','5rHUl/fJ8k9+dheUWTi6OQ==','xABx7jVd4HuG8HsEmMBj1yABSLHk9zA+fmURU6xu1JkTXmZBa6HL0OBe4nzhBUxj','')"
+      }
+    ]
+  },
+  {
+    "cnr_number": "KABC010000632023",
+    "case_type": "EX - Execution Petition Under Order",
+    "case_number": "EX/22/2023",
+    "filing_number": "4/2023",
+    "filing_date": "02-01-2023",
+    "registration_number": "22/2023",
+    "registration_date": "03-01-2023",
+    "efiling_number": "",
+    "efiling_date": "-",
+    "first_hearing_date": "03rd January 2023",
+    "decision_date": "21st June 2023",
+    "case_status": "Case disposed",
+    "nature_of_disposal": "Uncontested--DISPOSED OTHERWISE",
+    "court_number_judge": "1139-CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+    "court_name": "PRL. CITY CIVIL AND SESSIONS JUDGE",
+    "state_code": "3",
+    "dist_code": "20",
+    "court_complex_code": "1030135",
+    "est_code": "3",
+    "parties": [
+      {
+        "type": "petitioner",
+        "name": "SRINIVASA T",
+        "advocate": "RAJANNA"
+      },
+      {
+        "type": "respondent",
+        "name": "SAMPANGI RAMAIAH G C",
+        "advocate": ""
+      }
+    ],
+    "petitioners": [
+      {
+        "type": "petitioner",
+        "name": "SRINIVASA T",
+        "advocate": "RAJANNA"
+      }
+    ],
+    "respondents": [
+      {
+        "type": "respondent",
+        "name": "SAMPANGI RAMAIAH G C",
+        "advocate": ""
+      }
+    ],
+    "acts": [
+      {
+        "act": "U/O 21 RULE 11 OF CPC",
+        "section": ","
+      }
+    ],
+    "processes": [
+      {
+        "process_id": "PKABC010000632023_1_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "14-02-2023"
+      }
+    ],
+    "main_matters": [
+      {
+        "main_case_number": "CRL.A/0000278/2016",
+        "main_cnr_number": "KABC010054332016",
+        "main_filing_number": "4150"
+      }
+    ],
+    "hearings": [
+      {
+        "hearing_index": 1,
+        "judge": "CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "21-06-2023",
+        "hearing_date": "",
+        "purpose": "Disposed"
+      },
+      {
+        "hearing_index": 2,
+        "judge": "CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "29-05-2023",
+        "hearing_date": "21-06-2023",
+        "purpose": "A.D.R."
+      },
+      {
+        "hearing_index": 3,
+        "judge": "CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "27-05-2023",
+        "hearing_date": "29-05-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 4,
+        "judge": "CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "23-03-2023",
+        "hearing_date": "27-05-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 5,
+        "judge": "CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "14-02-2023",
+        "hearing_date": "23-03-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 6,
+        "judge": "CCH56 LV ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "03-01-2023",
+        "hearing_date": "14-02-2023",
+        "purpose": "NOTICE"
+      }
+    ],
+    "orders": [
+      {
+        "order_number": "1",
+        "order_date": "21-06-2023",
+        "order_details": "Orders",
+        "pdf_params": "displayPdf('cl+sGJoSJ58oyVespa8VHg==','xdaWrGVwISIc2EiEOu2Abw==','5rHUl/fJ8k9+dheUWTi6OQ==','xABx7jVd4HuG8HsEmMBj11jY/XY5uzko65eum2XqVS7ud7IaU1hGv6PHWQLfv2YM','')"
+      }
+    ]
+  },
+  {
+    "cnr_number": "KABC010000672023",
+    "case_type": "EX - Execution Petition Under Order",
+    "case_number": "EX/23/2023",
+    "filing_number": "5/2023",
+    "filing_date": "02-01-2023",
+    "registration_number": "23/2023",
+    "registration_date": "03-01-2023",
+    "efiling_number": "",
+    "efiling_date": "-",
+    "first_hearing_date": "03rd January 2023",
+    "decision_date": "08th July 2023",
+    "case_status": "Case disposed",
+    "nature_of_disposal": "Uncontested--SETTLED IN LOK ADALATH",
+    "court_number_judge": "844-CCH42 XLI ADDL. CITY CIVIL AND SESSONS JUDGE",
+    "court_name": "PRL. CITY CIVIL AND SESSIONS JUDGE",
+    "state_code": "3",
+    "dist_code": "20",
+    "court_complex_code": "1030135",
+    "est_code": "3",
+    "parties": [
+      {
+        "type": "petitioner",
+        "name": "HANUMAN SINGH",
+        "advocate": "Y.K.NARAYANA SHARMA"
+      },
+      {
+        "type": "respondent",
+        "name": "BASHEER AHMED Y",
+        "advocate": ""
+      }
+    ],
+    "petitioners": [
+      {
+        "type": "petitioner",
+        "name": "HANUMAN SINGH",
+        "advocate": "Y.K.NARAYANA SHARMA"
+      }
+    ],
+    "respondents": [
+      {
+        "type": "respondent",
+        "name": "BASHEER AHMED Y",
+        "advocate": ""
+      }
+    ],
+    "acts": [
+      {
+        "act": "U/O 21 RULE 11 OF CPC",
+        "section": ","
+      }
+    ],
+    "processes": [
+      {
+        "process_id": "PKABC010000672023_1_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "24-01-2023"
+      },
+      {
+        "process_id": "PKABC010000672023_1_2",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "24-01-2023"
+      },
+      {
+        "process_id": "PKABC010000672023_1_3",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "24-01-2023"
+      },
+      {
+        "process_id": "PKABC010000672023_2_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "09-02-2023"
+      },
+      {
+        "process_id": "PKABC010000672023_2_2",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "09-02-2023"
+      },
+      {
+        "process_id": "PKABC010000672023_2_3",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "09-02-2023"
+      },
+      {
+        "process_id": "PKABC010000672023_3_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "20-02-2023"
+      },
+      {
+        "process_id": "PKABC010000672023_3_3",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "20-02-2023"
+      },
+      {
+        "process_id": "PKABC010000672023_3_2",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "20-02-2023"
+      }
+    ],
+    "main_matters": [
+      {
+        "main_case_number": "O.S./0005979/2019",
+        "main_cnr_number": "KABC010255652019",
+        "main_filing_number": "6849"
+      }
+    ],
+    "hearings": [
+      {
+        "hearing_index": 1,
+        "judge": "CCH42 XLI ADDL. CITY CIVIL AND SESSONS JUDGE",
+        "business_date": "08-07-2023",
+        "hearing_date": "",
+        "purpose": "Disposed"
+      },
+      {
+        "hearing_index": 2,
+        "judge": "CCH42 XLI ADDL. CITY CIVIL AND SESSONS JUDGE",
+        "business_date": "04-07-2023",
+        "hearing_date": "08-07-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 3,
+        "judge": "CCH42 XLI ADDL. CITY CIVIL AND SESSONS JUDGE",
+        "business_date": "19-06-2023",
+        "hearing_date": "04-07-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 4,
+        "judge": "CCH42 XLI ADDL. CITY CIVIL AND SESSONS JUDGE",
+        "business_date": "16-06-2023",
+        "hearing_date": "19-06-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 5,
+        "judge": "CCH42 XLI ADDL. CITY CIVIL AND SESSONS JUDGE",
+        "business_date": "09-06-2023",
+        "hearing_date": "16-06-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 6,
+        "judge": "CCH42 XLI ADDL. CITY CIVIL AND SESSONS JUDGE",
+        "business_date": "05-06-2023",
+        "hearing_date": "09-06-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 7,
+        "judge": "CCH42 XLI ADDL. CITY CIVIL AND SESSONS JUDGE",
+        "business_date": "24-05-2023",
+        "hearing_date": "05-06-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 8,
+        "judge": "CCH42 XLI ADDL. CITY CIVIL AND SESSONS JUDGE",
+        "business_date": "21-03-2023",
+        "hearing_date": "24-05-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 9,
+        "judge": "CCH42 XLI ADDL. CITY CIVIL AND SESSONS JUDGE",
+        "business_date": "18-03-2023",
+        "hearing_date": "21-03-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 10,
+        "judge": "CCH42 XLI ADDL. CITY CIVIL AND SESSONS JUDGE",
+        "business_date": "06-03-2023",
+        "hearing_date": "18-03-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 11,
+        "judge": "CCH42 XLI ADDL. CITY CIVIL AND SESSONS JUDGE",
+        "business_date": "20-02-2023",
+        "hearing_date": "06-03-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 12,
+        "judge": "CCH42 XLI ADDL. CITY CIVIL AND SESSONS JUDGE",
+        "business_date": "09-02-2023",
+        "hearing_date": "20-02-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 13,
+        "judge": "CCH42 XLI ADDL. CITY CIVIL AND SESSONS JUDGE",
+        "business_date": "24-01-2023",
+        "hearing_date": "09-02-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 14,
+        "judge": "CCH42 XLI ADDL. CITY CIVIL AND SESSONS JUDGE",
+        "business_date": "03-01-2023",
+        "hearing_date": "24-01-2023",
+        "purpose": "NOTICE"
+      }
+    ],
+    "orders": [
+      {
+        "order_number": "1",
+        "order_date": "08-07-2023",
+        "order_details": "Orders",
+        "pdf_params": "displayPdf('cl+sGJoSJ58oyVespa8VHg==','VwsB2IK1wpMcnssQkv3T7g==','5rHUl/fJ8k9+dheUWTi6OQ==','xABx7jVd4HuG8HsEmMBj14R9ZPj56z2LyAProYGY0MXodCUdFdItuTsBceYDUo4i','')"
+      }
+    ]
+  },
+  {
+    "cnr_number": "KABC010000902023",
+    "case_type": "EX - Execution Petition Under Order",
+    "case_number": "EX/24/2023",
+    "filing_number": "6/2023",
+    "filing_date": "02-01-2023",
+    "registration_number": "24/2023",
+    "registration_date": "03-01-2023",
+    "efiling_number": "",
+    "efiling_date": "-",
+    "first_hearing_date": "03rd January 2023",
+    "decision_date": "21st March 2023",
+    "case_status": "Case disposed",
+    "nature_of_disposal": "Uncontested--SETTLED OUTSIDE THE COURT",
+    "court_number_judge": "10-CCH2 I ADDL. CITY CIVIL AND SESSIONS JUDGE",
+    "court_name": "PRL. CITY CIVIL AND SESSIONS JUDGE",
+    "state_code": "3",
+    "dist_code": "20",
+    "court_complex_code": "1030135",
+    "est_code": "3",
+    "parties": [
+      {
+        "type": "petitioner",
+        "name": "ILYAS SAIT H",
+        "advocate": "FIYAZ AHMED"
+      },
+      {
+        "type": "respondent",
+        "name": "SAMAR SHAIKH ALIAS SHAIKH JALALUDDIN",
+        "advocate": ""
+      }
+    ],
+    "petitioners": [
+      {
+        "type": "petitioner",
+        "name": "ILYAS SAIT H",
+        "advocate": "FIYAZ AHMED"
+      }
+    ],
+    "respondents": [
+      {
+        "type": "respondent",
+        "name": "SAMAR SHAIKH ALIAS SHAIKH JALALUDDIN",
+        "advocate": ""
+      }
+    ],
+    "acts": [
+      {
+        "act": "U/O 21 RULE 11 OF CPC",
+        "section": ","
+      }
+    ],
+    "processes": [
+      {
+        "process_id": "PKABC010000902023_1_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "03-01-2023"
+      }
+    ],
+    "main_matters": [
+      {
+        "main_case_number": "O.S./0007907/2018",
+        "main_cnr_number": "KABC010302502018",
+        "main_filing_number": "6849"
+      }
+    ],
+    "hearings": [
+      {
+        "hearing_index": 1,
+        "judge": "CCH2 I ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "21-03-2023",
+        "hearing_date": "",
+        "purpose": "Disposed"
+      },
+      {
+        "hearing_index": 2,
+        "judge": "CCH2 I ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "14-03-2023",
+        "hearing_date": "21-03-2023",
+        "purpose": "HEARING"
+      },
+      {
+        "hearing_index": 3,
+        "judge": "CCH2 I ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "02-03-2023",
+        "hearing_date": "14-03-2023",
+        "purpose": "HEARING"
+      },
+      {
+        "hearing_index": 4,
+        "judge": "CCH2 I ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "03-01-2023",
+        "hearing_date": "02-03-2023",
+        "purpose": "NOTICE"
+      }
+    ],
+    "orders": [
+      {
+        "order_number": "1",
+        "order_date": "21-03-2023",
+        "order_details": "Orders",
+        "pdf_params": "displayPdf('cl+sGJoSJ58oyVespa8VHg==','mIHIPGd1xJYxabzC/IKfww==','5rHUl/fJ8k9+dheUWTi6OQ==','xABx7jVd4HuG8HsEmMBj186fraqbtSiGAqdNyukEzRb0xSIR9yRdASEwagIDCg7l','')"
+      }
+    ]
+  },
+  {
+    "cnr_number": "KABC010001252023",
+    "case_type": "EX - Execution Petition Under Order",
+    "case_number": "EX/25/2023",
+    "filing_number": "7/2023",
+    "filing_date": "02-01-2023",
+    "registration_number": "25/2023",
+    "registration_date": "03-01-2023",
+    "efiling_number": "",
+    "efiling_date": "-",
+    "first_hearing_date": "03rd January 2023",
+    "decision_date": "17th November 2023",
+    "case_status": "Case disposedSub Stage",
+    "nature_of_disposal": "Contested--DECREE SATISFIED",
+    "court_number_judge": "20-CCH18 XIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+    "court_name": "PRL. CITY CIVIL AND SESSIONS JUDGE",
+    "state_code": "3",
+    "dist_code": "20",
+    "court_complex_code": "1030135",
+    "est_code": "3",
+    "parties": [
+      {
+        "type": "petitioner",
+        "name": "M/S CHOLAMANDALAM INVESTMENT AND FINANCE COMPANY LTD",
+        "advocate": "S.LAKSHMINARAYANA"
+      },
+      {
+        "type": "respondent",
+        "name": "RAJENDRA R",
+        "advocate": ""
+      }
+    ],
+    "petitioners": [
+      {
+        "type": "petitioner",
+        "name": "M/S CHOLAMANDALAM INVESTMENT AND FINANCE COMPANY LTD",
+        "advocate": "S.LAKSHMINARAYANA"
+      }
+    ],
+    "respondents": [
+      {
+        "type": "respondent",
+        "name": "RAJENDRA R",
+        "advocate": ""
+      }
+    ],
+    "acts": [
+      {
+        "act": "U/O 21 RULE 11 OF CPC",
+        "section": ","
+      }
+    ],
+    "processes": [
+      {
+        "process_id": "PKABC010001252023_1_2",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "04-03-2023"
+      },
+      {
+        "process_id": "PKABC010001252023_1_3",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "04-03-2023"
+      },
+      {
+        "process_id": "PKABC010001252023_1_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "04-03-2023"
+      },
+      {
+        "process_id": "PKABC010001252023_1_4",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "04-03-2023"
+      },
+      {
+        "process_id": "PKABC010001252023_2_3",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "05-06-2023"
+      },
+      {
+        "process_id": "PKABC010001252023_2_2",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "05-06-2023"
+      },
+      {
+        "process_id": "PKABC010001252023_2_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "05-06-2023"
+      },
+      {
+        "process_id": "PKABC010001252023_2_4",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "05-06-2023"
+      },
+      {
+        "process_id": "PKABC010001252023_3_3",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "01-09-2023"
+      },
+      {
+        "process_id": "PKABC010001252023_3_4",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "01-09-2023"
+      },
+      {
+        "process_id": "PKABC010001252023_3_2",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "01-09-2023"
+      },
+      {
+        "process_id": "PKABC010001252023_3_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "01-09-2023"
+      }
+    ],
+    "main_matters": [],
+    "hearings": [
+      {
+        "hearing_index": 1,
+        "judge": "CCH18 XIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "17-11-2023",
+        "hearing_date": "",
+        "purpose": "Disposed"
+      },
+      {
+        "hearing_index": 2,
+        "judge": "CCH18 XIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "01-09-2023",
+        "hearing_date": "17-11-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 3,
+        "judge": "CCH18 XIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "02-08-2023",
+        "hearing_date": "01-09-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 4,
+        "judge": "CCH18 XIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "05-06-2023",
+        "hearing_date": "02-08-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 5,
+        "judge": "CCH18 XIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "04-03-2023",
+        "hearing_date": "05-06-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 6,
+        "judge": "CCH18 XIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "02-02-2023",
+        "hearing_date": "04-03-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 7,
+        "judge": "CCH18 XIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "03-01-2023",
+        "hearing_date": "02-02-2023",
+        "purpose": "NOTICE"
+      }
+    ],
+    "orders": [
+      {
+        "order_number": "1",
+        "order_date": "17-11-2023",
+        "order_details": "Orders",
+        "pdf_params": "displayPdf('cl+sGJoSJ58oyVespa8VHg==','KO2z+obBKAF0ALwjYS3f4g==','5rHUl/fJ8k9+dheUWTi6OQ==','xABx7jVd4HuG8HsEmMBj15P9PioUNqM62Kq8kc+k8vhRoWTIfYsUHO0GPEBkMlyg','')"
+      }
+    ]
+  },
+  {
+    "cnr_number": "KABC010001272023",
+    "case_type": "EX - Execution Petition Under Order",
+    "case_number": "EX/26/2023",
+    "filing_number": "9/2023",
+    "filing_date": "02-01-2023",
+    "registration_number": "26/2023",
+    "registration_date": "03-01-2023",
+    "efiling_number": "",
+    "efiling_date": "-",
+    "first_hearing_date": "03rd January 2023",
+    "decision_date": "06th August 2025",
+    "case_status": "Case disposedSub Stage",
+    "nature_of_disposal": "Uncontested--DISPOSED OTHERWISE",
+    "court_number_judge": "20-CCH18 XIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+    "court_name": "PRL. CITY CIVIL AND SESSIONS JUDGE",
+    "state_code": "3",
+    "dist_code": "20",
+    "court_complex_code": "1030135",
+    "est_code": "3",
+    "parties": [
+      {
+        "type": "petitioner",
+        "name": "M/S CHOLAMANDALAM INVESTMENT AND FINANCE COMPANY LTD",
+        "advocate": "S.LAKSHMINARAYANA"
+      },
+      {
+        "type": "respondent",
+        "name": "FRANCIS A",
+        "advocate": ""
+      }
+    ],
+    "petitioners": [
+      {
+        "type": "petitioner",
+        "name": "M/S CHOLAMANDALAM INVESTMENT AND FINANCE COMPANY LTD",
+        "advocate": "S.LAKSHMINARAYANA"
+      }
+    ],
+    "respondents": [
+      {
+        "type": "respondent",
+        "name": "FRANCIS A",
+        "advocate": ""
+      }
+    ],
+    "acts": [
+      {
+        "act": "U/O 21 RULE 11 OF CPC",
+        "section": ","
+      }
+    ],
+    "processes": [
+      {
+        "process_id": "PKABC010001272023_1_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "04-03-2023"
+      },
+      {
+        "process_id": "PKABC010001272023_1_2",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "04-03-2023"
+      },
+      {
+        "process_id": "PKABC010001272023_2_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "05-06-2023"
+      },
+      {
+        "process_id": "PKABC010001272023_2_2",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "05-06-2023"
+      },
+      {
+        "process_id": "PKABC010001272023_3_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "01-09-2023"
+      },
+      {
+        "process_id": "PKABC010001272023_3_2",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "01-09-2023"
+      },
+      {
+        "process_id": "PKABC010001272023_4_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "17-11-2023"
+      },
+      {
+        "process_id": "PKABC010001272023_4_2",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "17-11-2023"
+      },
+      {
+        "process_id": "PKABC010001272023_5_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "20-02-2024"
+      },
+      {
+        "process_id": "PKABC010001272023_5_2",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "20-02-2024"
+      },
+      {
+        "process_id": "PKABC010001272023_6_2",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "03-07-2024"
+      },
+      {
+        "process_id": "PKABC010001272023_6_1",
+        "process_title": "Precept [Sec. 46]",
+        "process_date": "03-07-2024"
+      }
+    ],
+    "main_matters": [],
+    "hearings": [
+      {
+        "hearing_index": 1,
+        "judge": "CCH18 XIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "06-08-2025",
+        "hearing_date": "",
+        "purpose": "Disposed"
+      },
+      {
+        "hearing_index": 2,
+        "judge": "CCH18 XIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "25-07-2025",
+        "hearing_date": "06-08-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 3,
+        "judge": "CCH18 XIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "21-04-2025",
+        "hearing_date": "25-07-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 4,
+        "judge": "CCH18 XIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "12-03-2025",
+        "hearing_date": "21-04-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 5,
+        "judge": "CCH18 XIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "07-02-2025",
+        "hearing_date": "12-03-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 6,
+        "judge": "CCH18 XIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "17-12-2024",
+        "hearing_date": "07-02-2025",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 7,
+        "judge": "CCH18 XIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "25-09-2024",
+        "hearing_date": "17-12-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 8,
+        "judge": "CCH18 XIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "03-07-2024",
+        "hearing_date": "25-09-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 9,
+        "judge": "CCH18 XIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "20-02-2024",
+        "hearing_date": "03-07-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 10,
+        "judge": "CCH18 XIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "17-11-2023",
+        "hearing_date": "20-02-2024",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 11,
+        "judge": "CCH18 XIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "01-09-2023",
+        "hearing_date": "17-11-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 12,
+        "judge": "CCH18 XIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "02-08-2023",
+        "hearing_date": "01-09-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 13,
+        "judge": "CCH18 XIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "05-06-2023",
+        "hearing_date": "02-08-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 14,
+        "judge": "CCH18 XIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "04-03-2023",
+        "hearing_date": "05-06-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 15,
+        "judge": "CCH18 XIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "02-02-2023",
+        "hearing_date": "04-03-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 16,
+        "judge": "CCH18 XIX ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "03-01-2023",
+        "hearing_date": "02-02-2023",
+        "purpose": "NOTICE"
+      }
+    ],
+    "orders": [
+      {
+        "order_number": "1",
+        "order_date": "06-08-2025",
+        "order_details": "Orders",
+        "pdf_params": "displayPdf('cl+sGJoSJ58oyVespa8VHg==','6wNGiZDi+ZPUmlE/zGKeVw==','5rHUl/fJ8k9+dheUWTi6OQ==','xABx7jVd4HuG8HsEmMBj11RIdluMm41C2wVt0IayDSCelDC3yqGGxn1OTNyk0zzI','')"
+      }
+    ]
+  },
+  {
+    "cnr_number": "KABC010002062023",
+    "case_type": "EX - Execution Petition Under Order",
+    "case_number": "EX/28/2023",
+    "filing_number": "18/2023",
+    "filing_date": "03-01-2023",
+    "registration_number": "28/2023",
+    "registration_date": "04-01-2023",
+    "efiling_number": "",
+    "efiling_date": "-",
+    "first_hearing_date": "04th January 2023",
+    "decision_date": "17th February 2024",
+    "case_status": "Case disposed",
+    "nature_of_disposal": "Uncontested--SETTLED IN LOK ADALATH",
+    "court_number_judge": "13-CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+    "court_name": "PRL. CITY CIVIL AND SESSIONS JUDGE",
+    "state_code": "3",
+    "dist_code": "20",
+    "court_complex_code": "1030135",
+    "est_code": "3",
+    "parties": [
+      {
+        "type": "petitioner",
+        "name": "RAMASWAMY K H",
+        "advocate": "AJAY KUMAR K"
+      },
+      {
+        "type": "respondent",
+        "name": "ENAYATH PASHA",
+        "advocate": ""
+      }
+    ],
+    "petitioners": [
+      {
+        "type": "petitioner",
+        "name": "RAMASWAMY K H",
+        "advocate": "AJAY KUMAR K"
+      }
+    ],
+    "respondents": [
+      {
+        "type": "respondent",
+        "name": "ENAYATH PASHA",
+        "advocate": ""
+      }
+    ],
+    "acts": [
+      {
+        "act": "U/O 21 RULE 11 OF CPC",
+        "section": ","
+      }
+    ],
+    "processes": [],
+    "main_matters": [
+      {
+        "main_case_number": "O.S./0007521/2018",
+        "main_cnr_number": "KABC010284812018",
+        "main_filing_number": "6849"
+      }
+    ],
+    "hearings": [
+      {
+        "hearing_index": 1,
+        "judge": "CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "17-02-2024",
+        "hearing_date": "",
+        "purpose": "Disposed"
+      },
+      {
+        "hearing_index": 2,
+        "judge": "CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "31-01-2024",
+        "hearing_date": "17-02-2024",
+        "purpose": "A.D.R."
+      },
+      {
+        "hearing_index": 3,
+        "judge": "CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "09-12-2023",
+        "hearing_date": "31-01-2024",
+        "purpose": "HEARING"
+      },
+      {
+        "hearing_index": 4,
+        "judge": "CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "07-12-2023",
+        "hearing_date": "09-12-2023",
+        "purpose": "A.D.R."
+      },
+      {
+        "hearing_index": 5,
+        "judge": "CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "30-10-2023",
+        "hearing_date": "07-12-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 6,
+        "judge": "CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "09-10-2023",
+        "hearing_date": "30-10-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 7,
+        "judge": "CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "20-09-2023",
+        "hearing_date": "09-10-2023",
+        "purpose": "OBJECTION"
+      },
+      {
+        "hearing_index": 8,
+        "judge": "CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "24-08-2023",
+        "hearing_date": "20-09-2023",
+        "purpose": "SUMMONS"
+      },
+      {
+        "hearing_index": 9,
+        "judge": "CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "26-07-2023",
+        "hearing_date": "24-08-2023",
+        "purpose": "SUMMONS"
+      },
+      {
+        "hearing_index": 10,
+        "judge": "CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "13-06-2023",
+        "hearing_date": "26-07-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 11,
+        "judge": "CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "27-03-2023",
+        "hearing_date": "13-06-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 12,
+        "judge": "CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "01-02-2023",
+        "hearing_date": "27-03-2023",
+        "purpose": "NOTICE"
+      },
+      {
+        "hearing_index": 13,
+        "judge": "CCH27 XII ADDL. CITY CIVIL AND SESSIONS JUDGE",
+        "business_date": "04-01-2023",
+        "hearing_date": "01-02-2023",
+        "purpose": "NOTICE"
+      }
+    ],
+    "orders": [
+      {
+        "order_number": "1",
+        "order_date": "17-02-2024",
+        "order_details": "Orders",
+        "pdf_params": "displayPdf('cl+sGJoSJ58oyVespa8VHg==','WBArjYMP2TUCLSdVRsSiXg==','5rHUl/fJ8k9+dheUWTi6OQ==','xABx7jVd4HuG8HsEmMBj1y7Jo3SI6SZCrfqP3yAFPtM7qI6tyHVfYcH3lgFFbMpB','')"
+      }
+    ]
+  }
+]

@@ -190,6 +190,50 @@ class DeeperScraper:
             log.error("Failed to parse viewHistory: %s", e)
             return ""
 
+    def search_cases(
+        self,
+        case_type: str,
+        search_year: str,
+        case_status: str = "Disposed",
+        complex_code: str = "1030135",
+        state_code: str = "3",
+        dist_code: str = "20",
+        est_code: str = "3",
+        max_retries: int = 5,
+    ) -> List[Dict[str, Any]]:
+        """Search case status endpoint and return parsed cases."""
+        self.set_establishment(complex_code=complex_code, state_code=state_code, dist_code=dist_code, est_code=est_code)
+
+        for attempt in range(1, max_retries + 1):
+            sol = self.solve_captcha()
+            if not sol:
+                log.warning("CAPTCHA solve attempt %d returned empty, retrying...", attempt)
+                continue
+
+            log.info("Attempt %d/%d: solved CAPTCHA '%s', submitting search query...", attempt, max_retries, sol)
+            payload = {
+                "case_type_1": case_type,
+                "search_year": search_year,
+                "case_status": case_status,
+                "ct_captcha_code": sol,
+                "state_code": state_code,
+                "dist_code": dist_code,
+                "court_complex_code": complex_code,
+                "est_code": est_code,
+            }
+            res = self._post_api("casestatus/submit_case_type", payload)
+            case_data = res.get("case_data", "")
+            if "Invalid Captcha" in case_data or "Enter Captcha" in case_data:
+                log.warning("Server rejected CAPTCHA '%s', retrying...", sol)
+                continue
+
+            parsed = parse_case_results(case_data)
+            log.info("Search query succeeded: %d cases retrieved", len(parsed))
+            return parsed
+
+        log.error("Failed to retrieve cases after %d attempts", max_retries)
+        return []
+
     def scrape_and_save_case(self, view_params: Dict[str, Any], meta: Optional[Dict[str, str]] = None) -> DeeperCaseDetail:
         """Fetch, parse, and persist a single case with all deep relational fields."""
         html = self.fetch_view_history(view_params)
@@ -207,3 +251,42 @@ class DeeperScraper:
 
         self.db.save_case(case)
         return case
+
+    def batch_extract(
+        self,
+        cases: List[Dict[str, Any]],
+        limit: int = 20,
+        meta: Optional[Dict[str, str]] = None,
+    ) -> List[DeeperCaseDetail]:
+        """Extract and persist a batch of cases respecting the pacing guardrail."""
+        target_cases = cases[:limit]
+        extracted: List[DeeperCaseDetail] = []
+        total = len(target_cases)
+
+        print(f"\n[+] Beginning batch extraction for {total} cases...")
+        for idx, c in enumerate(target_cases, start=1):
+            vp = c.get("view_params")
+            case_no = c.get("case_number", f"Case #{idx}")
+            cnr_val = c.get("cnr_number") or (vp.get("cino") if vp else "Unknown")
+            print(f"    [{idx:2d}/{total}] Fetching {case_no} ({cnr_val})... ", end="", flush=True)
+
+            if not vp:
+                print("SKIPPED (no view_params)")
+                continue
+
+            try:
+                t0 = time.time()
+                case = self.scrape_and_save_case(vp, meta=meta)
+                elapsed = time.time() - t0
+                extracted.append(case)
+                h_cnt = len(case.hearings)
+                p_cnt = len(case.processes)
+                m_cnt = len(case.main_matters)
+                o_cnt = len(case.orders)
+                print(f"OK ({elapsed:.2f}s) [Stage: {case.nature_of_disposal or case.case_status} | Hearings: {h_cnt} | Proc: {p_cnt} | Main: {m_cnt} | Orders: {o_cnt}]")
+            except Exception as ex:
+                print(f"ERROR: {ex}")
+
+        print(f"\n[+] Batch complete! Successfully extracted {len(extracted)}/{total} cases.")
+        return extracted
+
