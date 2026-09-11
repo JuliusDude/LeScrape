@@ -24,7 +24,7 @@ Model_BackUP/ecourts_data.db
 .agents/
 *.log
 ~$*
-*_cookies*.txt
+*cookie*.txt
 
 # Distribution / packaging
 build/
