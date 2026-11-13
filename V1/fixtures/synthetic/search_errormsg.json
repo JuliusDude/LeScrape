@@ -1,0 +1,6 @@
+{
+  "_comment": "SYNTHETIC (not portal evidence): captcha-rejection style response with errormsg and no case_data.",
+  "errormsg": "Invalid Captcha",
+  "status": 0,
+  "app_token": "tok_err"
+}

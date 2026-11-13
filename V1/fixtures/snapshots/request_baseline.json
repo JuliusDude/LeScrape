@@ -1,0 +1,646 @@
+{
+  "calls": [
+    {
+      "phase": "init_session",
+      "argv": [
+        "curl.exe",
+        "-s",
+        "-b",
+        "<COOKIE>",
+        "-c",
+        "<COOKIE>",
+        "-H",
+        "User-Agent: Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Mobile Safari/537.36",
+        "-H",
+        "Accept-Language: en-US,en;q=0.9",
+        "-H",
+        "Sec-Fetch-Dest: document",
+        "-H",
+        "Sec-Fetch-Mode: navigate",
+        "https://services.ecourts.gov.in/ecourtindia_v6/"
+      ],
+      "form": [],
+      "headers": [
+        "User-Agent: Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Mobile Safari/537.36",
+        "Accept-Language: en-US,en;q=0.9",
+        "Sec-Fetch-Dest: document",
+        "Sec-Fetch-Mode: navigate"
+      ]
+    },
+    {
+      "phase": "init_session",
+      "argv": [
+        "curl.exe",
+        "-s",
+        "-b",
+        "<COOKIE>",
+        "-c",
+        "<COOKIE>",
+        "-H",
+        "User-Agent: Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Mobile Safari/537.36",
+        "-H",
+        "Accept-Language: en-US,en;q=0.9",
+        "-H",
+        "Referer: https://services.ecourts.gov.in/ecourtindia_v6/",
+        "-H",
+        "Sec-Fetch-Dest: document",
+        "-H",
+        "Sec-Fetch-Mode: navigate",
+        "https://services.ecourts.gov.in/ecourtindia_v6/?p=casestatus/index"
+      ],
+      "form": [],
+      "headers": [
+        "User-Agent: Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Mobile Safari/537.36",
+        "Accept-Language: en-US,en;q=0.9",
+        "Referer: https://services.ecourts.gov.in/ecourtindia_v6/",
+        "Sec-Fetch-Dest: document",
+        "Sec-Fetch-Mode: navigate"
+      ]
+    },
+    {
+      "phase": "init_session",
+      "argv": [
+        "curl.exe",
+        "-s",
+        "-b",
+        "<COOKIE>",
+        "-c",
+        "<COOKIE>",
+        "-H",
+        "User-Agent: Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Mobile Safari/537.36",
+        "-H",
+        "Accept-Language: en-US,en;q=0.9",
+        "-H",
+        "Referer: https://services.ecourts.gov.in/ecourtindia_v6/?p=casestatus/index",
+        "https://services.ecourts.gov.in/ecourtindia_v6/js/components.js?v=1"
+      ],
+      "form": [],
+      "headers": [
+        "User-Agent: Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Mobile Safari/537.36",
+        "Accept-Language: en-US,en;q=0.9",
+        "Referer: https://services.ecourts.gov.in/ecourtindia_v6/?p=casestatus/index"
+      ]
+    },
+    {
+      "phase": "set_establishment",
+      "argv": [
+        "curl.exe",
+        "-s",
+        "-b",
+        "<COOKIE>",
+        "-c",
+        "<COOKIE>",
+        "-H",
+        "User-Agent: Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Mobile Safari/537.36",
+        "-H",
+        "Accept-Language: en-US,en;q=0.9",
+        "-H",
+        "Accept: application/json, text/javascript, */*; q=0.01",
+        "-H",
+        "Content-Type: application/x-www-form-urlencoded; charset=UTF-8",
+        "-H",
+        "Origin: https://services.ecourts.gov.in",
+        "-H",
+        "Referer: https://services.ecourts.gov.in/ecourtindia_v6/?p=casestatus/index",
+        "-H",
+        "X-Requested-With: XMLHttpRequest",
+        "-H",
+        "delimeter: dlm123",
+        "-H",
+        "Xcustom: dlm123",
+        "-X",
+        "POST",
+        "-d",
+        "ajax_req=true&app_token=TOKEN1&complex_code=1030135%403%40Y&selected_state_code=3&selected_dist_code=20&selected_est_code=3",
+        "https://services.ecourts.gov.in/ecourtindia_v6/?p=casestatus/set_data"
+      ],
+      "form": [
+        [
+          "ajax_req",
+          "true"
+        ],
+        [
+          "app_token",
+          "TOKEN1"
+        ],
+        [
+          "complex_code",
+          "1030135@3@Y"
+        ],
+        [
+          "selected_state_code",
+          "3"
+        ],
+        [
+          "selected_dist_code",
+          "20"
+        ],
+        [
+          "selected_est_code",
+          "3"
+        ]
+      ],
+      "headers": [
+        "User-Agent: Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Mobile Safari/537.36",
+        "Accept-Language: en-US,en;q=0.9",
+        "Accept: application/json, text/javascript, */*; q=0.01",
+        "Content-Type: application/x-www-form-urlencoded; charset=UTF-8",
+        "Origin: https://services.ecourts.gov.in",
+        "Referer: https://services.ecourts.gov.in/ecourtindia_v6/?p=casestatus/index",
+        "X-Requested-With: XMLHttpRequest",
+        "delimeter: dlm123",
+        "Xcustom: dlm123"
+      ]
+    },
+    {
+      "phase": "solve_captcha",
+      "argv": [
+        "curl.exe",
+        "-s",
+        "-b",
+        "<COOKIE>",
+        "-c",
+        "<COOKIE>",
+        "-H",
+        "User-Agent: Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Mobile Safari/537.36",
+        "-H",
+        "Accept-Language: en-US,en;q=0.9",
+        "-H",
+        "Accept: application/json, text/javascript, */*; q=0.01",
+        "-H",
+        "Content-Type: application/x-www-form-urlencoded; charset=UTF-8",
+        "-H",
+        "Origin: https://services.ecourts.gov.in",
+        "-H",
+        "Referer: https://services.ecourts.gov.in/ecourtindia_v6/?p=casestatus/index",
+        "-H",
+        "X-Requested-With: XMLHttpRequest",
+        "-H",
+        "delimeter: dlm123",
+        "-H",
+        "Xcustom: dlm123",
+        "-X",
+        "POST",
+        "-d",
+        "ajax_req=true&app_token=tokSD",
+        "https://services.ecourts.gov.in/ecourtindia_v6/?p=casestatus/getCaptcha"
+      ],
+      "form": [
+        [
+          "ajax_req",
+          "true"
+        ],
+        [
+          "app_token",
+          "tokSD"
+        ]
+      ],
+      "headers": [
+        "User-Agent: Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Mobile Safari/537.36",
+        "Accept-Language: en-US,en;q=0.9",
+        "Accept: application/json, text/javascript, */*; q=0.01",
+        "Content-Type: application/x-www-form-urlencoded; charset=UTF-8",
+        "Origin: https://services.ecourts.gov.in",
+        "Referer: https://services.ecourts.gov.in/ecourtindia_v6/?p=casestatus/index",
+        "X-Requested-With: XMLHttpRequest",
+        "delimeter: dlm123",
+        "Xcustom: dlm123"
+      ]
+    },
+    {
+      "phase": "solve_captcha",
+      "argv": [
+        "curl.exe",
+        "-s",
+        "-b",
+        "<COOKIE>",
+        "-c",
+        "<COOKIE>",
+        "-H",
+        "User-Agent: Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Mobile Safari/537.36",
+        "-H",
+        "Accept-Language: en-US,en;q=0.9",
+        "-H",
+        "Referer: https://services.ecourts.gov.in/ecourtindia_v6/?p=casestatus/index",
+        "https://services.ecourts.gov.in/ecourtindia_v6/vendor/securimage/securimage_show.php?deadbeef"
+      ],
+      "form": [],
+      "headers": [
+        "User-Agent: Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Mobile Safari/537.36",
+        "Accept-Language: en-US,en;q=0.9",
+        "Referer: https://services.ecourts.gov.in/ecourtindia_v6/?p=casestatus/index"
+      ]
+    },
+    {
+      "phase": "search_cases",
+      "argv": [
+        "curl.exe",
+        "-s",
+        "-b",
+        "<COOKIE>",
+        "-c",
+        "<COOKIE>",
+        "-H",
+        "User-Agent: Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Mobile Safari/537.36",
+        "-H",
+        "Accept-Language: en-US,en;q=0.9",
+        "-H",
+        "Accept: application/json, text/javascript, */*; q=0.01",
+        "-H",
+        "Content-Type: application/x-www-form-urlencoded; charset=UTF-8",
+        "-H",
+        "Origin: https://services.ecourts.gov.in",
+        "-H",
+        "Referer: https://services.ecourts.gov.in/ecourtindia_v6/?p=casestatus/index",
+        "-H",
+        "X-Requested-With: XMLHttpRequest",
+        "-H",
+        "delimeter: dlm123",
+        "-H",
+        "Xcustom: dlm123",
+        "-X",
+        "POST",
+        "-d",
+        "ajax_req=true&app_token=tokCAP&complex_code=1030135%403%40Y&selected_state_code=3&selected_dist_code=20&selected_est_code=3",
+        "https://services.ecourts.gov.in/ecourtindia_v6/?p=casestatus/set_data"
+      ],
+      "form": [
+        [
+          "ajax_req",
+          "true"
+        ],
+        [
+          "app_token",
+          "tokCAP"
+        ],
+        [
+          "complex_code",
+          "1030135@3@Y"
+        ],
+        [
+          "selected_state_code",
+          "3"
+        ],
+        [
+          "selected_dist_code",
+          "20"
+        ],
+        [
+          "selected_est_code",
+          "3"
+        ]
+      ],
+      "headers": [
+        "User-Agent: Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Mobile Safari/537.36",
+        "Accept-Language: en-US,en;q=0.9",
+        "Accept: application/json, text/javascript, */*; q=0.01",
+        "Content-Type: application/x-www-form-urlencoded; charset=UTF-8",
+        "Origin: https://services.ecourts.gov.in",
+        "Referer: https://services.ecourts.gov.in/ecourtindia_v6/?p=casestatus/index",
+        "X-Requested-With: XMLHttpRequest",
+        "delimeter: dlm123",
+        "Xcustom: dlm123"
+      ]
+    },
+    {
+      "phase": "search_cases",
+      "argv": [
+        "curl.exe",
+        "-s",
+        "-b",
+        "<COOKIE>",
+        "-c",
+        "<COOKIE>",
+        "-H",
+        "User-Agent: Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Mobile Safari/537.36",
+        "-H",
+        "Accept-Language: en-US,en;q=0.9",
+        "-H",
+        "Accept: application/json, text/javascript, */*; q=0.01",
+        "-H",
+        "Content-Type: application/x-www-form-urlencoded; charset=UTF-8",
+        "-H",
+        "Origin: https://services.ecourts.gov.in",
+        "-H",
+        "Referer: https://services.ecourts.gov.in/ecourtindia_v6/?p=casestatus/index",
+        "-H",
+        "X-Requested-With: XMLHttpRequest",
+        "-H",
+        "delimeter: dlm123",
+        "-H",
+        "Xcustom: dlm123",
+        "-X",
+        "POST",
+        "-d",
+        "ajax_req=true&app_token=tokSD",
+        "https://services.ecourts.gov.in/ecourtindia_v6/?p=casestatus/getCaptcha"
+      ],
+      "form": [
+        [
+          "ajax_req",
+          "true"
+        ],
+        [
+          "app_token",
+          "tokSD"
+        ]
+      ],
+      "headers": [
+        "User-Agent: Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Mobile Safari/537.36",
+        "Accept-Language: en-US,en;q=0.9",
+        "Accept: application/json, text/javascript, */*; q=0.01",
+        "Content-Type: application/x-www-form-urlencoded; charset=UTF-8",
+        "Origin: https://services.ecourts.gov.in",
+        "Referer: https://services.ecourts.gov.in/ecourtindia_v6/?p=casestatus/index",
+        "X-Requested-With: XMLHttpRequest",
+        "delimeter: dlm123",
+        "Xcustom: dlm123"
+      ]
+    },
+    {
+      "phase": "search_cases",
+      "argv": [
+        "curl.exe",
+        "-s",
+        "-b",
+        "<COOKIE>",
+        "-c",
+        "<COOKIE>",
+        "-H",
+        "User-Agent: Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Mobile Safari/537.36",
+        "-H",
+        "Accept-Language: en-US,en;q=0.9",
+        "-H",
+        "Referer: https://services.ecourts.gov.in/ecourtindia_v6/?p=casestatus/index",
+        "https://services.ecourts.gov.in/ecourtindia_v6/vendor/securimage/securimage_show.php?deadbeef"
+      ],
+      "form": [],
+      "headers": [
+        "User-Agent: Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Mobile Safari/537.36",
+        "Accept-Language: en-US,en;q=0.9",
+        "Referer: https://services.ecourts.gov.in/ecourtindia_v6/?p=casestatus/index"
+      ]
+    },
+    {
+      "phase": "search_cases",
+      "argv": [
+        "curl.exe",
+        "-s",
+        "-b",
+        "<COOKIE>",
+        "-c",
+        "<COOKIE>",
+        "-H",
+        "User-Agent: Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Mobile Safari/537.36",
+        "-H",
+        "Accept-Language: en-US,en;q=0.9",
+        "-H",
+        "Accept: application/json, text/javascript, */*; q=0.01",
+        "-H",
+        "Content-Type: application/x-www-form-urlencoded; charset=UTF-8",
+        "-H",
+        "Origin: https://services.ecourts.gov.in",
+        "-H",
+        "Referer: https://services.ecourts.gov.in/ecourtindia_v6/?p=casestatus/index",
+        "-H",
+        "X-Requested-With: XMLHttpRequest",
+        "-H",
+        "delimeter: dlm123",
+        "-H",
+        "Xcustom: dlm123",
+        "-X",
+        "POST",
+        "-d",
+        "ajax_req=true&app_token=tokCAP&case_type_1=12%5E3&search_year=2024&case_status=Pending&ct_captcha_code=abc123&state_code=3&dist_code=20&court_complex_code=1030135&est_code=3",
+        "https://services.ecourts.gov.in/ecourtindia_v6/?p=casestatus/submit_case_type"
+      ],
+      "form": [
+        [
+          "ajax_req",
+          "true"
+        ],
+        [
+          "app_token",
+          "tokCAP"
+        ],
+        [
+          "case_type_1",
+          "12^3"
+        ],
+        [
+          "search_year",
+          "2024"
+        ],
+        [
+          "case_status",
+          "Pending"
+        ],
+        [
+          "ct_captcha_code",
+          "abc123"
+        ],
+        [
+          "state_code",
+          "3"
+        ],
+        [
+          "dist_code",
+          "20"
+        ],
+        [
+          "court_complex_code",
+          "1030135"
+        ],
+        [
+          "est_code",
+          "3"
+        ]
+      ],
+      "headers": [
+        "User-Agent: Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Mobile Safari/537.36",
+        "Accept-Language: en-US,en;q=0.9",
+        "Accept: application/json, text/javascript, */*; q=0.01",
+        "Content-Type: application/x-www-form-urlencoded; charset=UTF-8",
+        "Origin: https://services.ecourts.gov.in",
+        "Referer: https://services.ecourts.gov.in/ecourtindia_v6/?p=casestatus/index",
+        "X-Requested-With: XMLHttpRequest",
+        "delimeter: dlm123",
+        "Xcustom: dlm123"
+      ]
+    },
+    {
+      "phase": "fetch_view_history",
+      "argv": [
+        "curl.exe",
+        "-s",
+        "-b",
+        "<COOKIE>",
+        "-c",
+        "<COOKIE>",
+        "-H",
+        "User-Agent: Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Mobile Safari/537.36",
+        "-H",
+        "Accept-Language: en-US,en;q=0.9",
+        "-H",
+        "Accept: application/json, text/javascript, */*; q=0.01",
+        "-H",
+        "Content-Type: application/x-www-form-urlencoded; charset=UTF-8",
+        "-H",
+        "Origin: https://services.ecourts.gov.in",
+        "-H",
+        "Referer: https://services.ecourts.gov.in/ecourtindia_v6/?p=casestatus/index",
+        "-H",
+        "X-Requested-With: XMLHttpRequest",
+        "-H",
+        "delimeter: dlm123",
+        "-H",
+        "Xcustom: dlm123",
+        "-X",
+        "POST",
+        "-d",
+        "case_no=1001&cino=KABC010000012024&court_code=3&hideparty=&search_flag=CScaseNumber&state_code=3&dist_code=20&court_complex_code=1030135&search_by=CScaseType&ajax_req=true&app_token=tok_search",
+        "https://services.ecourts.gov.in/ecourtindia_v6/?p=home/viewHistory"
+      ],
+      "form": [
+        [
+          "case_no",
+          "1001"
+        ],
+        [
+          "cino",
+          "KABC010000012024"
+        ],
+        [
+          "court_code",
+          "3"
+        ],
+        [
+          "hideparty",
+          ""
+        ],
+        [
+          "search_flag",
+          "CScaseNumber"
+        ],
+        [
+          "state_code",
+          "3"
+        ],
+        [
+          "dist_code",
+          "20"
+        ],
+        [
+          "court_complex_code",
+          "1030135"
+        ],
+        [
+          "search_by",
+          "CScaseType"
+        ],
+        [
+          "ajax_req",
+          "true"
+        ],
+        [
+          "app_token",
+          "tok_search"
+        ]
+      ],
+      "headers": [
+        "User-Agent: Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Mobile Safari/537.36",
+        "Accept-Language: en-US,en;q=0.9",
+        "Accept: application/json, text/javascript, */*; q=0.01",
+        "Content-Type: application/x-www-form-urlencoded; charset=UTF-8",
+        "Origin: https://services.ecourts.gov.in",
+        "Referer: https://services.ecourts.gov.in/ecourtindia_v6/?p=casestatus/index",
+        "X-Requested-With: XMLHttpRequest",
+        "delimeter: dlm123",
+        "Xcustom: dlm123"
+      ]
+    },
+    {
+      "phase": "_curl_binary",
+      "argv": [
+        "curl.exe",
+        "-s",
+        "-b",
+        "<COOKIE>",
+        "-c",
+        "<COOKIE>",
+        "-H",
+        "User-Agent: Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Mobile Safari/537.36",
+        "-H",
+        "Accept-Language: en-US,en;q=0.9",
+        "-H",
+        "Referer: https://example.invalid/",
+        "https://services.ecourts.gov.in/ecourtindia_v6/vendor/securimage/securimage_show.php?deadbeef"
+      ],
+      "form": [],
+      "headers": [
+        "User-Agent: Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Mobile Safari/537.36",
+        "Accept-Language: en-US,en;q=0.9",
+        "Referer: https://example.invalid/"
+      ]
+    },
+    {
+      "phase": "_curl_text_post",
+      "argv": [
+        "curl.exe",
+        "-s",
+        "-b",
+        "<COOKIE>",
+        "-c",
+        "<COOKIE>",
+        "-H",
+        "User-Agent: Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Mobile Safari/537.36",
+        "-H",
+        "Accept-Language: en-US,en;q=0.9",
+        "-X",
+        "POST",
+        "-d",
+        "a=1&b=x+y",
+        "https://services.ecourts.gov.in/ecourtindia_v6/?p=casestatus/set_data"
+      ],
+      "form": [
+        [
+          "a",
+          "1"
+        ],
+        [
+          "b",
+          "x y"
+        ]
+      ],
+      "headers": [
+        "User-Agent: Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Mobile Safari/537.36",
+        "Accept-Language: en-US,en;q=0.9"
+      ]
+    }
+  ],
+  "returns": {
+    "init_session": {
+      "app_token": "TOKEN1",
+      "delimeter": "dlm123",
+      "custom_header": "Xcustom"
+    },
+    "solve_captcha": "abc123",
+    "search_cases": {
+      "count": 3,
+      "cnrs": [
+        "KABC010000012024",
+        "KABC010000022024",
+        "KABC010000032024"
+      ],
+      "court_names": [
+        "SYNTHETIC CIVIL JUDGE COURT",
+        "SYNTHETIC CIVIL JUDGE COURT",
+        "SYNTHETIC CIVIL JUDGE COURT"
+      ]
+    },
+    "fetch_view_history": {
+      "len": 17110,
+      "type": "str"
+    }
+  }
+}

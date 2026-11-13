@@ -15,10 +15,10 @@ __pycache__/
 *.db-wal
 *.db-shm
 ecourts.db
-Model2/ecourts_data.db
-Model3/ecourts_data.db
-Model3/data/
-Model_BackUP/ecourts_data.db
+archive/Model2/ecourts_data.db
+archive/Model3/ecourts_data.db
+archive/Model3/data/
+archive/Model_BackUP/ecourts_data.db
 
 # Agent metadata and temp logs
 .agents/
@@ -30,3 +30,12 @@ Model_BackUP/ecourts_data.db
 build/
 dist/
 *.egg-info/
+
+# V2 scraper run output (real court PDFs, party names) and V1 run artefacts
+V2/output/
+V1/cookies_session.txt
+
+# Real-case test fixtures (live eCourts pages with party names, order PDFs, CAPTCHA images) are kept
+# local only (owner decision 2026-11-13). Tests that need them fail on a clone without these folders.
+V1/fixtures/live_20261112/
+V2/tests/fixtures/

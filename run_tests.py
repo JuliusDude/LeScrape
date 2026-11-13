@@ -84,6 +84,21 @@ def main() -> int:
     loader = unittest.TestLoader()
     suite = loader.discover(start_dir=start_dir, pattern=args.pattern, top_level_dir=project_root)
 
+    # Default run also covers the V1 and V2 packages (top-level dir = repo root).
+    if args.start_dir == "tests":
+        deeper_dir = os.path.join(project_root, "V1")
+        if os.path.isdir(deeper_dir):
+            print(f"[*] Discovering tests in: {deeper_dir} (pattern: {args.pattern})")
+            suite.addTests(
+                loader.discover(start_dir=deeper_dir, pattern=args.pattern, top_level_dir=project_root)
+            )
+        v2_dir = os.path.join(project_root, "V2", "tests")
+        if os.path.isdir(v2_dir):
+            print(f"[*] Discovering tests in: {v2_dir} (pattern: {args.pattern})")
+            suite.addTests(
+                loader.discover(start_dir=v2_dir, pattern=args.pattern, top_level_dir=project_root)
+            )
+
     total_tests = suite.countTestCases()
     print(f"[*] Discovered {total_tests} test cases across test modules.")
     print("-" * 75)

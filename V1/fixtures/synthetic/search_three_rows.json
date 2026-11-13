@@ -1,0 +1,6 @@
+{
+  "_comment": "SYNTHETIC (not portal evidence): result table of 3 rows, one court-name header row, viewHistory onclicks in the 9-arg format parsed by ecourts/parser/search.py.",
+  "case_data": "<table class='table table-fixed' id='dispTable'><tbody><tr><th colspan='3' id='td_court_name_1'>SYNTHETIC CIVIL JUDGE COURT</th></tr><tr><td>1</td><td>EX/1/2024</td><td>ALPHA ONE<br>Vs</br>BETA ONE</td><td><a class='someclass' href='#' onclick=\"viewHistory(1001,'KABC010000012024',3,'','CScaseNumber',3,20,1030135,'CScaseType')\">View</a></td></tr><tr><td>2</td><td>EX/2/2024</td><td>ALPHA TWO<br>Vs</br>BETA TWO</td><td><a class='someclass' href='#' onclick=\"viewHistory(1002,'KABC010000022024',3,'','CScaseNumber',3,20,1030135,'CScaseType')\">View</a></td></tr><tr><td>3</td><td>EX/3/2024</td><td>ALPHA THREE<br>Vs</br>BETA THREE</td><td><a class='someclass' href='#' onclick=\"viewHistory(1003,'KABC010000032024',3,'','CScaseNumber',3,20,1030135,'CScaseType')\">View</a></td></tr></tbody></table>",
+  "status": 1,
+  "app_token": "tok_search"
+}

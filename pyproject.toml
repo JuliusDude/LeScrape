@@ -15,8 +15,11 @@ dependencies = [
     "opencv-python-headless>=4.5.0",
 ]
 
+[project.optional-dependencies]
+excel = ["openpyxl>=3.1"]
+
 [project.scripts]
 ecourts = "ecourts.cli:main"
 
 [tool.setuptools.packages.find]
-include = ["ecourts*"]
+include = ["ecourts*", "V1*", "V2*"]
