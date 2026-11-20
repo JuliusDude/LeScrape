@@ -1,5 +1,7 @@
 # LeScrape
 
+[Project changelog](CHANGELOG.md)
+
 LeScrape scrapes eCourts India district-court case data (services.ecourts.gov.in).
 
 | Folder | What it is | Start here |
@@ -10,6 +12,7 @@ LeScrape scrapes eCourts India district-court case data (services.ecourts.gov.in
 | [`archive/`](archive/README.md) | Unused earlier prototypes (model1, Model2, Model3, Model_BackUP) and one-off scripts and outputs. | — |
 
 Other files:
+- `docs/ECOURTS_SITE_MAP.md`: map of every option on the eCourts district-courts portal (endpoints, fields, court hierarchy) for future expansion.
 - `context.md`: full working history and live-test findings.
 - `RULES_.md`: agent delegation rules.
 - `ORIGINAL_REQUEST.md`: the original brief.

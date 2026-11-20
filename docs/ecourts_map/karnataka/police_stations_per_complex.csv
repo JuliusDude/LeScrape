@@ -1,0 +1,201 @@
+﻿dist_code,district,complex_code,complex,n_police_stations
+2,BAGALKOT,1030016,Court Complex- Hungund,2669
+2,BAGALKOT,1030017,Court Complex Jamkhandi,2668
+2,BAGALKOT,1030018,Court Complex Mudhol,2668
+2,BAGALKOT,1030019,Court Complex Banhatti,2941
+2,BAGALKOT,1030020,District Court Complex Bagalkot,2668
+2,BAGALKOT,1030021,Court Complex Badami,2670
+2,BAGALKOT,1030022,Court Complex-Bilagi,2668
+12,BALLARI,1030084,Court Complex- Siruguppa,2951
+12,BALLARI,1030086,Court Complex- Sandur,2951
+12,BALLARI,1030087,District Court Complex-Ballari,2952
+1,BELAGAVI,1030001,District (Old) Court Complex-Belagavi,2983
+1,BELAGAVI,1030002,Court Complex- Raibag,2695
+1,BELAGAVI,1030003,Court Complex- Gokak,2695
+1,BELAGAVI,1030004,New Court Complex-Belagavi,2081
+1,BELAGAVI,1030005,Court Complex- Nipani,2975
+1,BELAGAVI,1030006,Court Complex- Saundatti,2975
+1,BELAGAVI,1030007,Court Complex- sankeshwar,2978
+1,BELAGAVI,1030008,Court Complex Athani,2979
+1,BELAGAVI,1030009,Court Complex- Hukkeri,2696
+1,BELAGAVI,1030010,Court Complex- Khanapur,2975
+1,BELAGAVI,1030011,Court Complex- Chikodi,2978
+1,BELAGAVI,1030012,Court Complex- Ramdurga,2695
+1,BELAGAVI,1030013,Court Complex-Bailhongal,2695
+1,BELAGAVI,1030014,Court Complex Mudalgi,2695
+1,BELAGAVI,1030015,Court Complex Kittur,2695
+1,BELAGAVI,1370232,"Court Complex, Yaragatti",2975
+1,BELAGAVI,1370237,Court Complex Kagwad,2978
+20,BENGALURU,1030134,"CMM Court Complex, Bangalore",2680
+20,BENGALURU,1030135,"City Civil Court Complex, Bangalore",2945
+20,BENGALURU,1030136,NyayaDegula Court Complex Bangalore,2941
+20,BENGALURU,1030137,"SmallCauses Court Complex,Bangalore",3064
+20,BENGALURU,1030138,"Mayo Hall Court Complex, Bangalore",2054
+20,BENGALURU,1030210,COMMERCIAL COURT COMPLEX,2128
+21,BENGALURU RURAL,1030140,Court Complex- Hosakote,2940
+21,BENGALURU RURAL,1030141,City Civil Court Complex Bengalurur Rual,2942
+21,BENGALURU RURAL,1030142,Court Complex- Anekal,2940
+21,BENGALURU RURAL,1030143,Court Complex- Devanahalli,2933
+21,BENGALURU RURAL,1030144,Court Complex- Doddaballapur,2940
+21,BENGALURU RURAL,1030145,Court Complex- Nelamangala,2941
+21,BENGALURU RURAL,1370058,KR Puram Court Complex,2940
+5,BIDAR,1030036,Court Complex-Aurad,3118
+5,BIDAR,1030037,District Court Complex-Bidar,3121
+5,BIDAR,1030038,Court Complex-Bhalki,3118
+5,BIDAR,1030039,Court Complex-Basavakalyan,3118
+5,BIDAR,1030040,Court Complex-Humnabad,3118
+27,CHAMRAJNAGAR,1030181,Court Complex- Yelandur,3119
+27,CHAMRAJNAGAR,1030182,Court Complex- Kollegal,3119
+27,CHAMRAJNAGAR,1030183,Court Complex- Gundlupet,3119
+27,CHAMRAJNAGAR,1030184,District Court Complex-Chamarajanagar,3119
+29,CHIKKABALLAPUR,1030189,JMFC Court Complex-Chintamani,3118
+29,CHIKKABALLAPUR,1030190,Court Complex- Sidlaghatta,3118
+29,CHIKKABALLAPUR,1030191,Court Complex-Bagepalli,3118
+29,CHIKKABALLAPUR,1030192,District Court Complex-Chikkaballapur,3118
+29,CHIKKABALLAPUR,1030193,Court Complex- Gowribidanur,3121
+29,CHIKKABALLAPUR,1030194,COURT COMPLEX - GUDIBANDA,3118
+17,CHIKKAMAGALURU,1030111,Court Complex-N.R.Pura,2949
+17,CHIKKAMAGALURU,1030112,Court Complex-Kadur,2949
+17,CHIKKAMAGALURU,1030113,Court Complex-Tarikere,2949
+17,CHIKKAMAGALURU,1030114,District Court Complex-Chikkamagalur,3121
+17,CHIKKAMAGALURU,1030115,Court Complex-Mudigere,2950
+17,CHIKKAMAGALURU,1030116,Court Complex-Sringeri,2949
+17,CHIKKAMAGALURU,1030117,Court Complex-Koppa,2949
+13,CHITRADURGA,1030090,Court Complex-Hiriyur,2949
+13,CHITRADURGA,1030091,Court Complex-Molakalmuru,2949
+13,CHITRADURGA,1030092,Court Complex-Challakere,2949
+13,CHITRADURGA,1030093,Court Complex-Hosadurga,2949
+13,CHITRADURGA,1030094,Court Complex Holalkere,3118
+13,CHITRADURGA,1030095,District Court Complex-Chitradurga,3118
+24,DAKSHINA KANNADA,1030161,Court complex - Mudbidri,2949
+24,DAKSHINA KANNADA,1030162,Court Complex-Belthanagady,2948
+24,DAKSHINA KANNADA,1030163,District Court Complex-Dakshina Kannada,2949
+24,DAKSHINA KANNADA,1030164,Court Complex- Bantwal,2951
+24,DAKSHINA KANNADA,1030165,Court Complex-Puttur,2949
+24,DAKSHINA KANNADA,1030166,Court Complex-Sullia,2951
+14,DAVANGERE,1030096,Court Complex- Channagiri,3118
+14,DAVANGERE,1030097,Court Complex- Harihara,3118
+14,DAVANGERE,1030098,Court Complex- Jagalur,3118
+14,DAVANGERE,1030099,District Court Complex-Davanagere,3118
+14,DAVANGERE,1030100,Court Complex-Honnali,3118
+9,DHARWAD,1030055,District Court Complex-Dharwad,3125
+9,DHARWAD,1030056,Court Complex-Hubli,3123
+9,DHARWAD,1030057,City Court Complex-Dharawd,3123
+9,DHARWAD,1030058,Court Complex- Kundgol,3123
+9,DHARWAD,1030059,Court Complex- Navalgund,3123
+9,DHARWAD,1030060,Court Complex- Kalaghatgi,3123
+8,GADAG,1030050,Court Complex- Nargund,2949
+8,GADAG,1030051,District Court Complex-Gadag,2949
+8,GADAG,1030052,Court Complex mundargi,2949
+8,GADAG,1030053,Court Complex-Lakshmeshwar,2949
+8,GADAG,1030054,Court Complex-Ron,2949
+23,HASSAN,1030153,Court Complex-Belur,2941
+23,HASSAN,1030154,Court Complex Channarayapatna,2941
+23,HASSAN,1030155,Court Complex-Holenarasipura,2941
+23,HASSAN,1030156,Court Complex-Arakalagudu,2941
+23,HASSAN,1030157,District Court Complex-Hassan,2941
+23,HASSAN,1030158,Court Complex-Alur,2941
+23,HASSAN,1030159,Court Complex-Arasikere,2941
+23,HASSAN,1030160,Court Complex- Sakaleshpur,2941
+11,HAVERI,1030074,Court Complex- Hanagal,2668
+11,HAVERI,1030075,District Court Complex-Haveri,2671
+11,HAVERI,1030076,Court Complex- Savanur,2668
+11,HAVERI,1030077,Court Complex- Shiggaon,2941
+11,HAVERI,1030078,Court Complex- Ranebennur,2668
+11,HAVERI,1030079,Court Complex- Hirekerur,2668
+11,HAVERI,1030080,Court Complex- Byadgi,2670
+4,KALABURAGI,1030028,Court Complex-Aland,2941
+4,KALABURAGI,1030029,District Court Complex-Kalaburagi,2941
+4,KALABURAGI,1030030,Court Complex-Chincholi,2941
+4,KALABURAGI,1030031,Court Complex-Sedam,2941
+4,KALABURAGI,1030032,Court Complex-Chittapur,2941
+4,KALABURAGI,1030033,Court Complex-Jevargi,2941
+4,KALABURAGI,1030034,Court Complex- Afzalpur,2941
+4,KALABURAGI,1030035,Court Complex Shahabad,2941
+25,KODAGU,1030167,COURT COMPLEX KUSHALNAGAR,3121
+25,KODAGU,1030168,Court Complex Ponnampet,3123
+25,KODAGU,1030169,Court Complex- Virajpet,3121
+25,KODAGU,1030170,District Court Complex-Kodagu,3122
+25,KODAGU,1030171,Court Complex- Somwarpet,3122
+19,KOLAR,1030128,Court Complex-Bangarpet,3118
+19,KOLAR,1030129,Court Complex-Mulbagal,3119
+19,KOLAR,1030130,Court Complex-KGF,3118
+19,KOLAR,1030131,Court Complex-Malur,3121
+19,KOLAR,1030132,Court Complex-Srinivaspur,3118
+19,KOLAR,1030133,District Court Complex-Kolar,3122
+7,KOPPAL,1030046,Court Complex-Yelbarga,2668
+7,KOPPAL,1030047,District Court Complex-Koppal,2668
+7,KOPPAL,1030048,Court Complex-Kushtagi,2668
+7,KOPPAL,1030049,Court Complex-Gangavathi,2669
+7,KOPPAL,1370249,Court Complex Karatagi,2669
+22,MANDYA,1030146,Court Complex- Nagamangala,3118
+22,MANDYA,1030147,District Court Complex Mandya,3118
+22,MANDYA,1030148,Court Complex- Maddur,3118
+22,MANDYA,1030149,Court Complex-Pandavapura,3119
+22,MANDYA,1030150,Court Complex-Malavalli,3118
+22,MANDYA,1030151,Court Complex- Srirangapatna,3118
+22,MANDYA,1030152,Court Complex- Krishnarajapet,3118
+26,MYSURU,1030172,Court Complex- Nanjangud,3118
+26,MYSURU,1030173,"Law Court Complex, Mysuru",3125
+26,MYSURU,1030174,Court Complex- KrishnarajaNagar,3118
+26,MYSURU,1030175,Court Complex- T.Narasipura,3118
+26,MYSURU,1030176,Court Complex- Hunsur,3118
+26,MYSURU,1030177,"Double Road Court Complex, Mysuru",3118
+26,MYSURU,1030178,Court Complex- Heggadadevankote,3119
+26,MYSURU,1030179,"ADR COURT COMPLEX, MYSURU",3118
+26,MYSURU,1030180,Court Complex- Periyapatna,3118
+6,RAICHUR,1030041,Court Complex-Manvi,3118
+6,RAICHUR,1030042,Court Complex-Devadurga,3118
+6,RAICHUR,1030043,Court Complex-Sindhanur,3118
+6,RAICHUR,1030044,Court Complex-Lingasugur,3118
+6,RAICHUR,1030045,District Court Complex-Raichur,3118
+28,RAMANAGARA,1030185,Court Complex- Chennapatna,3118
+28,RAMANAGARA,1030186,District Court Complex Ramanagar,3118
+28,RAMANAGARA,1030187,Court Complex- Kanakapura,3118
+28,RAMANAGARA,1030188,Court Complex- Magadi,3118
+15,SHIVAMOGGA,1030101,Court Complex-Hosanagar,2941
+15,SHIVAMOGGA,1030102,Court Complex- Sorab,2941
+15,SHIVAMOGGA,1030103,Court Complex-Sagar,2941
+15,SHIVAMOGGA,1030104,Court Complex-Bhadravati,2941
+15,SHIVAMOGGA,1030105,Court Complex- Thirthahalli,3118
+15,SHIVAMOGGA,1030106,Court Complex- Shikaripura,2941
+15,SHIVAMOGGA,1030107,District Court Complex-Shimoga,3118
+18,TUMAKURU,1030118,Court Complex- Gubbi,2668
+18,TUMAKURU,1030119,Court Complex- Koratagere,2668
+18,TUMAKURU,1030120,District Court Complex-Tumakuru,2677
+18,TUMAKURU,1030121,Court Complex- Madhugiri,2669
+18,TUMAKURU,1030122,Court Complex- C.N.Halli,2668
+18,TUMAKURU,1030123,Court Complex- Kunigal,2668
+18,TUMAKURU,1030124,Court Complex- Turuvekere,2668
+18,TUMAKURU,1030125,Court Complex- Pavagada,2668
+18,TUMAKURU,1030126,Court Complex- Sira,2668
+18,TUMAKURU,1030127,Court Complex Tiptur,2668
+16,UDUPI,1030108,District Court Complex-Udupi,3119
+16,UDUPI,1030109,Court Complex- Karkala,3118
+16,UDUPI,1030110,Court Complex- Kundapur,3118
+16,UDUPI,1030211,COURT COMPLEX -BAINDURU,3118
+10,UTTARA KANNADA,1030061,Court Complex- Honnavar,2941
+10,UTTARA KANNADA,1030062,Court Complex- Dandeli,2941
+10,UTTARA KANNADA,1030063,Court Complex- Siddapur,2941
+10,UTTARA KANNADA,1030064,Court Complex- Haliyal,2941
+10,UTTARA KANNADA,1030065,Court Complex- Kumta,2941
+10,UTTARA KANNADA,1030066,Court Complex- Mundgod,2941
+10,UTTARA KANNADA,1030067,Court Complex- Sirsi,2942
+10,UTTARA KANNADA,1030068,Court Complex- Yellapur,2941
+10,UTTARA KANNADA,1030069,Court Complex- Bhatkal,2941
+10,UTTARA KANNADA,1030070,JMFC Court Complex-Karwar,2942
+10,UTTARA KANNADA,1030071,Court Complex- Ankola,2941
+10,UTTARA KANNADA,1030072,District Court Complex-Karwar,2943
+31,VIJAYANAGAR,1030081,Court Complex Huvina Hadagali,2951
+31,VIJAYANAGAR,1030082,Court Complex Kudligi,2951
+31,VIJAYANAGAR,1030083,Court Complex Hospet,2951
+31,VIJAYANAGAR,1030085,Court Complex Harapanahalli,2951
+31,VIJAYANAGAR,1030088,Court Complex Hagaribommanahalli,2951
+3,VIJAYAPURA,1030023,Court Complex- Indi,2986
+3,VIJAYAPURA,1030024,Court complex muddebihal,2986
+3,VIJAYAPURA,1030025,District Court Complex-Vijayapur,2983
+3,VIJAYAPURA,1030026,Court Complex Bagewadi,2985
+3,VIJAYAPURA,1030027,Court Complex- Sindagi,2986
+30,YADGIR,1030195,District Court Complex-Yadgir,2671
+30,YADGIR,1030196,Court Complex-Shahapur,2669
+30,YADGIR,1030197,Court Complex Shorapur,2669
