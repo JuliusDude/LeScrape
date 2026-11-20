@@ -60,7 +60,8 @@ def _write_csv(path: str, cols: List[str], rows: List[Dict[str, Any]]) -> None:
 
 def _cell(v: Any) -> Any:
     if isinstance(v, str):
-        return v[:32000]          # Excel cell limit
+        from openpyxl.cell.cell import ILLEGAL_CHARACTERS_RE
+        return ILLEGAL_CHARACTERS_RE.sub("", v[:32000])
     return v
 
 

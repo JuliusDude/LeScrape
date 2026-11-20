@@ -25,6 +25,11 @@ def _case():
 
 
 class TestView(unittest.TestCase):
+    def test_case_detail_date_displays_once_in_iso_format(self):
+        case = dict(_case(), filing_date="17-12-2022 <original>", filing_date_iso="2022-12-17")
+        self.assertIn("<td>2022-12-17</td>", render(case))
+        self.assertNotIn("17-12-2022", render(case))
+
     def test_render_contains_every_section_and_escapes(self):
         h = render(_case())
         for s in ("Case details", "Petitioners", "Respondents", "Acts", "Processes", "Main matters",
@@ -38,7 +43,7 @@ class TestView(unittest.TestCase):
         self.assertIn("site artefact", h)
         self.assertIn("<td>KABC010000000001</td>", h)                  # main CNR, not the case's own CNR
         self.assertNotIn("None/None", h)
-        self.assertLess(h.index("02-01-2023"), h.index("20-08-2025"))   # hearings oldest first
+        self.assertLess(h.index("2023-01-02"), h.index("2025-08-20"))   # hearings oldest first
         self.assertIn('class="badge ok"', h)
 
     def test_cli_writes_file(self):

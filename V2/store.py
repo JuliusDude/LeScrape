@@ -4,9 +4,11 @@ from __future__ import annotations
 import contextlib
 import gzip
 import json
+import re
 import sqlite3
 import threading
 import time
+from pathlib import Path
 from typing import Any, Dict, Iterable, Iterator, List, Optional
 
 SCHEMA = """
@@ -21,7 +23,7 @@ CREATE TABLE IF NOT EXISTS search_results(
   case_year TEXT, petitioner TEXT, respondent TEXT, court_name TEXT, cnr TEXT, view_args_json TEXT,
   UNIQUE(search_run_id, sr_no, cnr));
 CREATE TABLE IF NOT EXISTS cases(
-  cnr TEXT PRIMARY KEY, run_id TEXT, kind TEXT DEFAULT 'searched', parent_cnr TEXT,
+  cnr TEXT NOT NULL PRIMARY KEY CHECK(length(cnr)=16 AND cnr NOT GLOB '*[^A-Z0-9]*'), run_id TEXT NOT NULL REFERENCES runs(run_id), kind TEXT DEFAULT 'searched', parent_cnr TEXT,
   court_name TEXT, case_type_raw TEXT, case_type TEXT, case_number TEXT,
   filing_number TEXT, filing_date TEXT, filing_date_iso TEXT,
   registration_number TEXT, registration_date TEXT, registration_date_iso TEXT,
@@ -33,37 +35,38 @@ CREATE TABLE IF NOT EXISTS cases(
   search_case_number TEXT, search_parties TEXT,
   details_extra_json TEXT, status_extra_json TEXT, extra_sections_json TEXT, warnings_json TEXT,
   vb_links INTEGER, vb_fetched INTEGER, pdf_links INTEGER, pdf_saved INTEGER,
-  ack_expected INTEGER, ack_fetched INTEGER, complete INTEGER DEFAULT 0, missing_json TEXT, flags_json TEXT,
+  ack_expected INTEGER, ack_fetched INTEGER, complete INTEGER NOT NULL CHECK(complete=1), missing_json TEXT, flags_json TEXT,
   elapsed_s REAL, requests INTEGER, scraped_at TEXT);
 CREATE TABLE IF NOT EXISTS parties(
-  cnr TEXT, role TEXT, seq INTEGER, number TEXT, name TEXT, advocate TEXT, advocates_json TEXT,
+  cnr TEXT NOT NULL REFERENCES cases(cnr) ON DELETE CASCADE, role TEXT NOT NULL, seq INTEGER NOT NULL, number TEXT, name TEXT, advocate TEXT, advocates_json TEXT,
   extra_lines_json TEXT, PRIMARY KEY(cnr, role, seq));
-CREATE TABLE IF NOT EXISTS acts(cnr TEXT, seq INTEGER, act TEXT, section TEXT, section_raw TEXT,
+CREATE TABLE IF NOT EXISTS acts(cnr TEXT NOT NULL REFERENCES cases(cnr) ON DELETE CASCADE, seq INTEGER NOT NULL, act TEXT, section TEXT, section_raw TEXT,
   PRIMARY KEY(cnr, seq));
-CREATE TABLE IF NOT EXISTS processes(cnr TEXT, seq INTEGER, process_id TEXT, title TEXT, date TEXT,
+CREATE TABLE IF NOT EXISTS processes(cnr TEXT NOT NULL REFERENCES cases(cnr) ON DELETE CASCADE, seq INTEGER NOT NULL, process_id TEXT, title TEXT, date TEXT,
   date_iso TEXT, PRIMARY KEY(cnr, seq));
-CREATE TABLE IF NOT EXISTS main_matters(cnr TEXT, seq INTEGER, case_no TEXT, case_no_raw TEXT, main_cnr TEXT,
+CREATE TABLE IF NOT EXISTS main_matters(cnr TEXT NOT NULL REFERENCES cases(cnr) ON DELETE CASCADE, seq INTEGER NOT NULL, case_no TEXT, case_no_raw TEXT, main_cnr TEXT,
   filing_no TEXT, filing_no_suspect INTEGER DEFAULT 0, extra_json TEXT, PRIMARY KEY(cnr, seq));
 CREATE TABLE IF NOT EXISTS hearings(
-  cnr TEXT, seq INTEGER, judge TEXT, business_on_date TEXT, business_on_date_iso TEXT, hearing_date TEXT,
+  cnr TEXT NOT NULL REFERENCES cases(cnr) ON DELETE CASCADE, seq INTEGER NOT NULL, judge TEXT, business_on_date TEXT, business_on_date_iso TEXT, hearing_date TEXT,
   hearing_date_iso TEXT, purpose TEXT, vb_args_json TEXT, business_text TEXT, next_purpose TEXT,
   next_hearing_date TEXT, next_hearing_date_iso TEXT, business_judge TEXT, business_extra_json TEXT,
   fetched INTEGER DEFAULT 0, error TEXT, PRIMARY KEY(cnr, seq));
 CREATE TABLE IF NOT EXISTS orders(
-  cnr TEXT, seq INTEGER, section TEXT, category TEXT, number TEXT, order_date TEXT, order_date_iso TEXT,
+  cnr TEXT NOT NULL REFERENCES cases(cnr) ON DELETE CASCADE, seq INTEGER NOT NULL, section TEXT, category TEXT, number TEXT, order_date TEXT, order_date_iso TEXT,
   description TEXT, link_text TEXT, pdf_args_json TEXT, pdf_url TEXT, pdf_path TEXT, sha256 TEXT, size INTEGER,
   pages INTEGER, text TEXT, needs_ocr INTEGER, fetched INTEGER DEFAULT 0, error TEXT, PRIMARY KEY(cnr, seq));
-CREATE TABLE IF NOT EXISTS ack(cnr TEXT PRIMARY KEY, court_name TEXT, decree_holder TEXT, judgement_debtor TEXT,
+CREATE TABLE IF NOT EXISTS ack(cnr TEXT NOT NULL PRIMARY KEY REFERENCES cases(cnr) ON DELETE CASCADE, court_name TEXT, decree_holder TEXT, judgement_debtor TEXT,
   filing_number TEXT, fields_json TEXT, fetched INTEGER DEFAULT 0, error TEXT);
 CREATE TABLE IF NOT EXISTS interim_applications(
-  cnr TEXT, seq INTEGER, ia_number TEXT, parties_json TEXT, filing_date TEXT, filing_date_iso TEXT,
+  cnr TEXT NOT NULL REFERENCES cases(cnr) ON DELETE CASCADE, seq INTEGER NOT NULL, ia_number TEXT, parties_json TEXT, filing_date TEXT, filing_date_iso TEXT,
   next_date TEXT, next_date_iso TEXT, next_purpose TEXT, ia_status TEXT, args_json TEXT, business_case_no TEXT,
   fetched INTEGER DEFAULT 0, error TEXT, PRIMARY KEY(cnr, seq));
 CREATE TABLE IF NOT EXISTS ia_business(
-  cnr TEXT, ia_seq INTEGER, seq INTEGER, ia_no TEXT, business_on_date TEXT, business_on_date_iso TEXT,
-  hearing_date TEXT, hearing_date_iso TEXT, business TEXT, PRIMARY KEY(cnr, ia_seq, seq));
+  cnr TEXT NOT NULL, ia_seq INTEGER NOT NULL, seq INTEGER NOT NULL, ia_no TEXT, business_on_date TEXT, business_on_date_iso TEXT,
+  hearing_date TEXT, hearing_date_iso TEXT, business TEXT, PRIMARY KEY(cnr, ia_seq, seq),
+  FOREIGN KEY(cnr, ia_seq) REFERENCES interim_applications(cnr, seq) ON DELETE CASCADE);
 CREATE TABLE IF NOT EXISTS raw_responses(
-  id INTEGER PRIMARY KEY AUTOINCREMENT, run_id TEXT, cnr TEXT, endpoint TEXT, params_json TEXT, status INTEGER,
+  id INTEGER PRIMARY KEY AUTOINCREMENT, run_id TEXT, cnr TEXT NOT NULL REFERENCES cases(cnr) ON DELETE CASCADE, endpoint TEXT, params_json TEXT, status INTEGER,
   ts TEXT, body_gz BLOB);
 CREATE INDEX IF NOT EXISTS ix_raw_cnr ON raw_responses(cnr);
 CREATE TABLE IF NOT EXISTS errors(
@@ -97,21 +100,45 @@ class Store:
         self._local = threading.local()
         self._conns: List[sqlite3.Connection] = []
         self._conns_lock = threading.Lock()
-        self.conn.executescript(SCHEMA)
-        have = {r[1] for r in self.conn.execute("PRAGMA table_info(cases)")}
-        for col, typ in CASES_EXTRA_COLS.items():
-            if col not in have:
-                with contextlib.suppress(sqlite3.OperationalError):   # another process added it first
-                    self.conn.execute(f"ALTER TABLE cases ADD COLUMN {col} {typ}")
+        try:
+            with self.tx() as c:
+                legacy = c.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='cases'").fetchone()
+                for statement in SCHEMA.split(";"):
+                    if statement.strip():
+                        c.execute(statement)
+                have = {r[1] for r in c.execute("PRAGMA table_info(cases)")}
+                for col, typ in CASES_EXTRA_COLS.items():
+                    if col not in have:
+                        c.execute(f"ALTER TABLE cases ADD COLUMN {col} {typ}")
+                if legacy:
+                    self._upgrade_children(c)
+        except BaseException:
+            self.close()
+            raise
+
+    @staticmethod
+    def _upgrade_children(c):
+        # Rebuild legacy child tables in dependency order, inside the schema transaction.
+        for table in [*CHILD_TABLES, "raw_responses"]:
+            if c.execute(f"PRAGMA foreign_key_list({table})").fetchone():
+                continue
+            ddl = next(stmt for stmt in SCHEMA.split(";")
+                       if stmt.strip().startswith(f"CREATE TABLE IF NOT EXISTS {table}("))
+            c.execute(ddl.replace(f"{table}(", f"new_{table}(", 1))
+            c.execute(f"INSERT INTO new_{table} SELECT * FROM {table}")
+            c.execute(f"DROP TABLE {table}")
+            c.execute(f"ALTER TABLE new_{table} RENAME TO {table}")
+        c.execute("CREATE INDEX IF NOT EXISTS ix_raw_cnr ON raw_responses(cnr)")
 
     @property
     def conn(self) -> sqlite3.Connection:
         c = getattr(self._local, "conn", None)
         if c is None:
-            c = sqlite3.connect(self.path, timeout=60, isolation_level=None, check_same_thread=False)
+            c = sqlite3.connect(self.path, uri=True, timeout=60, isolation_level=None, check_same_thread=False)
             c.row_factory = sqlite3.Row
             c.execute("PRAGMA journal_mode=WAL")
-            c.execute("PRAGMA synchronous=NORMAL")
+            c.execute("PRAGMA synchronous=FULL")
+            c.execute("PRAGMA foreign_keys=ON")
             c.execute("PRAGMA busy_timeout=60000")
             self._local.conn = c
             with self._conns_lock:
@@ -140,7 +167,7 @@ class Store:
     # ------------------------------------------------------------------ runs / search
     def start_run(self, run_id: str, args: Dict[str, Any]) -> None:
         with self.tx() as c:
-            c.execute("INSERT OR REPLACE INTO runs(run_id,started_at,args_json) VALUES(?,?,?)",
+            c.execute("INSERT INTO runs(run_id,started_at,args_json) VALUES(?,?,?) ON CONFLICT(run_id) DO NOTHING",
                       (run_id, now(), j(args)))
 
     def finish_run(self, run_id: str, summary: Dict[str, Any]) -> None:
@@ -180,15 +207,32 @@ class Store:
     def has_case(self, cnr: str) -> bool:
         return self.conn.execute("SELECT 1 FROM cases WHERE cnr=?", (cnr,)).fetchone() is not None
 
-    def save_case(self, run_id: str, bundle: Dict[str, Any]) -> None:
+    def save_case(self, run_id: str, bundle: Dict[str, Any]) -> bool:
         """Replace everything stored for this CNR in ONE transaction (idempotent)."""
         case, meta = bundle["case"], bundle.get("meta", {})
         cnr = case["cnr"]
         hearings, orders = case["hearings"], case["orders"]
         ack = bundle.get("ack")
         ias = case.get("interim_applications") or []
+        if not re.fullmatch(r"[A-Z0-9]{16}", cnr or ""):
+            raise ValueError("Invalid case CNR")
+        missing = list(meta.get("missing", []))
+        for items, link, payload in ((hearings, "vb_args", "business"),
+                                     (orders, "pdf_args", "pdf"), (ias, "args", "business")):
+            for item in items:
+                if item[link] and (not item.get("fetched") or not isinstance(item.get(payload), dict)):
+                    missing.append(f"{link} seq={item['seq']}")
+        if case.get("ack_url") and not (ack and ack.get("fetched")):
+            missing.append("ack")
+        if not meta.get("complete") or missing:
+            self.record_error(run_id, cnr, "case", "IncompleteCase", ", ".join(dict.fromkeys(missing)))
+            return False
         with self.tx() as c:
-            for t in CHILD_TABLES:
+            if meta.get("kind") == "linked" and c.execute(
+                "SELECT 1 FROM cases WHERE cnr=? AND kind='searched' AND complete=1", (cnr,)
+            ).fetchone():
+                return False
+            for t in reversed(CHILD_TABLES):
                 c.execute(f"DELETE FROM {t} WHERE cnr=?", (cnr,))
             c.execute("DELETE FROM raw_responses WHERE cnr=?", (cnr,))
             vals = {k: case.get(k) for k in CASE_COLS}
@@ -207,26 +251,28 @@ class Store:
                 flags_json=j(meta.get("flags", {})), elapsed_s=meta.get("elapsed_s"), requests=meta.get("requests"),
                 scraped_at=now())
             cols = list(vals)
-            c.execute(f"INSERT OR REPLACE INTO cases({','.join(cols)}) VALUES({','.join('?' * len(cols))})",
+            updates = ",".join(f"{key}=excluded.{key}" for key in cols if key != "cnr")
+            c.execute(f"INSERT INTO cases({','.join(cols)}) VALUES({','.join('?' * len(cols))}) "
+                      f"ON CONFLICT(cnr) DO UPDATE SET {updates}",
                       [vals[k] for k in cols])
             for role, key in (("petitioner", "petitioners"), ("respondent", "respondents")):
                 for p in case[key]:
-                    c.execute("INSERT OR REPLACE INTO parties VALUES(?,?,?,?,?,?,?,?)",
+                    c.execute("INSERT INTO parties VALUES(?,?,?,?,?,?,?,?)",
                               (cnr, role, p["seq"], p["number"], p["name"], p["advocate"], j(p["advocates"]),
                                j(p["extra_lines"])))
             for a in case["acts"]:
-                c.execute("INSERT OR REPLACE INTO acts VALUES(?,?,?,?,?)",
+                c.execute("INSERT INTO acts VALUES(?,?,?,?,?)",
                           (cnr, a["seq"], a["act"], a["section"], a["section_raw"]))
             for p in case["processes"]:
-                c.execute("INSERT OR REPLACE INTO processes VALUES(?,?,?,?,?,?)",
+                c.execute("INSERT INTO processes VALUES(?,?,?,?,?,?)",
                           (cnr, p["seq"], p["process_id"], p["title"], p["date"], p["date_iso"]))
             for m in case["main_matters"]:
-                c.execute("INSERT OR REPLACE INTO main_matters VALUES(?,?,?,?,?,?,?,?)",
+                c.execute("INSERT INTO main_matters VALUES(?,?,?,?,?,?,?,?)",
                           (cnr, m["seq"], m["case_no"], m["case_no_raw"], m["cnr"], m["filing_no"],
                            1 if m.get("filing_no_suspect") else 0, j(m["extra"])))
             for h in hearings:
                 b = h.get("business") or {}
-                c.execute("INSERT OR REPLACE INTO hearings VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                c.execute("INSERT INTO hearings VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
                           (cnr, h["seq"], h["judge"], h["business_on_date"], h["business_on_date_iso"],
                            h["hearing_date"], h["hearing_date_iso"], h["purpose"], j(h["vb_args"]),
                            b.get("business_text"), b.get("next_purpose"), b.get("next_hearing_date"),
@@ -234,24 +280,24 @@ class Store:
                            1 if h.get("fetched") else 0, h.get("error")))
             for ia in ias:
                 b = ia.get("business") or {}
-                c.execute("INSERT OR REPLACE INTO interim_applications VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                c.execute("INSERT INTO interim_applications VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
                           (cnr, ia["seq"], ia["ia_number"], j(ia["parties"]), ia["filing_date"],
                            ia["filing_date_iso"], ia["next_date"], ia["next_date_iso"], ia["next_purpose"],
                            ia["ia_status"], j(ia["args"]), b.get("case_no"), 1 if ia.get("fetched") else 0,
                            ia.get("error")))
                 for r in b.get("rows", []):
-                    c.execute("INSERT OR REPLACE INTO ia_business VALUES(?,?,?,?,?,?,?,?,?)",
+                    c.execute("INSERT INTO ia_business VALUES(?,?,?,?,?,?,?,?,?)",
                               (cnr, ia["seq"], r["seq"], r["ia_no"], r["business_on_date"],
                                r["business_on_date_iso"], r["hearing_date"], r["hearing_date_iso"], r["business"]))
             for o in orders:
                 p = o.get("pdf") or {}
-                c.execute("INSERT OR REPLACE INTO orders VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                c.execute("INSERT INTO orders VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
                           (cnr, o["seq"], o["section"], o["category"], o["number"], o["order_date"],
                            o["order_date_iso"], o["description"], o["link_text"], j(o["pdf_args"]),
                            o.get("pdf_url"), p.get("path"), p.get("sha256"), p.get("size"), p.get("pages"),
                            p.get("text"), p.get("needs_ocr"), 1 if o.get("fetched") else 0, o.get("error")))
             if ack:
-                c.execute("INSERT OR REPLACE INTO ack VALUES(?,?,?,?,?,?,?,?)",
+                c.execute("INSERT INTO ack VALUES(?,?,?,?,?,?,?,?)",
                           (cnr, ack.get("court_name"), ack.get("decree_holder"), ack.get("judgement_debtor"),
                            ack.get("filing_number"), j(ack.get("fields", {})), 1 if ack.get("fetched") else 0,
                            ack.get("error")))
@@ -260,6 +306,47 @@ class Store:
                           "VALUES(?,?,?,?,?,?,?)",
                           (run_id, cnr, r["endpoint"], j(r.get("params")), r.get("status"), r.get("ts") or now(),
                            gzip.compress((r.get("body") or "").encode("utf-8"), 3)))
+
+        return True
+
+    def publish_run(self, path: str, run_id: str) -> int:
+        """Publish completed snapshots from a finished run into the shared case library."""
+        c = self.conn
+        source = Path(path).resolve().as_uri() + "?mode=ro"
+        c.execute("ATTACH DATABASE ? AS capture", (source,))
+        try:
+            with self.tx() as tx:
+                tx.execute("INSERT INTO runs SELECT * FROM capture.runs WHERE run_id=? "
+                           "ON CONFLICT(run_id) DO UPDATE SET finished_at=excluded.finished_at, "
+                           "summary_json=excluded.summary_json", (run_id,))
+            tables = ["cases", *CHILD_TABLES, "raw_responses"]
+            columns = {table: ",".join(r["name"] for r in c.execute(f"PRAGMA main.table_info({table})")
+                                       if r["name"] != "id") for table in tables}
+            rows = c.execute("SELECT cnr, kind, scraped_at FROM capture.cases "
+                             "WHERE run_id=? AND complete=1 AND vb_links=vb_fetched "
+                             "AND pdf_links=pdf_saved AND ack_expected=ack_fetched "
+                             "AND ia_links=ia_fetched ORDER BY cnr", (run_id,)).fetchall()
+            written = 0
+            for row in rows:
+                cnr = row["cnr"]
+                with self.tx() as tx:
+                    existing = tx.execute("SELECT kind, scraped_at, run_id FROM main.cases WHERE cnr=?",
+                                          (cnr,)).fetchone()
+                    if existing:
+                        # Prefer a full search capture, then the most recently scraped version.
+                        old = (existing["kind"] == "searched", existing["scraped_at"], existing["run_id"])
+                        new = (row["kind"] == "searched", row["scraped_at"], run_id)
+                        if old >= new:
+                            continue
+                    tx.execute("DELETE FROM main.cases WHERE cnr=?", (cnr,))
+                    for table in tables:
+                        cols = columns[table]
+                        tx.execute(f"INSERT INTO main.{table}({cols}) SELECT {cols} "
+                                   f"FROM capture.{table} WHERE cnr=?", (cnr,))
+                written += 1
+            return written
+        finally:
+            c.execute("DETACH DATABASE capture")
 
     def flag_suspect_main_filing(self) -> List[str]:
         """'Main Filing No.' is a session-scoped site artefact: the same value across different main CNRs
@@ -297,6 +384,16 @@ class Store:
     def get_case(self, cnr: str) -> Optional[Dict[str, Any]]:
         """Nested dict with every stored fact about the case (used by export and tests)."""
         c = self.conn
+        if c.in_transaction:
+            return self._read_case(c, cnr)
+        c.execute("BEGIN")
+        try:
+            return self._read_case(c, cnr)
+        finally:
+            c.rollback()
+
+    @staticmethod
+    def _read_case(c, cnr):
         row = c.execute("SELECT * FROM cases WHERE cnr=?", (cnr,)).fetchone()
         if row is None:
             return None

@@ -213,7 +213,7 @@ class TestRobustness(Base):
         self.assertEqual(c.execute("SELECT COUNT(*) FROM cases WHERE complete=1").fetchone()[0], 6)
         self.assertEqual(c.execute("SELECT COUNT(*) FROM hearings WHERE fetched=0").fetchone()[0], 0)
 
-    def test_permanent_failure_is_saved_incomplete_and_reported(self):
+    def test_permanent_failure_is_excluded_and_reported(self):
         self.server.fail_business_for = {"1"}      # every case has a hearing with srno 1
         pipe = self.make(case_retries=1)
         s = pipe.run()
@@ -221,12 +221,10 @@ class TestRobustness(Base):
         self.assertEqual(s["failed_final"], 6)
         self.assertEqual(len(s["failed_cnrs"]), 6)
         c = pipe.store.conn
-        self.assertEqual(c.execute("SELECT COUNT(*) FROM cases WHERE complete=0").fetchone()[0], 6)
-        # partial data still stored; the failing hearing carries an error
-        self.assertEqual(c.execute("SELECT COUNT(*) FROM hearings WHERE fetched=0 AND error IS NOT NULL")
-                         .fetchone()[0], 6)
-        self.assertGreater(c.execute("SELECT COUNT(*) FROM hearings WHERE fetched=1").fetchone()[0], 50)
-        # resume does not skip incomplete cases
+        for table in ("cases", "hearings", "orders", "raw_responses"):
+            self.assertEqual(c.execute(f"SELECT COUNT(*) FROM {table}").fetchone()[0], 0)
+        self.assertEqual(c.execute("SELECT COUNT(DISTINCT cnr) FROM errors "
+                                   "WHERE kind='IncompleteCase'").fetchone()[0], 6)
         self.assertEqual(pipe.store.completed_cnrs(), set())
 
     def test_unknown_case_reported_not_fatal(self):
@@ -255,8 +253,8 @@ class TestRobustness(Base):
         s = pipe.run()
         self.assertEqual(s["ok"], 0)
         row = pipe.store.conn.execute("SELECT fetched, error FROM orders").fetchone()
-        self.assertEqual(row[0], 0)
-        self.assertTrue(row[1])
+        self.assertIsNone(row)
+        self.assertIn("pdf seq=", pipe.store.conn.execute("SELECT message FROM errors").fetchone()[0])
 
 
 class TestMainMatters(Base):
@@ -301,12 +299,33 @@ class TestStoreRoundTrip(Base):
         c2 = st.counts()
         for k in ("cases", "hearings", "orders", "parties", "acts", "processes", "main_matters"):
             self.assertEqual(c1[k], c2[k], k)
-        self.assertEqual(c2["ack"], 0)             # replaced bundle had no ack
-        d2 = st.get_case(cnr)
-        self.assertEqual(d2["complete"], 0)
-        self.assertEqual(d1["case_status"], d2["case_status"])
-        self.assertEqual([p["name"] for p in d1["respondents"]], [p["name"] for p in d2["respondents"]])
+        self.assertEqual(c1["ack"], c2["ack"])
+        self.assertEqual(d1, st.get_case(cnr))
 
+    def test_duplicate_child_rolls_back_refresh_and_library_deduplicates(self):
+        import sqlite3
+        pipe = self.make(limit=1)
+        pipe.run()
+        store = pipe.store
+        cnr = store.case_cnrs()[0]
+        before = store.get_case(cnr)
+        raw = store.get_raw(cnr)
+        with self.assertRaises(sqlite3.IntegrityError):
+            store.conn.execute("INSERT INTO hearings(cnr,seq) VALUES('MISSING',1)")
+        # Inject a failure after the parent and earlier children have been written.
+        store.conn.execute("CREATE TRIGGER duplicate_hearing AFTER INSERT ON hearings BEGIN "
+                           "INSERT INTO hearings(cnr,seq) VALUES(new.cnr,new.seq); END")
+        pipe.run()
+        self.assertEqual(before, store.get_case(cnr))
+        self.assertEqual(raw, store.get_raw(cnr))
+        library = Store(os.path.join(self._td.name, "library.db"))
+        self.addCleanup(library.close)
+        library.publish_run(store.path, before["run_id"])
+        library.publish_run(store.path, before["run_id"])
+        self.assertEqual([cnr], library.case_cnrs())
+        self.assertEqual(before, library.get_case(cnr))
+        self.assertEqual(raw, library.get_raw(cnr))
+        self.assertEqual([], library.conn.execute("PRAGMA foreign_key_check").fetchall())
 
 
 class TestInterimApplications(Base):
@@ -384,9 +403,8 @@ class TestInterimApplications(Base):
         s = pipe2.run(rows=[self.row()])
         self.assertEqual(s["ok"], 0)
         d = pipe2.store.get_case(self.CNR)
-        self.assertEqual(d["complete"], 0)
-        self.assertIn("ia seq=1", d["missing"])
-        self.assertTrue(d["interim_applications"][0]["error"])
+        self.assertEqual(d["complete"], 1)
+        self.assertIn("ia seq=1", pipe2.store.conn.execute("SELECT message FROM errors").fetchone()[0])
 
     def test_old_db_without_ia_columns_opens(self):
         import sqlite3

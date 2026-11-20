@@ -83,7 +83,7 @@ class CaseScraper:
                 return fn()
             except EcourtsError as e:     # (BlockedAbort is not an EcourtsError and propagates)
                 last = e
-                log.debug("retry %d/%d after %s", n, tries, e)
+                log.warning("Request attempt %d of %d failed: %s", n, tries, e)
                 self._sleep(0.3 * n)
         raise last  # type: ignore[misc]
 
@@ -119,19 +119,8 @@ class CaseScraper:
         ack["fetched"] = True
         return ack
 
-    # -- main entry
-    def scrape(self, row: Dict[str, Any]) -> List[Dict[str, Any]]:
-        """Returns [main bundle, *linked bundles]. A bundle is saved even when incomplete."""
-        t0, req0 = time.monotonic(), self.s.stats["requests"]
-        raw: List[Dict[str, Any]] = []
-        cnr0 = row.get("cnr", "")
-        j = self._retry(lambda: self._call("home/viewHistory", dict(row["view_params"]), raw, cnr0, "data_list"))
-        case = parsers.parse_case_page(j["data_list"])
-        if not case["cnr"]:
-            case["cnr"] = cnr0
+    def _fetch_details(self, case, raw):
         cnr = case["cnr"]
-        if cnr0 and cnr != cnr0:
-            case["warnings"].append(f"CNR on page ({cnr}) differs from search row ({cnr0})")
         missing: List[str] = []
 
         fails = 0
@@ -140,6 +129,7 @@ class CaseScraper:
                 continue
             if fails >= self.MAX_CONSEC_FAIL:
                 h["fetched"], h["error"] = False, "skipped after repeated failures"
+                missing.append(f"business seq={h['seq']}")
                 continue
             try:
                 self.fetch_business(h, cnr, raw)
@@ -151,7 +141,10 @@ class CaseScraper:
                 missing.append(f"business seq={h['seq']}")
 
         for ia in case["interim_applications"]:
-            if not ia["args"] or len(ia["args"]) < len(parsers.IA_ARG_NAMES):
+            if not ia["args"]:
+                continue
+            if len(ia["args"]) < len(parsers.IA_ARG_NAMES):
+                missing.append(f"ia seq={ia['seq']}")
                 continue
             try:
                 self.fetch_ia(ia, cnr, raw)
@@ -179,8 +172,22 @@ class CaseScraper:
                 ack = {"fetched": False, "error": str(e)[:300], "fields": {}}
                 missing.append("ack")
 
-        # parser sanity: the page showed history rows but we found no business links is suspicious only
-        # for non-CNR pages; keep as a warning rather than an error
+        return ack, missing
+
+    # -- main entry
+    def scrape(self, row: Dict[str, Any]) -> List[Dict[str, Any]]:
+        """Returns [main bundle, *linked bundles]. Only complete bundles can be committed."""
+        t0, req0 = time.monotonic(), self.s.stats["requests"]
+        raw: List[Dict[str, Any]] = []
+        cnr0 = row.get("cnr", "")
+        j = self._retry(lambda: self._call("home/viewHistory", dict(row["view_params"]), raw, cnr0, "data_list"))
+        case = parsers.parse_case_page(j["data_list"])
+        if not case["cnr"]:
+            case["cnr"] = cnr0
+        cnr = case["cnr"]
+        if cnr0 and cnr != cnr0:
+            raise EcourtsError(f"CNR on page ({cnr}) differs from search row ({cnr0})")
+        ack, missing = self._fetch_details(case, raw)
         meta = {"kind": "searched", "elapsed_s": round(time.monotonic() - t0, 3),
                 "requests": self.s.stats["requests"] - req0, "missing": missing, "complete": not missing,
                 "search_case_number": row.get("case_number"), "search_parties": row.get("parties"), "flags": {}}
@@ -202,8 +209,11 @@ class CaseScraper:
                     lcase = parsers.parse_case_page(lj["casetype_list"])
                     if not lcase["cnr"]:
                         lcase["cnr"] = mc
-                    bundles.append({"case": lcase, "ack": None, "raw": lraw, "meta": {
-                        "kind": "linked", "parent_cnr": cnr, "complete": True, "missing": [], "flags": {},
+                    if lcase["cnr"] != mc:
+                        raise EcourtsError(f"Linked case CNR differs from requested CNR {mc}")
+                    lack, lmissing = self._fetch_details(lcase, lraw)
+                    bundles.append({"case": lcase, "ack": lack, "raw": lraw, "meta": {
+                        "kind": "linked", "parent_cnr": cnr, "complete": not lmissing, "missing": lmissing, "flags": {},
                         "elapsed_s": None, "requests": 1}})
                 except EcourtsError as e:
                     case["warnings"].append(f"main matter {mc} not fetched: {e}")
@@ -293,13 +303,13 @@ class Pipeline:
         return res
 
     def _save(self, bundles: List[Dict[str, Any]]) -> bool:
-        for b in bundles:
-            self.store.save_case(self.run_id, b)
         main = bundles[0]
+        complete = self.store.save_case(self.run_id, main)
+        linked = sum(self.store.save_case(self.run_id, b) for b in bundles[1:]) if complete else 0
         with self._lock:
-            self.counters["linked"] += len(bundles) - 1
+            self.counters["linked"] += linked
             self.elapsed_per_case.append(main["meta"]["elapsed_s"] or 0)
-        return bool(main["meta"]["complete"])
+        return complete
 
     def _worker(self, idx: int, q: "queue.Queue", failed: List[Dict[str, Any]], session=None) -> None:
         name = f"w{idx}"

@@ -14,10 +14,14 @@ import os
 import sys
 from typing import Any, Dict, Iterable, List, Optional, Sequence
 
+from .parsers import to_iso
+
 E = html.escape
 
 
 def _v(x: Any) -> str:
+    if isinstance(x, Raw):
+        return x
     if x is None or x == "":
         return '<span class="na">—</span>'
     return E(str(x))
@@ -32,7 +36,7 @@ def _table(headers: List[str], rows: List[List[Any]], cls: str = "") -> str:
     if not rows:
         return '<p class="na">None recorded on the site.</p>'
     th = "".join(f"<th>{E(h)}</th>" for h in headers)
-    trs = "".join("<tr>" + "".join(f"<td>{c if isinstance(c, Raw) else _v(c)}</td>" for c in r) + "</tr>" for r in rows)
+    trs = "".join("<tr>" + "".join(f"<td>{_v(c)}</td>" for c in r) + "</tr>" for r in rows)
     return f'<div class="scroll"><table class="grid {cls}"><thead><tr>{th}</tr></thead><tbody>{trs}</tbody></table></div>'
 
 
@@ -41,9 +45,7 @@ class Raw(str):
 
 
 def _date(raw: Any, iso: Any) -> Any:
-    if raw and iso and str(iso) not in str(raw):
-        return Raw(f'{E(str(raw))} <span class="iso">{E(str(iso))}</span>')
-    return raw
+    return iso or to_iso(raw) or raw
 
 
 def _ratio(c: Dict[str, Any], a: str, b: str) -> Optional[str]:
@@ -80,7 +82,7 @@ def _parties(ps: List[Dict[str, Any]]) -> str:
     return _table(["#", "Name", "Advocate(s)", "Other lines"], rows)
 
 
-def render(case: Dict[str, Any], run_dir: str = "") -> str:
+def render(case: Dict[str, Any], run_dir: str = "", *, pdf_url=None) -> str:
     c = case
     title = f'{c.get("case_number") or c.get("cnr")}'
     pet = "; ".join(p.get("name", "") for p in c.get("petitioners", []))
@@ -103,7 +105,7 @@ def render(case: Dict[str, Any], run_dir: str = "") -> str:
         ("Filing number", c.get("filing_number")), ("Filing date", _date(c.get("filing_date"), c.get("filing_date_iso"))),
         ("Registration number", c.get("registration_number")),
         ("Registration date", _date(c.get("registration_date"), c.get("registration_date_iso"))),
-        ("CNR", c.get("cnr")), ("e-Filing number", c.get("efiling_number")), ("e-Filing date", c.get("efiling_date")),
+        ("CNR", c.get("cnr")), ("e-Filing number", c.get("efiling_number")), ("e-Filing date", _date(c.get("efiling_date"), c.get("efiling_date_iso"))),
     ]) + _kv([
         ("First hearing date", _date(c.get("first_hearing_date"), c.get("first_hearing_date_iso"))),
         ("Decision date", _date(c.get("decision_date"), c.get("decision_date_iso"))),
@@ -140,10 +142,10 @@ def render(case: Dict[str, Any], run_dir: str = "") -> str:
             biz = ia.get("business") or []
             ia_html.append(_kv([("IA number", ia.get("ia_number")), ("Parties", "; ".join(ia.get("parties") or [])),
                                 ("Filed", _date(ia.get("filing_date"), ia.get("filing_date_iso"))),
-                                ("Next date", ia.get("next_date")), ("Next purpose", ia.get("next_purpose")),
+                                ("Next date", _date(ia.get("next_date"), ia.get("next_date_iso"))), ("Next purpose", ia.get("next_purpose")),
                                 ("Status", ia.get("ia_status"))]) +
                            _table(["#", "Business on date", "Hearing date", "Business"],
-                                  [[b.get("seq"), b.get("business_on_date"), b.get("hearing_date"), b.get("business")]
+                                  [[b.get("seq"), _date(b.get("business_on_date"), b.get("business_on_date_iso")), _date(b.get("hearing_date"), b.get("hearing_date_iso")), b.get("business")]
                                    for b in biz]))
         parts.append(_section("Interim applications", "".join(ia_html) or '<p class="na">None.</p>', len(ias), "ia"))
     else:
@@ -167,12 +169,16 @@ def render(case: Dict[str, Any], run_dir: str = "") -> str:
 
     o_html = []
     for o in orders:
-        path = _find_pdf(o, run_dir)
-        link = (f'<a href="file:///{E(path.replace(os.sep, "/"))}">Open PDF</a>' if path and os.path.exists(path)
+        if pdf_url is None:
+            path = _find_pdf(o, run_dir)
+            href = "file:///" + path.replace(os.sep, "/") if path else ""
+        else:
+            href = pdf_url(o)
+        link = (f'<a href="{E(href)}">Open PDF</a>' if href
                 else '<span class="na">PDF file not found locally</span>')
         o_html.append(
             f'<article class="order"><header><strong>{E(o.get("section") or "Order")}</strong> · Order {_v(o.get("number"))}'
-            f' · {_v(o.get("order_date"))}</header>'
+            f' · {_v(_date(o.get("order_date"), o.get("order_date_iso")))}</header>'
             + _kv([("Description", o.get("description")), ("Pages", o.get("pages")), ("Size (bytes)", o.get("size")),
                    ("SHA-256", o.get("sha256")), ("Needs OCR", "yes" if o.get("needs_ocr") else "no")])
             + f'<p>{link}</p><details><summary>Order text ({len(o.get("text") or "")} characters)</summary>'
@@ -204,7 +210,7 @@ def render(case: Dict[str, Any], run_dir: str = "") -> str:
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{E(title)}</title>
 <style>
-:root{{--bg:#f7f7f5;--card:#fff;--fg:#1d1d1f;--muted:#6b6b70;--line:#e3e3e0;--accent:#2f5d8a;--ok:#2e7d4f;--bad:#b3261e;--warn:#8a5a00}}
+:root{{--bg:#f5f9fc;--card:#fff;--fg:#1b2d5a;--muted:#6b6b70;--line:#e3e3e0;--accent:#0673ba;--ok:#2e7d4f;--bad:#b3261e;--warn:#8a5a00}}
 @media (prefers-color-scheme:dark){{:root:not([data-theme="light"]){{--bg:#151517;--card:#1e1e21;--fg:#ececee;--muted:#a0a0a8;--line:#333338;--accent:#8db7e0;--ok:#6fcf97;--bad:#f28b82;--warn:#f2c46d}}}}
 :root[data-theme="dark"]{{--bg:#151517;--card:#1e1e21;--fg:#ececee;--muted:#a0a0a8;--line:#333338;--accent:#8db7e0;--ok:#6fcf97;--bad:#f28b82;--warn:#f2c46d}}
 *{{box-sizing:border-box}}body{{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}}
@@ -222,7 +228,7 @@ table{{border-collapse:collapse;width:100%}}.kv{{margin-bottom:10px}}.kv th{{tex
 .kv td{{padding:5px 0;border-bottom:1px solid var(--line)}}
 .scroll{{overflow-x:auto}}.grid th,.grid td{{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:top}}
 .grid th{{font-size:13px;color:var(--muted);font-weight:600;white-space:nowrap}}.grid.hearings td:nth-child(6){{min-width:320px}}
-.biz{{white-space:pre-wrap}}.na{{color:var(--muted)}}.iso{{color:var(--muted);font-size:12px;margin-left:4px}}
+.biz{{white-space:pre-wrap}}.na{{color:var(--muted)}}
 .flag{{color:var(--warn);font-size:12px;border:1px solid var(--warn);border-radius:6px;padding:0 5px;margin-left:6px}}
 .note{{color:var(--muted);font-size:13px}}.order{{border:1px solid var(--line);border-radius:10px;padding:12px;margin:10px 0}}
 .order header{{margin-bottom:8px}}pre{{white-space:pre-wrap;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:12px;max-height:520px;overflow:auto;font-size:13px}}

@@ -176,7 +176,7 @@ class EcourtsSession:
                     self.governor.record(False)
                 if attempt > self.cfg.max_retries:
                     raise HttpFailure(f"{method} {url}: {e} (after {attempt} attempts)") from e
-                log.debug("%s transport error %s (attempt %d)", self.name, e, attempt)
+                log.warning("%s transport error %s (attempt %d)", self.name, e, attempt)
                 self._backoff(attempt)
                 continue
             self.stats["requests"] += 1
@@ -196,6 +196,7 @@ class EcourtsSession:
                     ra = float(resp.headers.get("Retry-After", ""))
                 except (TypeError, ValueError):
                     pass
+                log.warning("%s: HTTP %d, retrying after attempt %d", label, resp.status, attempt)
                 self._backoff(attempt, ra)
                 continue
             if self.governor:
