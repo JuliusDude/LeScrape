@@ -6,6 +6,8 @@ Milestones are listed newest first. Commit IDs identify the corresponding source
 
 <!-- Add user-facing changes here as they land. -->
 
+- Added spreadsheet analysis for each capture run. Filter cases, drill into pivot totals and distributions, compare decision times and pending-case ages, and explore hearings and orders. Save named views in your browser or export filtered rows and visible columns as CSV with run and capture dates.
+
 ## 2026-11-20 · V2 capture workspace and storage updates
 
 ### Added

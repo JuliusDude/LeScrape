@@ -79,7 +79,7 @@ def case_sheet(run):
             SELECT c.cnr, c.case_number, c.case_type, c.case_status, n.petitioners, n.respondents,
                    c.court_name, c.court_number_and_judge, c.filing_number, c.filing_date_iso,
                    c.registration_number, c.registration_date_iso, c.next_hearing_date_iso,
-                   c.decision_date_iso, c.case_stage, c.nature_of_disposal,
+                   date(c.scraped_at) AS capture_date, c.decision_date_iso, c.case_stage, c.nature_of_disposal,
                    (SELECT count(*) FROM hearings h WHERE h.cnr=c.cnr) AS hearings,
                    (SELECT count(*) FROM orders o WHERE o.cnr=c.cnr) AS orders, c.complete
             FROM cases c LEFT JOIN names n ON n.cnr=c.cnr ORDER BY c.cnr
