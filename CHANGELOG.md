@@ -2,6 +2,10 @@
 
 Milestones are listed newest first. Commit IDs identify the corresponding source snapshots. V1 and V2 are scraper generations. Earlier snapshots are identified by date because the repository has no historical release tags.
 
+## Unreleased
+
+<!-- Add user-facing changes here as they land. -->
+
 ## 2026-11-20 · V2 capture workspace and storage updates
 
 ### Added
